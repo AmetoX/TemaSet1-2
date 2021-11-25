@@ -1,0 +1,21 @@
+public static void set1p14()
+        {
+            Console.Write("Introduceti un numar: ");
+            int n = int.Parse(Console.ReadLine());
+            int ogl = 0;
+            int a = n;
+            while (n != 0)
+            {
+                ogl = ogl * 10 + n % 10; 
+                n = n / 10;
+            }
+            if (ogl == a)
+            {
+                Console.WriteLine("Numarul introdus este palidrom.");
+            }
+            else
+            {
+                Console.WriteLine("Numarul introdus nu este palidrom.");
+            }
+            Console.ReadKey();
+        }

@@ -1,0 +1,12 @@
+public static void set1p7()
+        {
+            Console.Write("Introduceti primul numar a = ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti al doilea numnar b = ");
+            int b = int.Parse(Console.ReadLine());
+            int aux = a;
+            a = b;
+            b = aux;
+            Console.WriteLine($"Dupa inversare numar a = {a} ,  iar b = {b} .");
+            Console.ReadKey();
+        }

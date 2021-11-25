@@ -1,0 +1,10 @@
+public static void set1p1()
+        {
+            Console.WriteLine("Type 2 numbers: ");
+            double a = int.Parse(Console.ReadLine());
+            double b = int.Parse(Console.ReadLine());
+            double sol = 0;
+            double x = (sol - b) / a;
+            Console.WriteLine($"Necunoscuta x din ax+b=0 este {x}");
+            Console.ReadKey();
+        }

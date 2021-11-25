@@ -1,0 +1,22 @@
+public static void set1p4()
+        {
+            Console.WriteLine("Introduceti un an:");
+            int a = int.Parse(Console.ReadLine());
+            if (a % 4 == 0)
+            {
+                Console.WriteLine($"Anul {a} este un an bisect.");
+            }
+            else if (a % 100 == 0)
+            {
+                Console.WriteLine($"Anul {a} nu este un an bisect.");
+            }
+            else if (a % 400 == 0)
+            {
+                Console.WriteLine($"Anul {a} este un an bisect.");
+            }
+            else
+            {
+                Console.WriteLine($"Anul {a} nu este un an bisect.");
+            }
+            Console.ReadKey();
+        }

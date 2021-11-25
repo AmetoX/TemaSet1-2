@@ -1,0 +1,17 @@
+public static void set1p6()
+        {
+            Console.WriteLine("Introduceti 3 numere: ");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            if (a + b > c && a + c > b && b + c > a)
+            {
+                Console.WriteLine($"{a}, {b}, {c}  pot fi lungimile laturilor unui triunghi");
+            }
+            else
+            {
+                Console.WriteLine($"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi");
+            }
+            Console.ReadKey();
+
+        }

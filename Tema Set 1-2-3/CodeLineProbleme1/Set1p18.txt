@@ -1,0 +1,23 @@
+public static void set1p18()
+        {
+            Console.Write("Introduceti un nr: ");
+            int n = int.Parse(Console.ReadLine());
+            int div = 2;
+            int pt;
+            Console.WriteLine("Numarul introdus se descompune in nr. prime astfel:");
+            while (n > 1)
+            {
+                if (n % div == 0)
+                {
+                    pt = 0;
+                    while (n % div == 0)
+                    {
+                        pt++;
+                        n /= div;
+                    }
+                    Console.WriteLine($"{div} la puterea {pt}");
+                }
+                div++;
+            }
+
+        }
