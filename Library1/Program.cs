@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.IO;
-using Probleme_Set_1;
+
 
 namespace Library1
 {
@@ -43,16 +43,7 @@ namespace Library1
             DateTime dt = DateTime.Now;
             CultureInfo culture = new CultureInfo("en-US");
             Console.WriteLine(dt.ToString(culture));
-        }
-        public static void problemeOptions()
-        {
-            int set = int.Parse(Console.ReadLine());
-            if (set == 1)
-            {
-                Console.WriteLine("\nProbleme set 1:");                          
-            }
-
-        }
+        }       
         public static void codprobleme1()
         {
             Console.WriteLine("Problema 1(necunoscuta: ax+b = 0)");
