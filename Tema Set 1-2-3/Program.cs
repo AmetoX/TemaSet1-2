@@ -22,6 +22,7 @@ namespace Tema_Set_1_2_3
             options();
             Console.Write("Please enter the number of the option you want to choose: ");
             optionSelect();
+            Console.Clear();
             Console.Write("Do you want to return to the main menu? (y/n)");
             string b = Console.ReadLine();
             string y = "y";
@@ -29,6 +30,7 @@ namespace Tema_Set_1_2_3
             if (b == y)
             {
                 goto start;
+                
             }
             else if (b == n)
             {
@@ -115,20 +117,20 @@ namespace Tema_Set_1_2_3
             {
                 Console.Clear();
                 Console.WriteLine("\nProbleme set 1:");
-                
+                Probleme_Set_1.Program.afisareProblemeSet1();
 
             }
             else if (af == 2)
             {
                 Console.Clear();
                 Console.WriteLine("\nProbleme set 2:");
-
+                Probleme_Set_2.Program.afisareProblemeSet2();
             }
             else if (af == 3)
             {
                 Console.Clear();
                 Console.WriteLine("\nProbleme set 3:");
-
+                Probleme_Set_3.Program.afisareProblemeSet3();
             }
 
         }
