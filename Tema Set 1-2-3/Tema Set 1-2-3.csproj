@@ -49,5 +49,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library1\Library1.csproj">
+      <Project>{1a8801f4-4990-4045-9d21-095fa124752e}</Project>
+      <Name>Library1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Probleme Set 1\Probleme Set 1.csproj">
+      <Project>{62fcf26f-12ec-4663-a850-01397ac8796f}</Project>
+      <Name>Probleme Set 1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Probleme Set 2\Probleme Set 2.csproj">
+      <Project>{4e63cd67-9e2e-4edc-ac02-199eb9e57415}</Project>
+      <Name>Probleme Set 2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Probleme Set 3\Probleme Set 3.csproj">
+      <Project>{3ba0e44c-e453-49cf-bf06-b05c6d248553}</Project>
+      <Name>Probleme Set 3</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
