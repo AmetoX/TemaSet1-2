@@ -71,7 +71,7 @@ namespace Library1
 
             Console.Write("\nType the number of the problem you want to see: ");
             int set1 = int.Parse(Console.ReadLine());
-            string back = "b";
+            
             switch (set1)
             {
                 case 1:
@@ -225,10 +225,78 @@ namespace Library1
         }
         public static void codprobleme2()
         {
+            Console.WriteLine("Problema 1()");
+            Console.WriteLine("Problema 2()");
+            Console.WriteLine("Problema 3()");
+            Console.WriteLine("Problema 4()");
+            Console.WriteLine("Problema 5()");
+            Console.WriteLine("Problema 6()");
+            Console.WriteLine("Problema 7()");
+            Console.WriteLine("Problema 8()");
+            Console.WriteLine("Problema 9()");
+            Console.WriteLine("Problema 10()");
+            Console.WriteLine("Problema 11()");
+            Console.WriteLine("Problema 12()");
+            Console.WriteLine("Problema 13()");
+            Console.WriteLine("Problema 14()");
+            Console.WriteLine("Problema 15()");
+            Console.WriteLine("Problema 16()");
+            Console.WriteLine("Problema 17()");
+            Console.WriteLine("Problema 18()");
+            Console.WriteLine("Problema 19()");
+            Console.WriteLine("Problema 20()");
+            Console.WriteLine("Problema 21()");
+
+            Console.Write("\nType the number of the problem you want to see: ");
+            int set2 = int.Parse(Console.ReadLine());
+            switch (set2)
+            {
+                case 1:
+                    TextReader s2load1 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p1.txt");
+                    string s2buffer1;
+                    while ((s2buffer1 = s2load1.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s2buffer1);
+                    }
+                    break;
+                default:
+                    break;
+            }
 
         }
         public static void codprobleme3()
         {
+            Console.WriteLine("Problema 1()");
+            Console.WriteLine("Problema 2()");
+            Console.WriteLine("Problema 3()");
+            Console.WriteLine("Problema 4()");
+            Console.WriteLine("Problema 5()");
+            Console.WriteLine("Problema 6()");
+            Console.WriteLine("Problema 7()");
+            Console.WriteLine("Problema 8()");
+            Console.WriteLine("Problema 9()");
+            Console.WriteLine("Problema 10()");
+            Console.WriteLine("Problema 11()");
+            Console.WriteLine("Problema 12()");
+            Console.WriteLine("Problema 13()");
+            Console.WriteLine("Problema 14()");
+            Console.WriteLine("Problema 15()");
+            Console.WriteLine("Problema 16()");
+            Console.WriteLine("Problema 17()");
+            Console.WriteLine("Problema 18()");
+            Console.WriteLine("Problema 19()");
+            Console.WriteLine("Problema 20()");
+            Console.WriteLine("Problema 21()");
+
+            Console.Write("\nType the number of the problem you want to see: ");
+            int set3 = int.Parse(Console.ReadLine());
+            switch (set3)
+            {
+                case 1:
+                    break;
+                default:
+                    break;
+            }
 
         }
     }

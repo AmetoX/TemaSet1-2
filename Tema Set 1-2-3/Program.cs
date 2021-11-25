@@ -19,23 +19,25 @@ namespace Tema_Set_1_2_3
             password();
             start:
             Console.WriteLine("Chose an option from below:");
+            Console.WriteLine();
             options();
             Console.Write("Please enter the number of the option you want to choose: ");
             optionSelect();
-            Console.Clear();
+            
             Console.Write("Do you want to return to the main menu? (y/n)");
             string b = Console.ReadLine();
             string y = "y";
             string n = "n";
             if (b == y)
             {
-                goto start;
-                
+                Console.Clear();
+                goto start;           
             }
             else if (b == n)
             {
                 Console.WriteLine("\nThank you for using my program!");
             }
+            
         }
         
         static void options()
@@ -85,7 +87,7 @@ namespace Tema_Set_1_2_3
             for (int P = 5; P > 0; P--)
             {
                 int done = 0;
-                Console.WriteLine("Please type the password:");
+                Console.Write("Please type the password:");
                 string p = Console.ReadLine();
                 //string sp = p.ToString();
                 string passwords = "123";

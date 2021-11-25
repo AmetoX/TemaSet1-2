@@ -62,7 +62,7 @@ namespace Probleme_Set_2
         static Random rnd = new Random();
         public static void set2p1()
         {
-            Console.WriteLine("Cate numere doriti sa aiba sirul?");
+            Console.Write("Cate numere doriti sa aiba sirul? :");
             int n = int.Parse(Console.ReadLine());
             int p = 0;
 
@@ -70,7 +70,7 @@ namespace Probleme_Set_2
             {
                 int r = rnd.Next(-100, 100);
 
-                Console.WriteLine(r);
+                Console.Write(r+" ");
                 if (r % 2 == 0)
                 {
                     p++;
@@ -91,7 +91,7 @@ namespace Probleme_Set_2
             {
                 int r = rnd.Next(-100, 100);
 
-                Console.WriteLine(r);
+                Console.Write(r + " ");
                 if (r > 0)
                 {
                     p++;
