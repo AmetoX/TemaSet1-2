@@ -259,6 +259,14 @@ namespace Library1
                         Console.WriteLine(s2buffer1);
                     }
                     break;
+                case 2:
+                    TextReader s2load2 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p2.txt");
+                    string s2buffer2;
+                    while ((s2buffer2 = s2load2.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s2buffer2);
+                    }
+                    break;
                 default:
                     break;
             }

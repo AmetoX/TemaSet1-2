@@ -86,7 +86,6 @@ namespace Probleme_Set_2
             int n = 0;
             int z = 0;
 
-
             for (int i = 0; i < a; i++)
             {
                 int r = rnd.Next(-100, 100);

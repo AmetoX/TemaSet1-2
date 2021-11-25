@@ -1,0 +1,29 @@
+public static void set2p2()
+        {
+            int a = int.Parse(Console.ReadLine());
+            int p = 0;
+            int n = 0;
+            int z = 0;
+
+            for (int i = 0; i < a; i++)
+            {
+                int r = rnd.Next(-100, 100);
+
+                Console.Write(r + " ");
+                if (r > 0)
+                {
+                    p++;
+                }
+                if (r < 0)
+                {
+                    n++;
+                }
+                if (r == 0)
+                {
+                    z++;
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"atatea nr  sunt : {p} (pozitive), {z} (zero), {n} (negative).");
+        }
