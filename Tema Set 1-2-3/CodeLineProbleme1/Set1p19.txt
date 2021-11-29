@@ -1,0 +1,30 @@
+public static void set1p19()
+        {
+            Console.WriteLine(dubp19()
+                ? "Numarul este format numai din 2 numere diferite."
+                : "Numarul este format din mai mult de 2 numere diferite.");
+            Console.ReadKey();
+        }
+static bool dubp19()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int a = -1, b = -1;
+            while (n != 0)
+            {
+                if (a == -1)
+                {
+                    a = n % 10;
+                }
+                else if (b == -1 && n % 10 != a)
+                {
+                    b = n % 10;
+                }
+                else if (n % 10 != a && n % 10 != b)
+                {
+                    return false;
+                }
+
+                n /= 10;
+            }
+            return a != -1 && b != -1;
+        }

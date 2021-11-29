@@ -38,12 +38,21 @@ namespace Library1
 
             //this will be empty for now...
         }
+        /// <summary>
+        /// arata timpul cand se porneste programul
+        /// </summary>
         public static void time()
         {
             DateTime dt = DateTime.Now;
             CultureInfo culture = new CultureInfo("en-US");
             Console.WriteLine(dt.ToString(culture));
         }       
+        /// <summary>
+        /// -aceste 3 functii cand vor fi apeta vor arata o serie de variante 
+        /// -odata ce utilizatorul alege una dintr-e acele variante programul va arata in consola exact continutul din fiesrul text
+        /// care ii corespende
+        /// (are rolul de gasi codul unei probleme fara a cauta prin tot codul programului)
+        /// </summary>
         public static void codprobleme1()
         {
             Console.WriteLine("Problema 1(necunoscuta: ax+b = 0)");
@@ -68,7 +77,7 @@ namespace Library1
             Console.WriteLine("Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
             Console.WriteLine("Problema 21(Ghiciti un numar intre 1 si 1024)");
 
-
+            repeat:
             Console.Write("\nType the number of the problem you want to see: ");
             int set1 = int.Parse(Console.ReadLine());
             
@@ -218,8 +227,33 @@ namespace Library1
                         Console.WriteLine(buffer18);
                     }
                     break;
-                default:
+                case 19:
+                    TextReader load19 = new StreamReader(@"..\..\CodeLineProbleme1\Set1p19.txt");
+                    string buffer19;
+                    while ((buffer19 = load19.ReadLine()) != null)
+                    {
+                        Console.WriteLine(buffer19);
+                    }
                     break;
+                case 20:
+                    TextReader load20 = new StreamReader(@"..\..\CodeLineProbleme1\Set1p20.txt");
+                    string buffer20;
+                    while ((buffer20 = load20.ReadLine()) != null)
+                    {
+                        Console.WriteLine(buffer20);
+                    }
+                    break;
+                case 21:
+                    TextReader load21 = new StreamReader(@"..\..\CodeLineProbleme1\Set1p21.txt");
+                    string buffer21;
+                    while ((buffer21 = load21.ReadLine()) != null)
+                    {
+                        Console.WriteLine(buffer21);
+                    }
+                    break;
+                default:
+                    goto repeat;
+                    
             }
             Console.ReadKey();
         }

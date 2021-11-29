@@ -1,0 +1,14 @@
+public static void set1p5()
+        {
+            Console.Write("Introduceti un nr: ");
+            int a = int.Parse(Console.ReadLine());
+            int ogl = 0;
+            int b = a;
+            while (a != 0)
+            {
+                ogl = ogl * 10 + a % 10;
+                a = a / 10;
+            }
+            Console.WriteLine($"Cifra de la sfarsitul unui numar ({ogl}) (Cifrele se numara de la dreapta la stanga): {ogl % 10}");
+            Console.ReadKey();
+        }

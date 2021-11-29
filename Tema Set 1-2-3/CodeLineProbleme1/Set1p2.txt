@@ -1,0 +1,4 @@
+public static void set1p2()
+        {
+            Console.WriteLine("Nu am stiut.");
+        }

@@ -108,6 +108,17 @@ namespace Probleme_Set_2
             Console.WriteLine();
             Console.WriteLine($"atatea nr  sunt : {p} (pozitive), {z} (zero), {n} (negative).");
         }
+        public static void set2p3()
+        {
+            Console.WriteLine("Introduceti un nr:");
+            int n = int.Parse(Console.ReadLine());
+            int sumgaus = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                sumgaus = sumgaus + i;
+            }
+            Console.WriteLine($"Suma numereleor de la 1 pana la {n} este: {sumgaus}.");
+        }
 
     }
 }

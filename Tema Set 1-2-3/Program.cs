@@ -12,8 +12,12 @@ namespace Tema_Set_1_2_3
 {
     class Program
     {
+        //Partea principala din program
+        //Pentru ca programul sa functioneze corect aceasta solutie trebuie selecta ca si startup project
+
         static void Main(string[] args)
         {
+            
             Library1.Program.time();
             Console.WriteLine("Welcome dear User to my program !\n");
             password();
@@ -24,6 +28,7 @@ namespace Tema_Set_1_2_3
             Console.Write("Please enter the number of the option you want to choose: ");
             optionSelect();
             
+            // o functie "goto" pt a merge inapoi la inceput dupa ce sa parcurs odata prin program           
             Console.Write("Do you want to return to the main menu? (y/n)");
             string b = Console.ReadLine();
             string y = "y";
@@ -39,12 +44,19 @@ namespace Tema_Set_1_2_3
             }
             
         }
-        
+
+        /// <summary>
+        /// optiunile listate care apar la inceput
+        /// </summary>
         static void options()
         {
             Console.WriteLine("1.Probleme");
             Console.WriteLine("2.Afisre codul problemelor");
         }
+        /// <summary>
+        /// -al doilea set de optiuni care apar in functie de ce alegi la primul set de optiuni
+        /// -si se mai apeleaza o functie specifica in care vei introduce nr optiunii alese si te va redirectiona spre partea aleasa
+        /// </summary>
         static void optionSelect()
         {
             int select = int.Parse(Console.ReadLine());
@@ -70,6 +82,9 @@ namespace Tema_Set_1_2_3
             }
 
         }
+        /// <summary>
+        /// functia password aceasta depinzand de un bool care daca va intoarce true vei intra in program iar daca nu se va inchide
+        /// </summary>
         static void password()
         {
             if (pass())
@@ -82,14 +97,18 @@ namespace Tema_Set_1_2_3
             }
 
         }
+        /// <summary>
+        /// -acest bool va verifica parola introdusa si va acorda 5 incercari de a introduce parola dupa ce acele incercari se termina
+        /// programul se va inchide 
+        /// - daca parola se potriveste vei putea intra in cont
+        /// </summary>        
         static bool pass()
         {
             for (int P = 5; P > 0; P--)
             {
                 int done = 0;
                 Console.Write("Please type the password:");
-                string p = Console.ReadLine();
-                //string sp = p.ToString();
+                string p = Console.ReadLine();               
                 string passwords = "123";
                 if (p == passwords)
                 {
@@ -111,6 +130,10 @@ namespace Tema_Set_1_2_3
             return false;
 
         }
+        /// <summary>
+        /// aceasta functie este apelata in functia de mai sus optionSelect(), in cazul in care utilizatorul alege prima optiune
+        /// aceasta functie urmand sa redirectioneze utilizatorul spre partea cu probleme
+        /// </summary>
         static void afisareProbleme()
         {
             Console.WriteLine("Scrieti numarul optiunii pe care o alegeti: ");
@@ -136,6 +159,10 @@ namespace Tema_Set_1_2_3
             }
 
         }
+        /// <summary>
+        /// aceasta functie este apelata in functia de mai sus optionSelect(), in cazul in care utilizatorul alege a doua optiune
+        /// aceasta functie urmand sa redirectioneze utilizatorul spre partea cu codul problemelor
+        /// </summary>
         static void codprobleme()
         {
             Console.WriteLine("Scrieti numarul optiunii pe care o alegeti: ");
