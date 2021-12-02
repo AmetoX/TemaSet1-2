@@ -11,7 +11,8 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-
+            
         }
+
     }
 }
