@@ -65,7 +65,6 @@ namespace Probleme_Set_2
                     break;
                 default:
                     break;
-
             }
         }
         static Random rnd = new Random();
@@ -338,6 +337,7 @@ namespace Probleme_Set_2
             {
 
             }
+            Console.WriteLine("Atat s-a putut.");
         }
         //apartin de problmea 9 (sir 1 si 2)
         public static void sir1()
@@ -410,8 +410,7 @@ namespace Probleme_Set_2
                 Console.Write(sb[j]);
             }
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Atat sa putut.");
+            
 
         }
         public static void sir2()
@@ -474,8 +473,7 @@ namespace Probleme_Set_2
                 Console.Write(sb[j]);
             }
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Atat sa putut.");
+     
 
 
         }
@@ -539,8 +537,7 @@ namespace Probleme_Set_2
                 Console.Write(sb[j]);
             }
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Atat sa putut.");
+ 
 
         }
         public static void sir4()
@@ -606,10 +603,7 @@ namespace Probleme_Set_2
             {
                 Console.Write(sb[j]);
             }
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Atat sa putut.");
-
+            Console.WriteLine();       
         }
 
     }
