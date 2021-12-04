@@ -340,6 +340,36 @@ namespace Library1
                     break;
             }
 
+        }       
+        public static bool passv2()
+        {
+            for (int P = 5; P > 0; P--)
+            {
+                Console.Write("Please type the password:");
+                string p = Console.ReadLine();
+                TextReader loadps = new StreamReader(@"..\..\Properties\Cache.txt");
+                string interval = loadps.ReadLine();
+                string[] local_data = interval.Split(' ');
+                int done = 0;
+                if (p == local_data[21])
+                {
+                    Console.WriteLine("Password corect!\n\nWelcome!\n");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("wrong password");
+                    Console.WriteLine($"{P - 1} attemps left");
+                }
+                if (P == done)
+                {
+                    Console.WriteLine("No more attemps left...\n The program is closing...");
+                    return false;
+
+                }
+            }
+            return false;
+
         }
     }
 }

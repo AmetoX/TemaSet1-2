@@ -87,7 +87,7 @@ namespace Tema_Set_1_2_3
         /// </summary>
         static void password()
         {
-            if (pass())
+            if (Library1.Program.passv2())
             {
                 Console.WriteLine("Now you can use the program!");
             }
@@ -106,10 +106,11 @@ namespace Tema_Set_1_2_3
         {
             for (int P = 5; P > 0; P--)
             {
-                int done = 0;
+                
                 Console.Write("Please type the password:");
                 string p = Console.ReadLine();               
                 string passwords = "123";
+                int done = 0;
                 if (p == passwords)
                 {
                     Console.WriteLine("Password corect!\n\nWelcome!\n");
@@ -126,6 +127,7 @@ namespace Tema_Set_1_2_3
                     return false;
 
                 }
+                
             }
             return false;
 
