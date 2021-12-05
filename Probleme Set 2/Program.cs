@@ -727,6 +727,35 @@ namespace Probleme_Set_2
             }
             Console.WriteLine();       
         }
+        public static void s3p10()
+        {
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+            int b = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                int r = rnd.Next(0, n);
+
+                if (r == a)
+                {
+                    b++;
+                }
+                a = r;
+
+                sb.Append(r + " ");
+            }
+            Console.WriteLine();
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Numarul maxim de numere egale in secventa de mai sus este: {b}");
+        }
 
     }
 }

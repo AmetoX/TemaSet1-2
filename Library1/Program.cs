@@ -16,8 +16,8 @@ namespace Library1
             int n = int.Parse(Console.ReadLine());
             char a = '|';
             char b = '*';
-            char c = ' ';
-            char d = '#';
+            //char c = ' ';
+            //char d = '#';
             for (int i = 0; i <= n; i++)
             {
                 Console.Write(a);
