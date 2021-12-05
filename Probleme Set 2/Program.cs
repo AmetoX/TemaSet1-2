@@ -339,7 +339,7 @@ namespace Probleme_Set_2
             }
             Console.WriteLine("Atat s-a putut.");
         }
-        //apartin de problmea 9 (sir 1 si 2)
+        //apartin de problmea 9 (sir 1,2,3,4)
         public static void sir1()
         {
             Console.Write("Introduceti un nr: ");
@@ -350,9 +350,12 @@ namespace Probleme_Set_2
             int b = 0;
             int c = 0;
             int d = n;
-            int f = 0;
             int e = 0;
+            int f = 0;          
             int g = 0;
+            int h = 0;
+            bool cres = false;
+            bool des = false;
             for (int i = 0; i < n; i++)
             {
                 while (d != 1)
@@ -368,33 +371,49 @@ namespace Probleme_Set_2
                     }
                     sb.Append(d + " ");
 
-                    //1  2  3  4  5
                     if (d > a)
                     {
                         if (a > b)
                         {
-                            c++;
+                            cres = false;
+                            if (b > d)
+                            {
+                                cres = true;
+                                c++;
+                            }
+
+                            d = b;
                         }
                         b = a;
+
                     }
                     a = d;
+
                     if (f > d)
                     {
-                        if (e > d)
+                        if (e > f)
                         {
-                            g++;
+                            des = false;
+                            if (h > e)
+                            {
+                                des = true;
+                                g++;
+                            }
+                            h = e;
                         }
-                        e = d;
+                        e = f;
                     }
                     f = d;
+
+                    
                 }
             }
-            if (c == (n - 1))
+            if (c == (n - 1) || cres)
             {
                 Console.WriteLine("Sirul este monoton crescator.");
                 Console.WriteLine();
             }
-            else if (g == (n - 2))
+            else if (g == (n - 2) || des)
             {
                 Console.WriteLine("Sirul este monoton descrescator.");
                 Console.WriteLine();
