@@ -21,7 +21,7 @@ namespace TestArea
             int c = 0;
             int r=n;
             int d = 0;
-            bool ok = false;
+            bool cres = false;
             bool des = false;
             int e=0;
             int f=0;
@@ -29,18 +29,18 @@ namespace TestArea
             int h =0;
             for (int i = 1; i <= n; i++)
             {                
-                r = r-2;
+                r = r/2+1;
                 if (r > a)
                 {
                     if (a > b)
                     {
-                        ok = false;
+                        cres = false;
                         if (b > d)
                         {
-                            ok = true;
+                            cres = true;
                             c++;
                         }
-
+                        
                         d = b;
                     }
                     b = a;
@@ -67,14 +67,14 @@ namespace TestArea
                 sb.Append(r + " ");
             }
             Console.WriteLine();
-            Console.WriteLine(ok);
+            Console.WriteLine(cres);
             Console.WriteLine(des);
             for(int j = 0; j < sb.Length; j++)
             {
                 Console.Write(sb[j]);
             }
             Console.WriteLine();
-            if (c == n-2 || ok)
+            if (c == n-2 || cres)
             {
                 Console.WriteLine("Sirul este crescator.");
                

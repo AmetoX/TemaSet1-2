@@ -210,7 +210,56 @@ namespace Probleme_Set_2
         }
         public static void set2p6()
         {
-           
+            Console.Write("Cate numere doriti sa aiba sirul? :");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int d = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+
+                int r = rnd.Next(0, 100);
+
+                sb.Append(r + " ");
+
+                if (r > a)
+                {
+                    if (a > b)
+                    {
+
+                        if (b > d)
+                        {
+
+                            c++;
+                        }
+
+                        d = b;
+                    }
+                    b = a;
+
+                }
+                a = r;
+            }
+            if (c == (n - 1))
+            {
+                Console.WriteLine("Sirul este monoton crescator.");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Sirul nu este crescator.");
+                Console.WriteLine();
+            }
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
         }
         public static void set2p7()
         {
@@ -349,36 +398,36 @@ namespace Probleme_Set_2
             int a = 0;
             int b = 0;
             int c = 0;
-            int d = n;
+            int d = 0;
             int e = 0;
             int f = 0;          
             int g = 0;
             int h = 0;
-            bool cres = false;
-            bool des = false;
-            for (int i = 0; i < n; i++)
+            int r = n;
+
+            for (int i = 0; i <= n; i++)
             {
-                while (d != 1)
+                while (n != 1)
                 {
 
-                    if (d % 2 == 0)
+                    if (n % 2 == 0)
                     {
-                        d = d / 2;
+                        n = n / 2;
                     }
                     else
                     {
-                        d = 3 * d + 1;
+                        n = 3 * n + 1;
                     }
-                    sb.Append(d + " ");
+                    sb.Append(n + " ");
 
-                    if (d > a)
+                    if (n > a)
                     {
                         if (a > b)
                         {
-                            cres = false;
+                            
                             if (b > d)
                             {
-                                cres = true;
+                                
                                 c++;
                             }
 
@@ -387,33 +436,33 @@ namespace Probleme_Set_2
                         b = a;
 
                     }
-                    a = d;
+                    a = n;
 
-                    if (f > d)
+                    if (f > n)
                     {
                         if (e > f)
                         {
-                            des = false;
+                            
                             if (h > e)
                             {
-                                des = true;
+                                
                                 g++;
                             }
                             h = e;
                         }
                         e = f;
                     }
-                    f = d;
+                    f = n;
 
                     
                 }
             }
-            if (c == (n - 1) || cres)
+            if (c == (r - 1))
             {
                 Console.WriteLine("Sirul este monoton crescator.");
                 Console.WriteLine();
             }
-            else if (g == (n - 2) || des)
+            else if (g == (r - 2))
             {
                 Console.WriteLine("Sirul este monoton descrescator.");
                 Console.WriteLine();
@@ -434,41 +483,59 @@ namespace Probleme_Set_2
         }
         public static void sir2()
         {
-            Console.Write("Introduceti un nr: ");
+            Console.Write("Cate numere doriti sa aiba sirul? :");
             int n = int.Parse(Console.ReadLine());
             StringBuilder sb = new StringBuilder();
             sb.Capacity = n;
             int a = 0;
             int b = 0;
             int c = 0;
-            int f = 0;
+            int d = 0;
             int e = 0;
+            int f = 0;
             int g = 0;
+            int h = 0;
+
             for (int i = 0; i < n; i++)
             {
 
                 int r = rnd.Next(0, 100);
-                int d = r;
-                sb.Append(d + " ");
+                
+                sb.Append(r + " ");
 
-                if (d > a)
+                if (r > a)
                 {
                     if (a > b)
                     {
-                        c++;
+                        
+                        if (b > d)
+                        {
+                            
+                            c++;
+                        }
+
+                        d = b;
                     }
                     b = a;
+
                 }
-                a = d;
-                if (f > d)
+                a = r;
+
+                if (f > r)
                 {
-                    if (e > d)
+                    if (e > f)
                     {
-                        g++;
+                        
+                        if (h > e)
+                        {
+                            
+                            g++;
+                        }
+                        h = e;
                     }
-                    e = d;
+                    e = f;
                 }
-                f = d;
+                f = r;
 
             }
             if (c == (n - 1))
@@ -498,41 +565,59 @@ namespace Probleme_Set_2
         }
         public static void sir3()
         {
-            Console.Write("Introduceti un nr: ");
+            Console.Write("Cate numere doriti sa aiba sirul? :");
             int n = int.Parse(Console.ReadLine());
             StringBuilder sb = new StringBuilder();
             sb.Capacity = n;
             int a = 0;
             int b = 0;
             int c = 0;
-            int f = 0;
+            int d = 0;
             int e = 0;
+            int f = 0;
             int g = 0;
+            int h = 0;
             int r = rnd.Next(1, 1000);
+            int j = r;
             for(int i = 0; i < n; i++)
             {
             
-                int d = r+2;
-                sb.Append(d + " ");
+                j+=2;
+                sb.Append(j + " ");
 
-                if (d > a)
+                if (j > a)
                 {
                     if (a > b)
                     {
-                        c++;
+                        
+                        if (b > d)
+                        {
+                            
+                            c++;
+                        }
+
+                        d = b;
                     }
                     b = a;
+
                 }
-                a = d;
-                if (f > d)
+                a = j;
+
+                if (f > j)
                 {
-                    if (e > d)
+                    if (e > f)
                     {
-                        g++;
+                        
+                        if (h > e)
+                        {
+                            
+                            g++;
+                        }
+                        h = e;
                     }
-                    e = d;
+                    e = f;
                 }
-                f = d;
+                f = j;
 
             }
             if (c == (n - 1))
@@ -551,9 +636,9 @@ namespace Probleme_Set_2
                 Console.WriteLine();
             }
 
-            for (int j = 0; j < sb.Length; j++)
+            for (int k = 0; k < sb.Length; k++)
             {
-                Console.Write(sb[j]);
+                Console.Write(sb[k]);
             }
             Console.WriteLine();
  
@@ -561,43 +646,61 @@ namespace Probleme_Set_2
         }
         public static void sir4()
         {
-            Console.Write("Introduceti un nr: ");
+            Console.Write("Cate numere doriti sa aiba sirul? :");
             int n = int.Parse(Console.ReadLine());
             StringBuilder sb = new StringBuilder();
             sb.Capacity = n;
             int a = 0;
             int b = 0;
             int c = 0;
-            int f = 0;
+            int d = 0;
             int e = 0;
+            int f = 0;
             int g = 0;
-            int d;
+            int h = 0;
+
+            int j;
             int k = rnd.Next(1, 1000);
             for (int i = 0; i < n; i++)
             {
 
                 k--;
-                d = k--;
-                sb.Append(d + " ");
+                j = k--;
+                sb.Append(j + " ");
 
-                if (d > a)
+                if (j > a)
                 {
                     if (a > b)
                     {
-                        c++;
+                        
+                        if (b > d)
+                        {
+                            
+                            c++;
+                        }
+
+                        d = b;
                     }
                     b = a;
+
                 }
-                a = d;
-                if (f > d)
+                a = j;
+
+                if (f > j)
                 {
-                    if (e > d)
+                    if (e > f)
                     {
-                        g++;
+                        
+                        if (h > e)
+                        {
+                            
+                            g++;
+                        }
+                        h = e;
                     }
-                    e = d;
+                    e = f;
                 }
-                f = d;
+                f = j;
 
 
 
@@ -618,9 +721,9 @@ namespace Probleme_Set_2
                 Console.WriteLine();
             }
 
-            for (int j = 0; j < sb.Length; j++)
+            for (int l = 0; l < sb.Length; l++)
             {
-                Console.Write(sb[j]);
+                Console.Write(sb[l]);
             }
             Console.WriteLine();       
         }
