@@ -36,7 +36,7 @@ namespace Probleme_Set_1
             Console.WriteLine("Problema 19(daca un numar e format doar cu 2 cifre care se pot repeta)");
             Console.WriteLine("Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
             Console.WriteLine("Problema 21(Ghiciti un numar intre 1 si 1024)");
-
+            begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set1 = int.Parse(Console.ReadLine());
 
@@ -106,7 +106,7 @@ namespace Probleme_Set_1
                     set1p21();
                     break;
                 default:
-                    break;
+                    goto begin;
             }
         }
         public static void set1p1()

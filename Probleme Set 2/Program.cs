@@ -14,24 +14,24 @@ namespace Probleme_Set_2
         }
         public static void afisareProblemeSet2()
         {
-            Console.WriteLine("Problema 1( )");
-            Console.WriteLine("Problema 2( )");
-            Console.WriteLine("Problema 3( )");
-            Console.WriteLine("Problema 4( )");
-            Console.WriteLine("Problema 5( )");
-            Console.WriteLine("Problema 6( )");
-            Console.WriteLine("Problema 7( )");
-            Console.WriteLine("Problema 8( )");
-            Console.WriteLine("Problema 9( )");
-            Console.WriteLine("Problema 10( )");
-            Console.WriteLine("Problema 11( )");
-            Console.WriteLine("Problema 12( )");
-            Console.WriteLine("Problema 13( )");
-            Console.WriteLine("Problema 14( )");
-            Console.WriteLine("Problema 15( )");
-            Console.WriteLine("Problema 16( )");
-            Console.WriteLine("Problema 17( )");
-
+            Console.WriteLine("Problema 1(Cate din ele sunt pare.)");
+            Console.WriteLine("Problema 2(Cate sunt negative, cate sunt zero si cate sunt pozitive.)");
+            Console.WriteLine("Problema 3(Suma si produsul numerelor de la 1 la n.)");
+            Console.WriteLine("Problema 4(Pe ce pozitie se afla in secventa un numara a.)");
+            Console.WriteLine("Problema 5(Cate elemente dintr-o secventa de n numere sunt egale cu pozitia pe care apar in secventa.)");
+            Console.WriteLine("Problema 6(Sa se determine daca numerele din secventa sunt in ordine crescatoare.)");
+            Console.WriteLine("Problema 7(Sa se determine cea mai mare si cea mai mica valoare din secventa.)");
+            Console.WriteLine("Problema 8(Al n-lea numar din sirul lui Fibonacci.)");
+            Console.WriteLine("Problema 9(Daca o secventa de n numere este monotona.)");
+            Console.WriteLine("Problema 10(Care este numarul maxim de numere consecutive egale din secventa.)");
+            Console.WriteLine("Problema 11(Sa se caculeze suma inverselor acestor numere.)");
+            Console.WriteLine("Problema 12(Cate grupuri de numere consecutive diferite de zero sunt intr-o secventa de n numere.)");
+            Console.WriteLine("Problema 13(Determinati daca o secventa de n numere este o secventa crescatoare rotita.)");
+            Console.WriteLine("Problema 14(Determinati daca o secventa de n numere este o secventa monotona rotita.)");
+            Console.WriteLine("Problema 15(Sa se determine daca este bitonica.)");
+            Console.WriteLine("Problema 16(Se da o secventa de n numere. Se cere sa se determine daca este o secventa bitonica rotita.)");
+            Console.WriteLine("Problema 17(Determinati daca secventa reprezinta o secventa de paranteze corecta.)");
+            begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set2 = int.Parse(Console.ReadLine());
             switch (set2)
@@ -63,8 +63,32 @@ namespace Probleme_Set_2
                 case 9:
                     set2p9();
                     break;
-                default:
+                case 10:
+                    set2p10();
                     break;
+                case 11:
+                    set2p11();
+                    break;
+                case 12:
+                    set2p12();
+                    break;
+                case 13:
+                    set2p13();
+                    break;
+                case 14:
+                    set2p14();
+                    break;
+                case 15:
+                    set2p15();
+                    break;
+                case 16:
+                    set2p16();
+                    break;
+                case 17:
+                    set2p17();                    
+                    break;
+                default:
+                    goto begin;                   
             }
         }
         static Random rnd = new Random();
@@ -132,7 +156,7 @@ namespace Probleme_Set_2
         {
             Console.Write("Cate numere doriti sa aiba sirul? : ");
             int n = int.Parse(Console.ReadLine());
-            Console.Write("numarul pe care il cautati: ");
+            Console.Write("Numarul pe care il cautati: ");
             int a = int.Parse(Console.ReadLine());
 
             StringBuilder sb = new StringBuilder();
@@ -727,7 +751,7 @@ namespace Probleme_Set_2
             }
             Console.WriteLine();       
         }
-        public static void s3p10()
+        public static void set2p10()
         {
             Console.Write("Introduceti un nr. : ");
             int n = int.Parse(Console.ReadLine());
@@ -755,6 +779,150 @@ namespace Probleme_Set_2
             }
             Console.WriteLine();
             Console.WriteLine($"Numarul maxim de numere egale in secventa de mai sus este: {b}");
+        }
+        public static void set2p11()
+        {
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int suma = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int r = rnd.Next(0, 100);
+                Console.Write(r + " ");
+                int ogl = 0;
+                while (r != 0)
+                {
+                    ogl = ogl * 10 + r % 10;
+                    r = r / 10;
+                }
+                suma = suma + ogl;
+
+                sb.Append(ogl + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Suma inverselor numerelor din sir este: {suma}");
+        }
+        public static void set2p12()
+        {
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int r = rnd.Next(0, 10);
+                if (r != 0)
+                {
+                    a++;
+                }
+
+                sb.Append(r + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Sunt: {a} grupuri consecutive de numere diferite de 0.");
+        }
+        public static void set2p13()
+        {
+
+        }
+        public static void set2p14()
+        {
+
+        }
+        public static void set2p15()
+        {
+
+        }
+        public static void set2p16()
+        {
+
+        }
+        public static void set2p17()
+        {
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int b = 0;
+            int a = -1;
+            int zero = 0;
+            int unu = 0;
+            bool ok = true; ;
+            for (int i = 1; i <= n; i++)
+            {
+                //()(()())
+                //01001011
+                //(((())))()((()))
+                int r = rnd.Next(0, 2);
+                if (r == 0)
+                {
+                    Console.Write("(" + " ");
+                }
+                else if (r == 1)
+                {
+                    Console.Write(")" + " ");
+                }
+                if (r == 1 && a == 0)
+                {
+                    b++;
+                }
+                a = r;
+
+
+                ok = true;
+                if (r == 0)
+                {
+                    ok = false;
+                    zero++;
+                }
+                else
+                {
+                    unu++;
+                }
+
+                sb.Append(r + " ");
+            }
+            Console.WriteLine();
+
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Paranteze perfecte: " + b);
+            if (sb[0] == 1 || ok)
+            {
+                Console.WriteLine("nu");
+            }
+
+            if (zero == unu)
+
+            {
+                Console.WriteLine("merge");
+            }
+
         }
 
     }

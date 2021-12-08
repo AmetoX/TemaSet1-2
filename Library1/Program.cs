@@ -13,31 +13,8 @@ namespace Library1
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            char a = '|';
-            char b = '*';
-            //char c = ' ';
-            //char d = '#';
-            for (int i = 0; i <= n; i++)
-            {
-                Console.Write(a);
-                for (int j = 0; j <= 4; j++)
-                {
-                    Console.Write(b);
-                }
-                Console.Write(a);
-                for (int j = 0; j <= 4; j++)
-                {
-                    Console.Write(b);
-                }
-                Console.Write(a);
-                Console.WriteLine();
-            }
-
-
-
-            //this will be empty for now...
-        }
+            // this will be empty for now...
+        }             
         /// <summary>
         /// arata timpul cand se porneste programul
         /// </summary>
@@ -86,10 +63,10 @@ namespace Library1
                 case 1:
                     TextReader load = new StreamReader(@"..\..\CodeLineProbleme1\Set1p1.txt");
                     string buffer;
-                    while ((buffer = load.ReadLine()) != null)
-                    {
-                        Console.WriteLine(buffer);
-                    }
+                        while ((buffer = load.ReadLine()) != null)
+                        {
+                            Console.WriteLine(buffer);
+                        }
                     break;
                 case 2:
                     TextReader load2 = new StreamReader(@"..\..\CodeLineProbleme1\Set1p2.txt");

@@ -32,7 +32,7 @@ namespace Probleme_Set_3
             Console.WriteLine("Problema 15( )");
             Console.WriteLine("Problema 16( )");
             Console.WriteLine("Problema 17( )");
-
+            begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set3 = int.Parse(Console.ReadLine());
             switch (set3)
@@ -54,7 +54,7 @@ namespace Probleme_Set_3
                 case 8:
                     break;
                 default:
-                    break;
+                    goto begin;
 
             }
         }
