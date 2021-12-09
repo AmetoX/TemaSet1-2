@@ -11,8 +11,7 @@ namespace Probleme_Set_1
         public static void Main(string[] args)
         {
             //this will be empty for now...
-        }
-        
+        }       
         public static void afisareProblemeSet1()
         {
             Console.WriteLine("Problema 1(necunoscuta: ax+b = 0)");

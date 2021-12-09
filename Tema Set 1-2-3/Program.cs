@@ -14,7 +14,6 @@ namespace Tema_Set_1_2_3
     {
         //Partea principala din program
         //Pentru ca programul sa functioneze corect aceasta solutie trebuie selecta ca si startup project
-
         static void Main(string[] args)
         {
             

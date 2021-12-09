@@ -924,6 +924,5 @@ namespace Probleme_Set_2
             }
 
         }
-
     }
 }
