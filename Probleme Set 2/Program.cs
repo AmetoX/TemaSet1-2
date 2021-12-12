@@ -99,7 +99,6 @@ namespace Probleme_Set_2
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
                 goto begin;
-                throw;
             }
         }
         static Random rnd = new Random();

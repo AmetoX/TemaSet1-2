@@ -58,53 +58,63 @@ namespace Tema_Set_1_2_3
         /// </summary>
         static void optionSelect()
         {
-            int select = int.Parse(Console.ReadLine());
-            switch (select)
+            try1:
+            try
             {
-                case 1:
-                    Console.Clear();
-                    Console.WriteLine("Select the set:\n");
-                    Console.WriteLine("1.Set 1");
-                    Console.WriteLine("2.Set 2");
-                    Console.WriteLine("3.Set 3");
-                    afisareProbleme();
-                    Console.WriteLine("Again or continue? (a/c)");
-                    string b = Console.ReadLine();
-                    string y = "a";
-                    string n = "c";
-                    if (b == y)
-                    {
+                int select = int.Parse(Console.ReadLine());
+                switch (select)
+                {
+                    case 1:
                         Console.Clear();
-                        goto again;
-                    }
-                    else if (b == n)
-                    {
-                        Console.WriteLine("\nThank you for using my program!");
-                    }
-                    break;
-                case 2:
+                        Console.WriteLine("Select the set:\n");
+                        Console.WriteLine("1.Set 1");
+                        Console.WriteLine("2.Set 2");
+                        Console.WriteLine("3.Set 3");
+                        afisareProbleme();
+                        Console.WriteLine("Again or continue? (a/c)");
+                        string b = Console.ReadLine();
+                        string y = "a";
+                        string n = "c";
+                        if (b == y)
+                        {
+                            Console.Clear();
+                            goto again;
+                        }
+                        else if (b == n)
+                        {
+                            Console.WriteLine("\nThank you for using my program!");
+                        }
+                        break;
+                    case 2:
                     again:
-                    Console.Clear();
-                    Console.WriteLine("1.Cod probleme 1");
-                    Console.WriteLine("2.Cod probleme 2");
-                    Console.WriteLine("3.Cod probleme 3");
-                    codprobleme();
-                    Console.WriteLine("Again or continue? (a/c)");
-                    string d = Console.ReadLine();
-                    string a = "a";
-                    string c = "c";
-                    if (d == a)
-                    {
                         Console.Clear();
-                        goto again;
-                    }
-                    else if (d == c)
-                    {
-                        Console.WriteLine("\nThank you for using my program!");
-                    }
-                    break;
-                default:
-                    break;
+                        Console.WriteLine("1.Cod probleme 1");
+                        Console.WriteLine("2.Cod probleme 2");
+                        Console.WriteLine("3.Cod probleme 3");
+                        codprobleme();
+                        Console.WriteLine("Again or continue? (a/c)");
+                        string d = Console.ReadLine();
+                        string a = "a";
+                        string c = "c";
+                        if (d == a)
+                        {
+                            Console.Clear();
+                            goto again;
+                        }
+                        else if (d == c)
+                        {
+                            Console.WriteLine("\nThank you for using my program!");
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+                Console.WriteLine("EROR: wrong input.");
+                Console.WriteLine("Please try again...");
+                goto try1;
             }
 
         }
@@ -164,27 +174,38 @@ namespace Tema_Set_1_2_3
         /// </summary>
         static void afisareProbleme()
         {
+            try2:
             Console.WriteLine("Scrieti numarul optiunii pe care o alegeti: ");
-            int af = int.Parse(Console.ReadLine());
-            if (af == 1)
+            try
             {
-                Console.Clear();
-                Console.WriteLine("\nProbleme set 1:");
-                Probleme_Set_1.Program.afisareProblemeSet1();
+                int af = int.Parse(Console.ReadLine());
+                if (af == 1)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nProbleme set 1:");
+                    Probleme_Set_1.Program.afisareProblemeSet1();
 
+                }
+                else if (af == 2)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nProbleme set 2:");
+                    Probleme_Set_2.Program.afisareProblemeSet2();
+                }
+                else if (af == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nProbleme set 3:");
+                    Probleme_Set_3.Program.afisareProblemeSet3();
+                }
             }
-            else if (af == 2)
+            catch
             {
-                Console.Clear();
-                Console.WriteLine("\nProbleme set 2:");
-                Probleme_Set_2.Program.afisareProblemeSet2();
+                Console.WriteLine("EROR: wrong input.");
+                Console.WriteLine("Please try again...");
+                goto try2;
             }
-            else if (af == 3)
-            {
-                Console.Clear();
-                Console.WriteLine("\nProbleme set 3:");
-                Probleme_Set_3.Program.afisareProblemeSet3();
-            }
+
 
         }
         /// <summary>
@@ -193,18 +214,29 @@ namespace Tema_Set_1_2_3
         /// </summary>
         static void codprobleme()
         {
+            try3:
             Console.WriteLine("Scrieti numarul optiunii pe care o alegeti: ");
-            int rs = int.Parse(Console.ReadLine());
-            if (rs == 1)
+            try
             {
-                Library1.Program.codprobleme1();
+                int rs = int.Parse(Console.ReadLine());
+                if (rs == 1)
+                {
+                    Library1.Program.codprobleme1();
+                }
+                else if (rs == 2)
+                {
+                    Library1.Program.codprobleme2();
+                }
+                else if (rs == 3)
+                {
+                    Library1.Program.codprobleme3();
+                }
             }
-            else if (rs == 2)
+            catch
             {
-                Library1.Program.codprobleme2();
-            } else if(rs == 3)
-            {
-                Library1.Program.codprobleme3();
+                Console.WriteLine("EROR: wrong input.");
+                Console.WriteLine("Please try again...");
+                goto try3;
             }
         }
     }

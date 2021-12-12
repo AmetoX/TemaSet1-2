@@ -114,8 +114,7 @@ namespace Probleme_Set_1
             {
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
-                goto begin;
-                
+                goto begin;                
             }
            
         }

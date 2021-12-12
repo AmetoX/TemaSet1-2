@@ -35,27 +35,36 @@ namespace Probleme_Set_3
             begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set3 = int.Parse(Console.ReadLine());
-            switch (set3)
+            try
             {
-                case 1:
-                    break;
-                case 2:                   
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                default:
-                    goto begin;
+                switch (set3)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    case 8:
+                        break;
+                    default:
+                        goto begin;
 
+                }
+            }
+            catch
+            {
+                Console.WriteLine("EROR: wrong input.");
+                Console.WriteLine("Please try again...");
+                goto begin;
             }
         }
     }
