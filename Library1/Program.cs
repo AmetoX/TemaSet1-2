@@ -236,27 +236,23 @@ namespace Library1
         }
         public static void codprobleme2()
         {
-            Console.WriteLine("Problema 1()");
-            Console.WriteLine("Problema 2()");
-            Console.WriteLine("Problema 3()");
-            Console.WriteLine("Problema 4()");
-            Console.WriteLine("Problema 5()");
-            Console.WriteLine("Problema 6()");
-            Console.WriteLine("Problema 7()");
-            Console.WriteLine("Problema 8()");
-            Console.WriteLine("Problema 9()");
-            Console.WriteLine("Problema 10()");
-            Console.WriteLine("Problema 11()");
-            Console.WriteLine("Problema 12()");
-            Console.WriteLine("Problema 13()");
-            Console.WriteLine("Problema 14()");
-            Console.WriteLine("Problema 15()");
-            Console.WriteLine("Problema 16()");
-            Console.WriteLine("Problema 17()");
-            Console.WriteLine("Problema 18()");
-            Console.WriteLine("Problema 19()");
-            Console.WriteLine("Problema 20()");
-            Console.WriteLine("Problema 21()");
+            Console.WriteLine("Problema 1(Cate din ele sunt pare.)");
+            Console.WriteLine("Problema 2(Cate sunt negative, cate sunt zero si cate sunt pozitive.)");
+            Console.WriteLine("Problema 3(Suma si produsul numerelor de la 1 la n.)");
+            Console.WriteLine("Problema 4(Pe ce pozitie se afla in secventa un numara a.)");
+            Console.WriteLine("Problema 5(Cate elemente dintr-o secventa de n numere sunt egale cu pozitia pe care apar in secventa.)");
+            Console.WriteLine("Problema 6(Sa se determine daca numerele din secventa sunt in ordine crescatoare.)");
+            Console.WriteLine("Problema 7(Sa se determine cea mai mare si cea mai mica valoare din secventa.)");
+            Console.WriteLine("Problema 8(Al n-lea numar din sirul lui Fibonacci.)");
+            Console.WriteLine("Problema 9(Daca o secventa de n numere este monotona.)");
+            Console.WriteLine("Problema 10(Care este numarul maxim de numere consecutive egale din secventa.)");
+            Console.WriteLine("Problema 11(Sa se caculeze suma inverselor acestor numere.)");
+            Console.WriteLine("Problema 12(Cate grupuri de numere consecutive diferite de zero sunt intr-o secventa de n numere.)");
+            Console.WriteLine("Problema 13(Determinati daca o secventa de n numere este o secventa crescatoare rotita.)");
+            Console.WriteLine("Problema 14(Determinati daca o secventa de n numere este o secventa monotona rotita.)");
+            Console.WriteLine("Problema 15(Sa se determine daca este bitonica.)");
+            Console.WriteLine("Problema 16(Se da o secventa de n numere. Se cere sa se determine daca este o secventa bitonica rotita.)");
+            Console.WriteLine("Problema 17(Determinati daca secventa reprezinta o secventa de paranteze corecta.)");
 
             Console.Write("\nType the number of the problem you want to see: ");
             int set2 = int.Parse(Console.ReadLine());

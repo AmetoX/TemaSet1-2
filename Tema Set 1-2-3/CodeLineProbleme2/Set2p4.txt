@@ -1,0 +1,45 @@
+public static void set2p4()
+        {
+            Console.Write("Cate numere doriti sa aiba sirul? : ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Write("Numarul pe care il cautati: ");
+            int a = int.Parse(Console.ReadLine());
+
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int b = 0;
+            bool ok = false;
+            for (int i = 0; i < n; i++)
+            {
+                int r = rnd.Next(1, 10);
+                //Console.Write(r + " ");
+                sb.Append(r);
+                b++;
+                if (r == a)
+                {
+
+                    Console.WriteLine($"am gasit nr {a} pe pozitia {b}");
+                    ok = true;
+                }
+                else
+                {
+
+                }
+            }
+            if (ok)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("-1");
+            }
+            Console.WriteLine("Sirul de numere generat: ");
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j] + " ");
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }

@@ -35,78 +35,89 @@ namespace Probleme_Set_1
             Console.WriteLine("Problema 19(daca un numar e format doar cu 2 cifre care se pot repeta)");
             Console.WriteLine("Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
             Console.WriteLine("Problema 21(Ghiciti un numar intre 1 si 1024)");
-            begin:
+        begin:
             Console.Write("\nType the number of the problem you want to see: ");
-            int set1 = int.Parse(Console.ReadLine());
-
-            switch (set1)
+            try
             {
-                case 1:
-                    set1p1();
-                    break;
-                case 2:
-                    set1p2();
-                    break;
-                case 3:
-                    set1p3();
-                    break;
-                case 4:
-                    set1p4();
-                    break;
-                case 5:
-                    set1p5();
-                    break;
-                case 6:
-                    set1p6();
-                    break;
-                case 7:
-                    set1p7();
-                    break;
-                case 8:
-                    set1p8();
-                    break;
-                case 9:
-                    set1p9();
-                    break;
-                case 10:
-                    set1p10();
-                    break;
-                case 11:
-                    set1p11();
-                    break;
-                case 12:
-                    set1p12();
-                    break;
-                case 13:
-                    set1p13();
-                    break;
-                case 14:
-                    set1p14();
-                    break;
-                case 15:
-                    set1p15();
-                    break;
-                case 16:
-                    set1p16();
-                    break;
-                case 17:
-                    set1p17();
-                    break;
-                case 18:
-                    set1p18();
-                    break;
-                case 19:
-                    set1p19();
-                    break;
-                case 20:
-                    set1p20();
-                    break;
-                case 21:
-                    set1p21();
-                    break;
-                default:
-                    goto begin;
+                int set1 = int.Parse(Console.ReadLine());
+                switch (set1)
+                {
+                    case 1:
+                        set1p1();
+                        break;
+                    case 2:
+                        set1p2();
+                        break;
+                    case 3:
+                        set1p3();
+                        break;
+                    case 4:
+                        set1p4();
+                        break;
+                    case 5:
+                        set1p5();
+                        break;
+                    case 6:
+                        set1p6();
+                        break;
+                    case 7:
+                        set1p7();
+                        break;
+                    case 8:
+                        set1p8();
+                        break;
+                    case 9:
+                        set1p9();
+                        break;
+                    case 10:
+                        set1p10();
+                        break;
+                    case 11:
+                        set1p11();
+                        break;
+                    case 12:
+                        set1p12();
+                        break;
+                    case 13:
+                        set1p13();
+                        break;
+                    case 14:
+                        set1p14();
+                        break;
+                    case 15:
+                        set1p15();
+                        break;
+                    case 16:
+                        set1p16();
+                        break;
+                    case 17:
+                        set1p17();
+                        break;
+                    case 18:
+                        set1p18();
+                        break;
+                    case 19:
+                        set1p19();
+                        break;
+                    case 20:
+                        set1p20();
+                        break;
+                    case 21:
+                        set1p21();
+                        break;
+                    default:
+                        Console.WriteLine("Wrong problem number.Try again!");
+                        goto begin;
+                }
             }
+            catch
+            {
+                Console.WriteLine("EROR: wrong input.");
+                Console.WriteLine("Please try again...");
+                goto begin;
+                
+            }
+           
         }
         public static void set1p1()
         {

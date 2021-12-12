@@ -68,13 +68,40 @@ namespace Tema_Set_1_2_3
                     Console.WriteLine("2.Set 2");
                     Console.WriteLine("3.Set 3");
                     afisareProbleme();
+                    Console.WriteLine("Again or continue? (a/c)");
+                    string b = Console.ReadLine();
+                    string y = "a";
+                    string n = "c";
+                    if (b == y)
+                    {
+                        Console.Clear();
+                        goto again;
+                    }
+                    else if (b == n)
+                    {
+                        Console.WriteLine("\nThank you for using my program!");
+                    }
                     break;
                 case 2:
+                    again:
                     Console.Clear();
                     Console.WriteLine("1.Cod probleme 1");
                     Console.WriteLine("2.Cod probleme 2");
                     Console.WriteLine("3.Cod probleme 3");
                     codprobleme();
+                    Console.WriteLine("Again or continue? (a/c)");
+                    string d = Console.ReadLine();
+                    string a = "a";
+                    string c = "c";
+                    if (d == a)
+                    {
+                        Console.Clear();
+                        goto again;
+                    }
+                    else if (d == c)
+                    {
+                        Console.WriteLine("\nThank you for using my program!");
+                    }
                     break;
                 default:
                     break;

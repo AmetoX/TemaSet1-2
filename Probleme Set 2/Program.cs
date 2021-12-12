@@ -34,61 +34,72 @@ namespace Probleme_Set_2
             begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set2 = int.Parse(Console.ReadLine());
-            switch (set2)
+            try
             {
-                case 1:
-                    set2p1();
-                    break;
-                case 2:
-                    set2p2();
-                    break;
-                case 3:
-                    set2p3();
-                    break;
-                case 4:
-                    set2p4();
-                    break;
-                case 5:
-                    set2p5();
-                    break;
-                case 6:
-                    set2p6();
-                    break;
-                case 7:
-                    set2p7();
-                    break;
-                case 8:
-                    set2p8();
-                    break;
-                case 9:
-                    set2p9();
-                    break;
-                case 10:
-                    set2p10();
-                    break;
-                case 11:
-                    set2p11();
-                    break;
-                case 12:
-                    set2p12();
-                    break;
-                case 13:
-                    set2p13();
-                    break;
-                case 14:
-                    set2p14();
-                    break;
-                case 15:
-                    set2p15();
-                    break;
-                case 16:
-                    set2p16();
-                    break;
-                case 17:
-                    set2p17();                    
-                    break;
-                default:
-                    goto begin;                   
+                switch (set2)
+                {
+                    case 1:
+                        set2p1();
+                        break;
+                    case 2:
+                        set2p2();
+                        break;
+                    case 3:
+                        set2p3();
+                        break;
+                    case 4:
+                        set2p4();
+                        break;
+                    case 5:
+                        set2p5();
+                        break;
+                    case 6:
+                        set2p6();
+                        break;
+                    case 7:
+                        set2p7();
+                        break;
+                    case 8:
+                        set2p8();
+                        break;
+                    case 9:
+                        set2p9();
+                        break;
+                    case 10:
+                        set2p10();
+                        break;
+                    case 11:
+                        set2p11();
+                        break;
+                    case 12:
+                        set2p12();
+                        break;
+                    case 13:
+                        set2p13();
+                        break;
+                    case 14:
+                        set2p14();
+                        break;
+                    case 15:
+                        set2p15();
+                        break;
+                    case 16:
+                        set2p16();
+                        break;
+                    case 17:
+                        set2p17();
+                        break;
+                    default:
+                        Console.WriteLine("Wrong problem number.Try again!");
+                        goto begin;
+                }
+            }
+            catch
+            {
+                Console.WriteLine("EROR: wrong input.");
+                Console.WriteLine("Please try again...");
+                goto begin;
+                throw;
             }
         }
         static Random rnd = new Random();
