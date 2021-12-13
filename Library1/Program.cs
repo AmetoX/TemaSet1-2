@@ -294,8 +294,11 @@ namespace Library1
             }
             catch
             {
+                int p = 0;
+                Console.WriteLine();
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
+                Console.WriteLine();
                 goto repeat1;
             }
 

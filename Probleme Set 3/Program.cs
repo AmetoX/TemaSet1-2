@@ -56,6 +56,7 @@ namespace Probleme_Set_3
                     case 8:
                         break;
                     default:
+                        Console.WriteLine("Wrong problem number.Try again!");
                         goto begin;
 
                 }

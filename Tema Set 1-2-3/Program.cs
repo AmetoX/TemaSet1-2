@@ -16,17 +16,17 @@ namespace Tema_Set_1_2_3
         //Pentru ca programul sa functioneze corect aceasta solutie trebuie selecta ca si startup project
         static void Main(string[] args)
         {
-            
+
             Library1.Program.time();
             Console.WriteLine("Welcome dear User to my program !\n");
             password();
             start:
+
             Console.WriteLine("Chose an option from below:");
             Console.WriteLine();
             options();
             Console.Write("Please enter the number of the option you want to choose: ");
             optionSelect();
-            
             // o functie "goto" pt a merge inapoi la inceput dupa ce sa parcurs odata prin program           
             Console.Write("Do you want to return to the main menu? (y/n)");
             string b = Console.ReadLine();
@@ -35,15 +35,13 @@ namespace Tema_Set_1_2_3
             if (b == y)
             {
                 Console.Clear();
-                goto start;           
+                goto start;
             }
             else if (b == n)
             {
                 Console.WriteLine("\nThank you for using my program!");
             }
-            
-        }
-
+        }      
         /// <summary>
         /// optiunile listate care apar la inceput
         /// </summary>
@@ -107,16 +105,18 @@ namespace Tema_Set_1_2_3
                         }
                         break;
                     default:
-                        break;
+                        Console.WriteLine("Wrong problem number.Try again!");
+                        goto again;
                 }
             }
             catch
             {
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
+                Console.WriteLine();
+                Console.Write("Please enter the number of the option you want to choose: ");
                 goto try1;
             }
-
         }
         /// <summary>
         /// functia password aceasta depinzand de un bool care daca va intoarce true vei intra in program iar daca nu se va inchide
@@ -175,7 +175,7 @@ namespace Tema_Set_1_2_3
         static void afisareProbleme()
         {
             try2:
-            Console.WriteLine("Scrieti numarul optiunii pe care o alegeti: ");
+            Console.Write("Scrieti numarul optiunii pe care o alegeti: ");
             try
             {
                 int af = int.Parse(Console.ReadLine());
