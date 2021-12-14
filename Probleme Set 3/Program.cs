@@ -50,8 +50,10 @@ namespace Probleme_Set_3
                         set3p3();
                         break;
                     case 4:
+                        set3p4();
                         break;
                     case 5:
+                        set3p5();
                         break;
                     case 6:
                         break;
@@ -62,7 +64,6 @@ namespace Probleme_Set_3
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");
                         goto begin;
-
                 }
             }
             catch
@@ -142,7 +143,6 @@ namespace Probleme_Set_3
             {
                 arr[i] = rnd.Next(-100, 100);
             }
-            int b = -1;
             int c = 0;
             int d = 0;
             int e = 0;
@@ -154,16 +154,16 @@ namespace Probleme_Set_3
             Array.Sort(arr2);
             for (int i = 0; i < arr.Length; i++)
             {
-                b++;
+                
                 if (arr[i] == arr2[a - 1])
                 {
                     c = arr[i];
-                    d = b;
+                    d = i;
                 }
                 if (arr[i] == arr2[0])
                 {
                     e = arr[i];
-                    f = b;
+                    f = i;
                 }
             }
 
@@ -171,6 +171,57 @@ namespace Probleme_Set_3
             Console.WriteLine();
             Console.WriteLine($"Cel mai mare nr este: {c} pe pozitia {d}");
             Console.WriteLine($"Cel mai mic nr este: {e} pe pozitia {f}");
+        }
+        public static void set3p4()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int b = 0;
+            int c = 0;
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);
+            }
+            Array.Sort(arr);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == arr[0])
+                {
+                    b++;
+                }
+                if (arr[i] == arr[a - 1])
+                {
+                    c++;
+                }
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine($"Cel mai mare nr este: {arr[a - 1]} ,iar acesta apare de {c}-ori.");
+            Console.WriteLine($"Cel mai mic nr este: {arr[0]} ,iar acesta apare de {b}-ori.");
+        }
+        public static void set3p5()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.Write("Ce numar doriti sa introduceti?: ");
+            int e = int.Parse(Console.ReadLine());
+            Console.Write("Pe ce pozitie dorit sa fie acesta?: ");
+            int k = int.Parse(Console.ReadLine());
+            arr[k] = e;
+            Console.WriteLine();
+            Console.WriteLine("Noul vector: ");
+            PrintArray(arr);
         }
         private static void PrintArray(int[] arr)
         {
