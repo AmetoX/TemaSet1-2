@@ -218,9 +218,41 @@ namespace Probleme_Set_3
             int e = int.Parse(Console.ReadLine());
             Console.Write("Pe ce pozitie dorit sa fie acesta?: ");
             int k = int.Parse(Console.ReadLine());
-            arr[k] = e;
+            int[] newarr = new int[a + 1];
+            for (int i = 0; i < a + 1; i++)
+            {
+                if (i < k - 1)
+                {
+                    newarr[i] = arr[i];
+                }
+                else if (i == k - 1)
+                {
+                    newarr[i] = e;
+                }
+                else
+                {
+                    newarr[i] = arr[i - 1];
+                }
+            }
             Console.WriteLine();
             Console.WriteLine("Noul vector: ");
+            PrintArray(newarr);
+        }
+        public static void set3p6()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.Write("Ce numar de pe ce pozitie dori sa stergei(pozitia elementelor incepe de la 0)?: ");
+            int e = int.Parse(Console.ReadLine());
+            arr = arr.Where((source, index) => index != e).ToArray();
             PrintArray(arr);
         }
         private static void PrintArray(int[] arr)

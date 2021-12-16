@@ -23,13 +23,9 @@ namespace TestArea
             }
             PrintArray(arr);
             Console.WriteLine();
-            Console.Write("Ce numar doriti sa introduceti?: ");
+            Console.Write("Ce numar de pe ce pozitie dori sa stergei(pozitia elementelor incepe de la 0)?: ");
             int e = int.Parse(Console.ReadLine());
-            Console.Write("Pe ce pozitie dorit sa fie acesta?: ");                     
-            int k = int.Parse(Console.ReadLine());
-            arr[k] = e;
-            Console.WriteLine();
-            Console.WriteLine("Noul vector: ");
+            arr = arr.Where((source, index) =>index!= e).ToArray();
             PrintArray(arr);
         }       
         private static void PrintArray(int[] arr)
