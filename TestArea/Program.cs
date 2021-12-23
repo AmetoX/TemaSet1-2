@@ -23,9 +23,22 @@ namespace TestArea
             }
             PrintArray(arr);
             Console.WriteLine();
-            Console.Write("Ce numar de pe ce pozitie dori sa stergei(pozitia elementelor incepe de la 0)?: ");
-            int e = int.Parse(Console.ReadLine());
-            arr = arr.Where((source, index) =>index!= e).ToArray();
+            int[] reverse = new int[a];
+            //Array.Reverse(arr);
+            Console.Write("rotire:");
+            int k = int.Parse(Console.ReadLine());
+            int c = arr[0];
+
+            while (k!=0){
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+
+                    arr[i] = arr[i + k];
+
+                }
+                k--;
+                //arr[a - 1] = c;
+            }
             PrintArray(arr);
         }       
         private static void PrintArray(int[] arr)

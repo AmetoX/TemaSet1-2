@@ -255,6 +255,64 @@ namespace Probleme_Set_3
             arr = arr.Where((source, index) => index != e).ToArray();
             PrintArray(arr);
         }
+        public static void set3p7()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            int[] rev = new int[a];
+            int b = a - 1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+
+                rev[i] = arr[b];
+                b--;
+            }
+            Console.Write("Vectorul inversat: ");
+            for (int i = 0; i < rev.Length; i++)
+            {
+                Console.Write(rev[i] + " ");
+            }
+        }
+        public static void set3p8()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            int c = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+
+                arr[i] = arr[i + 1];
+
+            }
+            arr[a - 1] = c;
+            Console.WriteLine("Vector rotit spre stanga cu o pozitie.");
+            PrintArray(arr);
+
+        }
+        public static void set3p9()
+        {
+
+        }
+        public static void set3p10()
+        {
+
+        }
         private static void PrintArray(int[] arr)
         {
             Console.Write("Vectorul: ");
