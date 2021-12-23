@@ -130,7 +130,23 @@ namespace Probleme_Set_1
         }
         public static void set1p2()
         {
-            Console.WriteLine("Nu am stiut.");
+            Console.WriteLine("Ecuatia:");
+            Console.WriteLine("ax^2 + bx + c = 0");
+            Console.WriteLine("Introduceti numerele a , b si c: ");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            int delta = b * b - 4 * a * c;
+            if (delta < 0)
+            {
+                Console.WriteLine("nu are solutii");
+            }
+            else
+            {
+                double x1 = (-b + Math.Sqrt(delta)) / 2 * a;
+                double x2 = (-b - Math.Sqrt(delta)) / 2 * a;
+                Console.WriteLine($"Rezultatutul: x1= {x1}, x2= {x2}.");
+            }
         }
         public static void set1p3()
         {

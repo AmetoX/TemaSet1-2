@@ -313,6 +313,34 @@ namespace Probleme_Set_3
         {
 
         }
+        public static void set3p11()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(0,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            int b = 1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = b++;
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            arr = arr.Where((source, index) => index != 0).ToArray();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int c = arr[i];
+                if (c % c == 0)
+                {
+                    for (int j = i + 1; j < arr.Length; j++)
+                        if (arr[j] % c == 0)
+                            arr = arr.Where((source, index) => index != j).ToArray();
+                }
+
+            }
+            Console.WriteLine("Toate numerele prime mai mici sau egale cu a (ciurul lui Eratostene): ");
+            PrintArray(arr);
+        }
         private static void PrintArray(int[] arr)
         {
             Console.Write("Vectorul: ");
