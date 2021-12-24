@@ -1,0 +1,29 @@
+public static void set2p12()
+        {
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int r = rnd.Next(0, 10);
+                if (r != 0)
+                {
+                    a++;
+                }
+
+                sb.Append(r + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Sunt: {a} grupuri consecutive de numere diferite de 0.");
+        }

@@ -286,6 +286,126 @@ namespace Library1
                             Console.WriteLine(s2buffer2);
                         }
                         break;
+                    case 3:
+                        TextReader s2load3 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p3.txt");
+                        string s2buffer3;
+                        while ((s2buffer3 = s2load3.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer3);
+                        }
+                        break;
+                    case 4:
+                        TextReader s2load4 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p4.txt");
+                        string s2buffer4;
+                        while ((s2buffer4 = s2load4.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer4);
+                        }
+                        break;
+                    case 5:
+                        TextReader s2load5 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p5.txt");
+                        string s2buffer5;
+                        while ((s2buffer5 = s2load5.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer5);
+                        }
+                        break;
+                    case 6:
+                        TextReader s2load6 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p6.txt");
+                        string s2buffer6;
+                        while ((s2buffer6 = s2load6.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer6);
+                        }
+                        break;
+                    case 7:
+                        TextReader s2load7 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p7.txt");
+                        string s2buffer7;
+                        while ((s2buffer7 = s2load7.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer7);
+                        }
+                        break;
+                    case 8:
+                        TextReader s2load8 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p8.txt");
+                        string s2buffer8;
+                        while ((s2buffer8 = s2load8.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer8);
+                        }
+                        break;
+                    case 9:
+                        TextReader s2load9 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p9.txt");
+                        string s2buffer9;
+                        while ((s2buffer9 = s2load9.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer9);
+                        }
+                        break;
+                    case 10:
+                        TextReader s2load10 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p10.txt");
+                        string s2buffer10;
+                        while ((s2buffer10 = s2load10.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer10);
+                        }
+                        break;
+                    case 11:
+                        TextReader s2load11 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p11.txt");
+                        string s2buffer11;
+                        while ((s2buffer11 = s2load11.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer11);
+                        }
+                        break;
+                    case 12:
+                        TextReader s2load12 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p12.txt");
+                        string s2buffer12;
+                        while ((s2buffer12 = s2load12.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer12);
+                        }
+                        break;
+                    case 13:
+                        TextReader s2load13 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p13.txt");
+                        string s2buffer13;
+                        while ((s2buffer13 = s2load13.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer13);
+                        }
+                        break;
+                    case 14:
+                        TextReader s2load14 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p14.txt");
+                        string s2buffer14;
+                        while ((s2buffer14 = s2load14.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer14);
+                        }
+                        break;
+                    case 15:
+                        TextReader s2load15 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p15.txt");
+                        string s2buffer15;
+                        while ((s2buffer15 = s2load15.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer15);
+                        }
+                        break;
+                    case 16:
+                        TextReader s2load16 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p16.txt");
+                        string s2buffer16;
+                        while ((s2buffer16 = s2load16.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer16);
+                        }
+                        break;
+                    case 17:
+                        TextReader s2load17 = new StreamReader(@"..\..\CodeLineProbleme2\Set2p17.txt");
+                        string s2buffer17;
+                        while ((s2buffer17 = s2load17.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s2buffer17);
+                        }
+                        break;
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");
                         goto repeat1;
@@ -293,12 +413,10 @@ namespace Library1
                 }
             }
             catch
-            {
-                int p = 0;
+            {               
                 Console.WriteLine();
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
-                Console.WriteLine();
                 goto repeat1;
             }
 

@@ -1,0 +1,58 @@
+public static void set2p7()
+        {
+            Console.Write("Cate numere doriti sa aiba sirul? :");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int m = 0;
+            int mic = 0;
+            int mic2 = -1;
+
+            for (int i = 0; i < n; i++)
+            {
+                int r = rnd.Next(1, 10);
+                //Console.Write(r + " ");
+                sb.Append(r);
+                if (r > m)
+                {
+                    m = r;
+                }
+                if (r == 0 || r == 1)
+                {
+                    mic2 = r;
+
+                }
+                else
+                {
+
+                }
+
+                if (r < m)
+                {
+                    if (r < mic)
+                    {
+                        mic = r;
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+                else
+                {
+                    mic = r;
+                }
+
+            }
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j] + " ");
+            }
+            Console.WriteLine();
+            if (mic2 == 0 || mic2 == 1)
+            {
+                mic = mic2;
+            }
+            Console.WriteLine($"cel mai mare numar: {m}, si cel mai mic nr: {mic}.");
+        }

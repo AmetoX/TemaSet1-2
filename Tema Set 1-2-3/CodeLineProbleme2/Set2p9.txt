@@ -1,0 +1,376 @@
+public static void set2p9()
+        {
+        again:
+            Console.Clear();
+            Console.WriteLine("Sir 1 (generare de sir cu calcule matematice).");
+            Console.WriteLine("Sir 2 (generare de sir cu numere aleatorii).");
+            Console.WriteLine("Sir 3 (monoton crescator 100%).");
+            Console.WriteLine("Sir 4 (monoton descrescator 100%)");
+            int sir = int.Parse(Console.ReadLine());
+            switch (sir)
+            {
+                case 1:
+                    sir1();
+                    break;
+                case 2:
+                    sir2();
+                    break;
+                case 3:
+                    sir3();
+                    break;
+                case 4:
+                    sir4();
+                    break;               
+            }
+            Console.WriteLine("Again? (y/n)");
+            string yn = Convert.ToString(Console.ReadLine());
+            string da = "y";
+            string nu = "n";
+            if (yn == da)
+            {
+                goto again;
+            }
+            else if (yn == nu)
+            {
+
+            }
+            Console.WriteLine("Atat s-a putut.");
+        }
+        public static void sir1()
+        {
+            Console.Write("Introduceti un nr: ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int d = 0;
+            int e = 0;
+            int f = 0;          
+            int g = 0;
+            int h = 0;
+            int r = n;
+
+            for (int i = 0; i <= n; i++)
+            {
+                while (n != 1)
+                {
+
+                    if (n % 2 == 0)
+                    {
+                        n = n / 2;
+                    }
+                    else
+                    {
+                        n = 3 * n + 1;
+                    }
+                    sb.Append(n + " ");
+
+                    if (n > a)
+                    {
+                        if (a > b)
+                        {
+                            
+                            if (b > d)
+                            {
+                                
+                                c++;
+                            }
+
+                            d = b;
+                        }
+                        b = a;
+
+                    }
+                    a = n;
+
+                    if (f > n)
+                    {
+                        if (e > f)
+                        {
+                            
+                            if (h > e)
+                            {
+                                
+                                g++;
+                            }
+                            h = e;
+                        }
+                        e = f;
+                    }
+                    f = n;
+
+                    
+                }
+            }
+            if (c == (r - 1))
+            {
+                Console.WriteLine("Sirul este monoton crescator.");
+                Console.WriteLine();
+            }
+            else if (g == (r - 2))
+            {
+                Console.WriteLine("Sirul este monoton descrescator.");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Sirul nu este monoton.");
+                Console.WriteLine();
+            }
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            
+
+        }
+        public static void sir2()
+        {
+            Console.Write("Cate numere doriti sa aiba sirul? :");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int d = 0;
+            int e = 0;
+            int f = 0;
+            int g = 0;
+            int h = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+
+                int r = rnd.Next(0, 100);
+                
+                sb.Append(r + " ");
+
+                if (r > a)
+                {
+                    if (a > b)
+                    {
+                        
+                        if (b > d)
+                        {
+                            
+                            c++;
+                        }
+
+                        d = b;
+                    }
+                    b = a;
+
+                }
+                a = r;
+
+                if (f > r)
+                {
+                    if (e > f)
+                    {
+                        
+                        if (h > e)
+                        {
+                            
+                            g++;
+                        }
+                        h = e;
+                    }
+                    e = f;
+                }
+                f = r;
+
+            }
+            if (c == (n - 1))
+            {
+                Console.WriteLine("Sirul este monoton crescator.");
+                Console.WriteLine();
+            }
+            else if (g == (n - 2))
+            {
+                Console.WriteLine("Sirul este monoton descrescator.");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Sirul nu este monoton.");
+                Console.WriteLine();
+            }
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+     
+
+
+        }
+        public static void sir3()
+        {
+            Console.Write("Cate numere doriti sa aiba sirul? :");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int d = 0;
+            int e = 0;
+            int f = 0;
+            int g = 0;
+            int h = 0;
+            int r = rnd.Next(1, 1000);
+            int j = r;
+            for(int i = 0; i < n; i++)
+            {
+            
+                j+=2;
+                sb.Append(j + " ");
+
+                if (j > a)
+                {
+                    if (a > b)
+                    {
+                        
+                        if (b > d)
+                        {
+                            
+                            c++;
+                        }
+
+                        d = b;
+                    }
+                    b = a;
+
+                }
+                a = j;
+
+                if (f > j)
+                {
+                    if (e > f)
+                    {
+                        
+                        if (h > e)
+                        {
+                            
+                            g++;
+                        }
+                        h = e;
+                    }
+                    e = f;
+                }
+                f = j;
+
+            }
+            if (c == (n - 1))
+            {
+                Console.WriteLine("Sirul este monoton crescator.");
+                Console.WriteLine();
+            }
+            else if (g == (n - 2))
+            {
+                Console.WriteLine("Sirul este monoton descrescator.");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Sirul nu este monoton.");
+                Console.WriteLine();
+            }
+
+            for (int k = 0; k < sb.Length; k++)
+            {
+                Console.Write(sb[k]);
+            }
+            Console.WriteLine();
+ 
+
+        }
+        public static void sir4()
+        {
+            Console.Write("Cate numere doriti sa aiba sirul? :");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int d = 0;
+            int e = 0;
+            int f = 0;
+            int g = 0;
+            int h = 0;
+
+            int j;
+            int k = rnd.Next(1, 1000);
+            for (int i = 0; i < n; i++)
+            {
+
+                k--;
+                j = k--;
+                sb.Append(j + " ");
+
+                if (j > a)
+                {
+                    if (a > b)
+                    {
+                        
+                        if (b > d)
+                        {
+                            
+                            c++;
+                        }
+
+                        d = b;
+                    }
+                    b = a;
+
+                }
+                a = j;
+
+                if (f > j)
+                {
+                    if (e > f)
+                    {
+                        
+                        if (h > e)
+                        {
+                            
+                            g++;
+                        }
+                        h = e;
+                    }
+                    e = f;
+                }
+                f = j;
+
+
+
+            }
+            if (c == (n - 1))
+            {
+                Console.WriteLine("Sirul este monoton crescator.");
+                Console.WriteLine();
+            }
+            else if (g == (n - 2))
+            {
+                Console.WriteLine("Sirul este monoton descrescator.");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Sirul nu este monoton.");
+                Console.WriteLine();
+            }
+
+            for (int l = 0; l < sb.Length; l++)
+            {
+                Console.Write(sb[l]);
+            }
+            Console.WriteLine();       
+        }

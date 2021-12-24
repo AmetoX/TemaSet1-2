@@ -1,0 +1,33 @@
+public static void set2p11()
+        {
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int suma = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int r = rnd.Next(0, 100);
+                Console.Write(r + " ");
+                int ogl = 0;
+                while (r != 0)
+                {
+                    ogl = ogl * 10 + r % 10;
+                    r = r / 10;
+                }
+                suma = suma + ogl;
+
+                sb.Append(ogl + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Suma inverselor numerelor din sir este: {suma}");
+        }

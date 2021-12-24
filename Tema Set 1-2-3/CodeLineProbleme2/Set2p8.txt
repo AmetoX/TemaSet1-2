@@ -1,0 +1,31 @@
+public static void set2p8()
+        {
+            Console.WriteLine("Sirul lui Fibonacci");
+            Console.Write("Introduceti un nr: ");
+            int a = int.Parse(Console.ReadLine());
+            int b, c, d, e, f;
+            b = 1;
+            c = 1;
+            e = a;
+            f = 1;
+            if (a == 1)
+            {
+                Console.Write("1");
+            }
+            else
+            {
+                Console.Write("1" + " " + "1" + " ");
+                a -= 2;
+                while (a > 0)
+                {
+                    d = b + c;
+                    b = c;
+                    c = d;
+                    Console.Write($"{d}" + " ");
+                    a--;
+                    f = d;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Al {e}-lea nr din sirul lui Fibonacci este: {f}.");
+        }

@@ -1,5 +1,6 @@
 public static void set2p2()
         {
+            Console.Write("Introduceti un nr: ");
             int a = int.Parse(Console.ReadLine());
             int p = 0;
             int n = 0;

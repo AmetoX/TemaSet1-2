@@ -114,7 +114,9 @@ namespace Tema_Set_1_2_3
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
                 Console.WriteLine();
+                options();
                 Console.Write("Please enter the number of the option you want to choose: ");
+                
                 goto try1;
             }
         }
@@ -204,6 +206,7 @@ namespace Tema_Set_1_2_3
                 Console.WriteLine("EROR: wrong input.");
                 Console.WriteLine("Please try again...");
                 goto try2;
+
             }
 
 
