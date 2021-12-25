@@ -1,0 +1,12 @@
+public static void set1p8()
+        {
+            Console.Write("Iroduceti a =");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Iroduceti b =");
+            int b = int.Parse(Console.ReadLine());
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine($"a={a} iar b = {b}");
+            Console.ReadKey();
+        }

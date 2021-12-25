@@ -1,0 +1,15 @@
+public static void set1p3()
+        {
+            Console.WriteLine("Type 2 numbers: ");
+            double n = int.Parse(Console.ReadLine());
+            double k = int.Parse(Console.ReadLine());
+            if (n % k == 0)
+            {
+                Console.WriteLine($"numarul {n} este divizibil cu {k}.");
+            }
+            else
+            {
+                Console.WriteLine($"numarul {n} nu este divizibil cu {k}.");
+            }
+            Console.ReadKey();
+        }

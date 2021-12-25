@@ -1,0 +1,22 @@
+public static void set1p12()
+        {
+            Console.WriteLine("Introduceti doua numere sa fie interval(unul dupa altu cu spatiu intre ele):");
+            string interval = Console.ReadLine();
+            string[] local_data = interval.Split(' ');
+            int a = int.Parse(local_data[0]);
+            int b = int.Parse(local_data[1]);
+            Console.Write("Introduceti un numar: ");
+            int n = int.Parse(Console.ReadLine());
+            int interval1 = b - a;
+            int div = 0;
+            for (int i = 1; i <= interval1; i++)
+            {
+                if (i % n == 0)
+                {
+                    div++;
+                }
+
+            }
+            Console.WriteLine($"Numarul {n} are {div} divizori in intervalul [{a},{b}].");
+            Console.ReadKey();
+        }

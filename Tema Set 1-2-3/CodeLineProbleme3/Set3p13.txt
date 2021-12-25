@@ -1,0 +1,50 @@
+public static void set1p13()
+        {
+            Console.WriteLine("Introduceti doi ani ca sa aflati cati ani bisecti se aflta intr-e ei (unul dupa altu cu spatiu intre ele):");
+            string interval = Console.ReadLine();
+            string[] local_data = interval.Split(' ');
+            int a = int.Parse(local_data[0]);
+            int b = int.Parse(local_data[1]);
+            int bis = 0;
+            if (a < b)
+            {
+                while (a < b)
+                {
+                    if (a % 4 == 0)
+                    {
+                        bis++;
+                    }
+                    else if (a % 400 == 0)
+                    {
+                        bis++;
+                    }
+                    else
+                    {
+
+                    }
+                    a++;
+                }
+            }
+            else if (b > a)
+            {
+                while (b > a)
+                {
+                    if (b % 4 == 0)
+                    {
+                        bis++;
+                    }
+                    else if (b % 400 == 0)
+                    {
+                        bis++;
+                    }
+                    else
+                    {
+
+                    }
+                    b++;
+                }
+
+            }
+            Console.WriteLine($"Intr-e anii {a} - {b} sunt {bis} anii bisecti.");
+            Console.ReadKey();
+        }
