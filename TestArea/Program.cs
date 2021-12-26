@@ -13,27 +13,27 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");            
+            Console.Write("Introduceti un nr. in baza 10: ");
             int a = int.Parse(Console.ReadLine());
-            int[] arr;
-            arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
+        bk:
+            Console.Write("In ce baza doriti sa convertiti numarul?: ");
+            int b = int.Parse(Console.ReadLine());
+            switch (b)
             {
-                arr[i] = rnd.Next(-10, 10);                
+                case 2:
+                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 2));
+                    break;
+                case 10:
+                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 10));
+                    break;
+                case 16:
+                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 16));
+                    break;
+                default:
+                    Console.WriteLine("Baza gresita !!!! Incercati dinou...");
+                    goto bk;
             }
-            PrintArray(arr);
-            Console.WriteLine();
-            int[] rmv = new int[a];
-            Array.Sort(arr);
-            for (int i = 1; i < arr.Length-1; i++)
-            {
-                if(arr[i] == arr[i - 1])
-                {
-                    arr = arr.Where((source, index) => index != i).ToArray();
-                }  
-            }
-            Console.WriteLine("Vectorul fara numere care se repeta:");
-            PrintArray(arr);            
+
         }       
         private static void PrintArray(int[] arr)
         {

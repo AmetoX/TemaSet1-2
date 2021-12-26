@@ -437,6 +437,30 @@ namespace Probleme_Set_3
             Console.WriteLine("Vectorul fara numere care se repeta:");
             PrintArray(arr);
         }
+        public static void set3p17()
+        {
+            Console.Write("Introduceti un nr. in baza 10: ");
+            int a = int.Parse(Console.ReadLine());
+        bk:
+            Console.Write("In ce baza doriti sa convertiti numarul?: ");
+            int b = int.Parse(Console.ReadLine());
+            switch (b)
+            {
+                case 2:
+                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 2));
+                    break;
+                case 10:
+                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 10));
+                    break;
+                case 16:
+                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 16));
+                    break;
+                default:
+                    Console.WriteLine("Baza gresita !!!! Incercati dinou...");
+                    goto bk;
+            }
+
+        }
         private static void PrintArray(int[] arr)
         {
             Console.Write("Vectorul: ");
