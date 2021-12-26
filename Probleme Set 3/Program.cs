@@ -83,7 +83,7 @@ namespace Probleme_Set_3
                         
                         break;
                     case 15:
-                        
+                        set3p15();
                         break;
                     case 16:
                         
@@ -292,7 +292,7 @@ namespace Probleme_Set_3
             }
             PrintArray(arr);
             Console.WriteLine();
-            Console.Write("Ce numar de pe ce pozitie dori sa stergei(pozitia elementelor incepe de la 0)?: ");
+            Console.Write("Ce numar de pe ce pozitie dori sa stergeti(pozitia elementelor incepe de la 0)?: ");
             int e = int.Parse(Console.ReadLine());
             arr = arr.Where((source, index) => index != e).ToArray();
             PrintArray(arr);
@@ -353,7 +353,37 @@ namespace Probleme_Set_3
         }
         public static void set3p10()
         {
-
+                        Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");            
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);                
+            }
+            Array.Sort(arr);
+            Console.Write("Ce numar doriti sa cautati?: ");
+            int key = int.Parse(Console.ReadLine());
+            bool ok = false;
+            int nf = -1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == key)
+                {
+                    ok = true;
+                    nf = i;
+                }
+            }
+            if (ok)
+            {
+                Console.WriteLine($"Am gasit nr. cautat({key}), pe pozitia: {nf}");
+            }
+            else
+            {
+                Console.WriteLine($"Numarul nu a fost gasit {nf}");
+            }
+            PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p11()
         {
@@ -381,6 +411,30 @@ namespace Probleme_Set_3
 
             }
             Console.WriteLine("Toate numerele prime mai mici sau egale cu a (ciurul lui Eratostene): ");
+            PrintArray(arr);
+        }
+        public static void set3p15()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-10, 10);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            int[] rmv = new int[a];
+            Array.Sort(arr);
+            for (int i = 1; i < arr.Length - 1; i++)
+            {
+                if (arr[i] == arr[i - 1])
+                {
+                    arr = arr.Where((source, index) => index != i).ToArray();
+                }
+            }
+            Console.WriteLine("Vectorul fara numere care se repeta:");
             PrintArray(arr);
         }
         private static void PrintArray(int[] arr)
