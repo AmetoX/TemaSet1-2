@@ -56,10 +56,52 @@ namespace Probleme_Set_3
                         set3p5();
                         break;
                     case 6:
+                        set3p6();
                         break;
                     case 7:
+                        set3p7();
                         break;
                     case 8:
+                        set3p8();
+                        break;
+                    case 9:
+                        set3p9();
+                        break;
+                    case 10:
+                        set3p10();
+                        break;
+                    case 11:
+                        set3p11();
+                        break;
+                    case 12:
+                        
+                        break;
+                    case 13:
+                        
+                        break;
+                    case 14:
+                        
+                        break;
+                    case 15:
+                        
+                        break;
+                    case 16:
+                        
+                        break;
+                    case 17:
+                        
+                        break;
+                    case 18:
+                        
+                        break;
+                    case 19:
+                        
+                        break;
+                    case 20:
+                        
+                        break;
+                    case 21:
+                        
                         break;
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");

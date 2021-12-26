@@ -452,6 +452,164 @@ namespace Library1
                 switch (set3)
                 {
                     case 1:
+                        TextReader s3load1 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p1.txt");
+                        string s3buffer1;
+                        while ((s3buffer1 = s3load1.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer1);
+                        }
+                        break;
+                    case 2:
+                        TextReader s3load2 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p2.txt");
+                        string s3buffer2;
+                        while ((s3buffer2 = s3load2.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer2);
+                        }
+                        break;
+                    case 3:
+                        TextReader s3load3 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p3.txt");
+                        string s3buffer3;
+                        while ((s3buffer3 = s3load3.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer3);
+                        }
+                        break;
+                    case 4:
+                        TextReader s3load4 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p4.txt");
+                        string s3buffer4;
+                        while ((s3buffer4 = s3load4.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer4);
+                        }
+                        break;
+                    case 5:
+                        TextReader s3load5 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p5.txt");
+                        string s3buffer5;
+                        while ((s3buffer5 = s3load5.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer5);
+                        }
+                        break;
+                    case 6:
+                        TextReader s3load6 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p6.txt");
+                        string s3buffer6;
+                        while ((s3buffer6 = s3load6.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer6);
+                        }
+                        break;
+                    case 7:
+                        TextReader s3load7 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p7.txt");
+                        string s3buffer7;
+                        while ((s3buffer7 = s3load7.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer7);
+                        }
+                        break;
+                    case 8:
+                        TextReader s3load8 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p8.txt");
+                        string s3buffer8;
+                        while ((s3buffer8 = s3load8.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer8);
+                        }
+                        break;
+                    case 9:
+                        TextReader s3load9 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p9.txt");
+                        string s3buffer9;
+                        while ((s3buffer9 = s3load9.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer9);
+                        }
+                        break;
+                    case 10:
+                        TextReader s3load10 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p10.txt");
+                        string s3buffer10;
+                        while ((s3buffer10 = s3load10.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer10);
+                        }
+                        break;
+                    case 11:
+                        TextReader s3load11 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p11.txt");
+                        string s3buffer11;
+                        while ((s3buffer11 = s3load11.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer11);
+                        }
+                        break;
+                    case 12:
+                        TextReader s3load12 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p12.txt");
+                        string s3buffer12;
+                        while ((s3buffer12 = s3load12.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer12);
+                        }
+                        break;
+                    case 13:
+                        TextReader s3load13 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p13.txt");
+                        string s3buffer13;
+                        while ((s3buffer13 = s3load13.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer13);
+                        }
+                        break;
+                    case 14:
+                        TextReader s3load14 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p14.txt");
+                        string s3buffer14;
+                        while ((s3buffer14 = s3load14.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer14);
+                        }
+                        break;
+                    case 15:
+                        TextReader s3load15 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p15.txt");
+                        string s3buffer15;
+                        while ((s3buffer15 = s3load15.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer15);
+                        }
+                        break;
+                    case 16:
+                        TextReader s3load16 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p16.txt");
+                        string s3buffer16;
+                        while ((s3buffer16 = s3load16.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer16);
+                        }
+                        break;
+                    case 17:
+                        TextReader s3load17 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p17.txt");
+                        string s3buffer17;
+                        while ((s3buffer17 = s3load17.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer17);
+                        }
+                        break;
+                    case 18:
+                        TextReader s3load18 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p18.txt");
+                        string s3buffer18;
+                        while ((s3buffer18 = s3load18.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer18);
+                        }
+                        break;
+                    case 19:
+                        TextReader s3load19 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p19.txt");
+                        string s3buffer19;
+                        while ((s3buffer19 = s3load19.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer19);
+                        }
+                        break;
+                    case 20:
+                        TextReader s3load20 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p20.txt");
+                        string s3buffer20;
+                        while ((s3buffer20 = s3load20.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer20);
+                        }
                         break;
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");
