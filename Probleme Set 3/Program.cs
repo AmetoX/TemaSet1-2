@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library1;
 
 
 namespace Probleme_Set_3
@@ -501,25 +502,56 @@ namespace Probleme_Set_3
         {
             Console.Write("Introduceti un nr. in baza 10: ");
             int a = int.Parse(Console.ReadLine());
-        bk:
             Console.Write("In ce baza doriti sa convertiti numarul?: ");
             int b = int.Parse(Console.ReadLine());
             switch (b)
             {
                 case 2:
-                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 2));
+                    Console.WriteLine(Library1.Program.MyBase2Converter(a));
+                    break;
+                case 3:
+                    Console.WriteLine(Library1.Program.MyBase3Converter(a));
+                    break;
+                case 4:
+                    Console.WriteLine(Library1.Program.MyBase4Converter(a));
+                    break;
+                case 5:
+                    Console.WriteLine(Library1.Program.MyBase5Converter(a));
+                    break;
+                case 6:
+                    Console.WriteLine(Library1.Program.MyBase6Converter(a));
+                    break;
+                case 7:
+                    Console.WriteLine(Library1.Program.MyBase7Converter(a));
+                    break;
+                case 8:
+                    Console.WriteLine(Library1.Program.MyBase8Converter(a));
+                    break;
+                case 9:
+                    Console.WriteLine(Library1.Program.MyBase9Converter(a));
                     break;
                 case 10:
-                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 10));
+                    Console.WriteLine(Convert.ToString(a, 10));
+                    break;
+                case 11:
+                    Console.WriteLine(Library1.Program.MyBase11Converter(a));
+                    break;
+                case 12:
+                    Console.WriteLine(Library1.Program.MyBase12Converter(a));
+                    break;
+                case 13:
+                    Console.WriteLine(Library1.Program.MyBase13Converter(a));
+                    break;
+                case 14:
+                    Console.WriteLine(Library1.Program.MyBase14Converter(a));
+                    break;
+                case 15:
+                    Console.WriteLine(Library1.Program.MyBase15Converter(a));
                     break;
                 case 16:
-                    Console.WriteLine($"Numarul {a} convertit in baza {b} este: " + Convert.ToString(a, 16));
+                    Console.WriteLine(Library1.Program.MyBase16Converter(a));
                     break;
-                default:
-                    Console.WriteLine("Baza gresita !!!! Incercati dinou...");
-                    goto bk;
             }
-
         }
         private static void PrintArray(int[] arr)
         {

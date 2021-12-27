@@ -655,6 +655,27 @@ namespace Library1
             return false;
 
         }
+        public static string MyBase2Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 2;
+                digits.Push(cifra);
+                a /= 2;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "01";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
     }
 }
 
