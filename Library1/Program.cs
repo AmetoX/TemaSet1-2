@@ -655,6 +655,8 @@ namespace Library1
             return false;
 
         }
+
+        //-----------------------------------------------
         public static string MyBase2Converter(int a)
         {
             int cifra;
@@ -667,6 +669,279 @@ namespace Library1
             }
             StringBuilder sb = new StringBuilder();
             string map = "01";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase3Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 3;
+                digits.Push(cifra);
+                a /= 3;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "012";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase4Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 4;
+                digits.Push(cifra);
+                a /= 4;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase5Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 5;
+                digits.Push(cifra);
+                a /= 5;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "01234";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase6Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 6;
+                digits.Push(cifra);
+                a /= 6;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "012345";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase7Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 7;
+                digits.Push(cifra);
+                a /= 7;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase8Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 8;
+                digits.Push(cifra);
+                a /= 8;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "01234567";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase9Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 9;
+                digits.Push(cifra);
+                a /= 9;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "01234567";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase11Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 11;
+                digits.Push(cifra);
+                a /= 11;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456789A";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase12Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 12;
+                digits.Push(cifra);
+                a /= 12;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456789AB";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase13Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 13;
+                digits.Push(cifra);
+                a /= 13;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456789ABC";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase14Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 14;
+                digits.Push(cifra);
+                a /= 14;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456789ABCD";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase15Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 15;
+                digits.Push(cifra);
+                a /= 15;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456789ABCDE";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase16Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 16;
+                digits.Push(cifra);
+                a /= 16;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123456789ABCDEF";
             while (digits.Count > 0)
             {
                 cifra = digits.Pop();

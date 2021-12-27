@@ -13,8 +13,23 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int b = 3;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
 
-        } 
+        }
+        private static void Swap(int[] arr, int i, int j)
+        {
+            int aux;
+            aux = arr[i];
+            arr[i] = arr[j];
+            arr[j] = aux;
+        }
         public static void PrintArray(int[] arr)
         {
             Console.Write("Vectorul: ");

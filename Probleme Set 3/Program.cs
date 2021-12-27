@@ -107,46 +107,46 @@ namespace Probleme_Set_3
                         set3p17();
                         break;
                     case 18:
-                        
+                        set3p18();
                         break;
                     case 19:
-                        
+                        set3p19();
                         break;
                     case 20:
-                        
+                        set3p20();
                         break;
                     case 21:
-                        
+                        set3p21();
                         break;
                     case 22:
-
+                        set3p22();
                         break;
                     case 23:
-
+                        set3p23();
                         break;
                     case 24:
-
+                        set3p24();
                         break;
                     case 25:
-
+                        set3p25();
                         break;
                     case 26:
-
+                        set3p26();
                         break;
                     case 27:
-
+                        set3p27();
                         break;
                     case 28:
-
+                        set3p28();
                         break;
                     case 29:
-
+                        set3p29();
                         break;
                     case 30:
-
+                        set3p30();
                         break;
                     case 31:
-
+                        set3p31();
                         break;
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");
@@ -193,10 +193,7 @@ namespace Probleme_Set_3
             bool ok = false;
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             for (int i = 0; i < arr.Length; i++)
             {
 
@@ -226,10 +223,7 @@ namespace Probleme_Set_3
             int[] arr;
             arr = new int[a];
             int[] arr2 = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             int c = 0;
             int d = 0;
             int e = 0;
@@ -267,10 +261,7 @@ namespace Probleme_Set_3
             int c = 0;
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             Array.Sort(arr);
             for (int i = 0; i < arr.Length; i++)
             {
@@ -295,10 +286,7 @@ namespace Probleme_Set_3
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             Console.Write("Ce numar doriti sa introduceti?: ");
@@ -331,10 +319,7 @@ namespace Probleme_Set_3
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             Console.Write("Ce numar de pe ce pozitie dori sa stergeti(pozitia elementelor incepe de la 0)?: ");
@@ -348,10 +333,7 @@ namespace Probleme_Set_3
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             int[] rev = new int[a];
@@ -374,10 +356,7 @@ namespace Probleme_Set_3
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);
-            }
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             int c = arr[0];
@@ -402,10 +381,7 @@ namespace Probleme_Set_3
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-100, 100);                
-            }
+            GenerateArray(arr);
             Array.Sort(arr);
             Console.Write("Ce numar doriti sa cautati?: ");
             int key = int.Parse(Console.ReadLine());
@@ -460,11 +436,50 @@ namespace Probleme_Set_3
         }
         public static void set3p12()
         {
-
+            Console.Write("Cate numere doriti sa contina vectorul?: ");
+            int a = int.Parse(Console.ReadLine()); ;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            int i, j, k;
+            for (i = 0; i < arr.Length; i++)
+            {
+                k = i;
+                for (j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] < arr[k])
+                    {
+                        k = j;
+                    }
+                }
+                Swap(arr, i, k);
+            }
+            Console.WriteLine("-Selection sort-");
+            PrintArray(arr);
         }
         public static void set3p13()
         {
-
+            Console.Write("Cate numere doriti sa contina vectorul?: ");
+            int a = int.Parse(Console.ReadLine()); ;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            int i, k;
+            for (i = 1; i < arr.Length; i++)
+            {
+                for (k = i; k > 0 && arr[k] < arr[k - 1]; k--)
+                {
+                    Swap(arr, k, k - 1);
+                }
+            }
+            Console.WriteLine("-Insertion sort-");
+            PrintArray(arr);
         }
         public static void set3p14()
         {
@@ -553,6 +568,63 @@ namespace Probleme_Set_3
                     break;
             }
         }
+        public static void set3p18()
+        {
+
+        }
+        public static void set3p19()
+        {
+
+        }
+        public static void set3p20()
+        {
+
+        }
+        public static void set3p21()
+        {
+
+        }
+        public static void set3p22()
+        {
+
+        }
+        public static void set3p23()
+        {
+
+        }
+        public static void set3p24()
+        {
+
+        }
+        public static void set3p25()
+        {
+
+        }
+        public static void set3p26()
+        {
+
+        }
+        public static void set3p27()
+        {
+
+        }
+        public static void set3p28()
+        {
+
+        }
+        public static void set3p29()
+        {
+
+        }
+        public static void set3p30()
+        {
+
+        }
+        public static void set3p31()
+        {
+
+        }
+
         private static void PrintArray(int[] arr)
         {
             Console.Write("Vectorul: ");
@@ -560,6 +632,21 @@ namespace Probleme_Set_3
             {
                 Console.Write(arr[i] + " ");
             }
+        }
+        public static int[] GenerateArray(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(-100, 100);
+            }
+            return arr;
+        }
+        private static void Swap(int[] arr, int i, int j)
+        {
+            int aux;
+            aux = arr[i];
+            arr[i] = arr[j];
+            arr[j] = aux;
         }
     }
     
