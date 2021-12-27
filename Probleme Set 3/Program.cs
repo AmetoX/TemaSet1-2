@@ -33,7 +33,21 @@ namespace Probleme_Set_3
             Console.WriteLine("Problema 15( )");
             Console.WriteLine("Problema 16( )");
             Console.WriteLine("Problema 17( )");
-            begin:
+            Console.WriteLine("Problema 18( )");
+            Console.WriteLine("Problema 19( )");
+            Console.WriteLine("Problema 20( )");
+            Console.WriteLine("Problema 21( )");
+            Console.WriteLine("Problema 22( )");
+            Console.WriteLine("Problema 23( )");
+            Console.WriteLine("Problema 24( )");
+            Console.WriteLine("Problema 25( )");
+            Console.WriteLine("Problema 26( )");
+            Console.WriteLine("Problema 27( )");
+            Console.WriteLine("Problema 28( )");
+            Console.WriteLine("Problema 29( )");
+            Console.WriteLine("Problema 30( )");
+            Console.WriteLine("Problema 31( )");
+        begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set3 = int.Parse(Console.ReadLine());
             try
@@ -74,22 +88,22 @@ namespace Probleme_Set_3
                         set3p11();
                         break;
                     case 12:
-                        
+                        set3p12();
                         break;
                     case 13:
-                        
+                        set3p13();
                         break;
                     case 14:
-                        
+                        set3p14();
                         break;
                     case 15:
                         set3p15();
                         break;
                     case 16:
-                        
+                        set3p16();
                         break;
                     case 17:
-                        
+                        set3p17();
                         break;
                     case 18:
                         
@@ -102,6 +116,36 @@ namespace Probleme_Set_3
                         break;
                     case 21:
                         
+                        break;
+                    case 22:
+
+                        break;
+                    case 23:
+
+                        break;
+                    case 24:
+
+                        break;
+                    case 25:
+
+                        break;
+                    case 26:
+
+                        break;
+                    case 27:
+
+                        break;
+                    case 28:
+
+                        break;
+                    case 29:
+
+                        break;
+                    case 30:
+
+                        break;
+                    case 31:
+
                         break;
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");
@@ -413,6 +457,18 @@ namespace Probleme_Set_3
             Console.WriteLine("Toate numerele prime mai mici sau egale cu a (ciurul lui Eratostene): ");
             PrintArray(arr);
         }
+        public static void set3p12()
+        {
+
+        }
+        public static void set3p13()
+        {
+
+        }
+        public static void set3p14()
+        {
+
+        }
         public static void set3p15()
         {
             Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
@@ -436,6 +492,10 @@ namespace Probleme_Set_3
             }
             Console.WriteLine("Vectorul fara numere care se repeta:");
             PrintArray(arr);
+        }
+        public static void set3p16()
+        {
+
         }
         public static void set3p17()
         {
