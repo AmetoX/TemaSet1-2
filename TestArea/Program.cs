@@ -16,43 +16,38 @@ namespace TestArea
             Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
+            bool ok = true;
+            GenerateArray(arr);
+            PrintArray(arr);
+            do
             {
-                arr[i] = rnd.Next(0, 3);
+                ok = true;
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    if (arr[i] > arr[i + 1])
+                    {
+                        Swap(arr, i, i + 1);
+                        ok = false;
+                    }
+                }
+            } while (!ok);
+            Console.WriteLine();
+            PrintArray(arr);
+            Console.WriteLine();
+            int b = a-1;
+            int aux;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == 0)
+                {
+                    aux = arr[b];
+                    arr[b] = arr[i];
+                    arr[i] = aux;
+                    b--;
+                }
             }
             PrintArray(arr);
             Console.WriteLine();
-            int m = 0;
-            bool ok = false;
-            double n = a/2;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                int b = arr[i];
-                int rp = 0;
-                for (int j = 0; j < arr.Length; j++)
-                {                   
-                    if (b == arr[j])
-                    {
-                        rp++;
-                        if (rp >= n)
-                        {
-                            m = b;
-                            ok = true;
-                        }
-                        
-                    }                     
-                }
-            }
-            if (ok)
-            {
-                Console.WriteLine($"Numarul majoritar este: {m}");
-            }
-            else
-            {
-                Console.WriteLine("Nu este numar majoritar.");
-            }       
-            Console.WriteLine();
-
         }
         private static void Swap(int[] arr, int i, int j)
         {
@@ -73,7 +68,7 @@ namespace TestArea
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rnd.Next(0, 3);
+                arr[i] = rnd.Next(0, 2);
             }
             return arr;
         }
