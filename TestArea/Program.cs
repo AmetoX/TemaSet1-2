@@ -15,11 +15,42 @@ namespace TestArea
         {
             Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
-            int b = 3;
-            int[] arr;
-            arr = new int[a];
-            GenerateArray(arr);
+            int[] arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 3);
+            }
             PrintArray(arr);
+            Console.WriteLine();
+            int m = 0;
+            bool ok = false;
+            double n = a/2;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int b = arr[i];
+                int rp = 0;
+                for (int j = 0; j < arr.Length; j++)
+                {                   
+                    if (b == arr[j])
+                    {
+                        rp++;
+                        if (rp >= n)
+                        {
+                            m = b;
+                            ok = true;
+                        }
+                        
+                    }                     
+                }
+            }
+            if (ok)
+            {
+                Console.WriteLine($"Numarul majoritar este: {m}");
+            }
+            else
+            {
+                Console.WriteLine("Nu este numar majoritar.");
+            }       
             Console.WriteLine();
 
         }
@@ -42,7 +73,7 @@ namespace TestArea
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rnd.Next(-100, 100);
+                arr[i] = rnd.Next(0, 3);
             }
             return arr;
         }

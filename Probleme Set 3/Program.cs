@@ -622,7 +622,45 @@ namespace Probleme_Set_3
         }
         public static void set3p31()
         {
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 3);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            int m = 0;
+            bool ok = false;
+            double n = a / 2;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int b = arr[i];
+                int rp = 0;
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (b == arr[j])
+                    {
+                        rp++;
+                        if (rp >= n)
+                        {
+                            m = b;
+                            ok = true;
+                        }
 
+                    }
+                }
+            }
+            if (ok)
+            {
+                Console.WriteLine($"Numarul majoritar este: {m}");
+            }
+            else
+            {
+                Console.WriteLine("Nu este numar majoritar.");
+            }
+            Console.WriteLine();
         }
 
         private static void PrintArray(int[] arr)
