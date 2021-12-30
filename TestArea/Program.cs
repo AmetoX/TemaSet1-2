@@ -16,37 +16,29 @@ namespace TestArea
             Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            bool ok = true;
+            int[] arr2 = new int[a];
+            int[] arr3 = new int[a+a];
             GenerateArray(arr);
+            GenerateArray(arr2);
             PrintArray(arr);
-            do
+            Console.WriteLine();
+            PrintArray(arr2);
+            StringBuilder sb = new StringBuilder();
+            for(int i = 0; i < arr2.Length; i++)
             {
-                ok = true;
-                for (int i = 0; i < arr.Length - 1; i++)
+                for(int j = 0; j < arr.Length; j++)
                 {
-                    if (arr[i] > arr[i + 1])
+                    if (arr2[i] == arr[j])
                     {
-                        Swap(arr, i, i + 1);
-                        ok = false;
+                        sb.Append(arr[j]);
                     }
                 }
-            } while (!ok);
-            Console.WriteLine();
-            PrintArray(arr);
-            Console.WriteLine();
-            int b = a-1;
-            int aux;
-            for(int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i] == 0)
-                {
-                    aux = arr[b];
-                    arr[b] = arr[i];
-                    arr[i] = aux;
-                    b--;
-                }
             }
-            PrintArray(arr);
+            Console.WriteLine();
+            for(int i = 0; i < sb.Length; i++)
+            {
+                Console.Write(sb[i]+" ");
+            }
             Console.WriteLine();
         }
         private static void Swap(int[] arr, int i, int j)
@@ -68,7 +60,7 @@ namespace TestArea
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rnd.Next(0, 2);
+                arr[i] = rnd.Next(0, 10);
             }
             return arr;
         }
