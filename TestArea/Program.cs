@@ -13,33 +13,117 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-            Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
+            Console.Write("Cate numere doriti sa contina vectorul 1?(0,100): ");
             int a = int.Parse(Console.ReadLine());
+            Console.Write("Cate numere doriti sa contina vectorul 2?(0,100): ");
+            int a2 = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            int[] arr2 = new int[a];
-            int[] arr3 = new int[a+a];
-            GenerateArray(arr);
-            GenerateArray(arr2);
+            int[] arr2 = new int[a2];
+            int[] arr3 = arr;
+            Array.Copy(arr, arr3, arr.Length);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 100);
+            }
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                arr2[i] = rnd.Next(0, 100);
+            }
             PrintArray(arr);
             Console.WriteLine();
             PrintArray(arr2);
+            Console.WriteLine();
+            //PrintArray(arr3);
             StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < arr2.Length; i++)
+            List<int> re = new List<int>();
+            int b;
+            if (a2 > a)
             {
-                for(int j = 0; j < arr.Length; j++)
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    if (arr2[i] == arr[j])
+                    for (int j = 0; j < arr2.Length; j++)
                     {
-                        sb.Append(arr[j]);
+                        if (arr[i] == arr2[j])
+                        {
+                            b = arr[i];
+                            sb.Append(b + " ");
+                            re.Add(b);
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < arr2.Length; i++)
+                {
+                    for (int j = 0; j < arr.Length; j++)
+                    {
+                        if (arr2[i] == arr[j])
+                        {
+                            b = arr2[i];
+                            sb.Append(b + " ");
+                            re.Add(b);
+                            break;
+                        }
                     }
                 }
             }
             Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Interesctia:");
             for(int i = 0; i < sb.Length; i++)
             {
-                Console.Write(sb[i]+" ");
+                Console.Write(sb[i]);
+            }
+            re.Count();
+            Console.WriteLine();
+            sb.Clear();
+            Console.WriteLine();
+            Console.WriteLine("Reuniunea:");
+            int c = 0;           
+            for(int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i]+" ");
+                while (c < arr2.Length)
+                {
+                    Console.Write(arr2[c] + " ");
+                    c++;
+                    break;
+                }
             }
             Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Diferenta v1-v2");
+            for(int i  = 0; i < arr.Length; i++)
+            {
+                for(int j = 0; j < arr2.Length; j++)
+                {
+                    if(arr[i] == arr2[j])
+                    {
+                        arr = arr.Where((source, index) => index != i).ToArray();                       
+                    }
+                }
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Diferenta v2-v1");
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                for (int j = 0; j < arr3.Length; j++)
+                {
+                    if (arr2[i] == arr3[j])
+                    {
+                        arr2 = arr2.Where((source, index) => index != i).ToArray();
+
+                    }
+                }
+            }
+            PrintArray(arr2);
+            Console.WriteLine();
+
+
         }
         private static void Swap(int[] arr, int i, int j)
         {
@@ -60,9 +144,21 @@ namespace TestArea
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rnd.Next(0, 10);
+                arr[i] = rnd.Next(0, 50);
             }
             return arr;
         }
+        /*for(int i  = 0; i < arr.Length; i++)
+            {
+                for(int j = 0; j < arr2.Length; j++)
+                {
+                    if(arr[i] == arr2[j])
+                    {
+                        arr = arr.Where((source, index) => index != i).ToArray();
+                        arr2 = arr2.Where((source, index) => index != j).ToArray();
+                    }
+                }
+            }
+        */
     }
 } 
