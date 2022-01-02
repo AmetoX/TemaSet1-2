@@ -33,9 +33,7 @@ namespace TestArea
             Console.WriteLine();
             PrintArray(arr2);
             Console.WriteLine();
-            //PrintArray(arr3);
             StringBuilder sb = new StringBuilder();
-            List<int> re = new List<int>();
             int b;
             if (a2 > a)
             {
@@ -47,7 +45,6 @@ namespace TestArea
                         {
                             b = arr[i];
                             sb.Append(b + " ");
-                            re.Add(b);
                             break;
                         }
                     }
@@ -63,45 +60,74 @@ namespace TestArea
                         {
                             b = arr2[i];
                             sb.Append(b + " ");
-                            re.Add(b);
                             break;
                         }
                     }
                 }
             }
             Console.WriteLine();
-            Console.WriteLine();
             Console.WriteLine("Interesctia:");
             for(int i = 0; i < sb.Length; i++)
             {
                 Console.Write(sb[i]);
             }
-            re.Count();
             Console.WriteLine();
             sb.Clear();
             Console.WriteLine();
             Console.WriteLine("Reuniunea:");
-            int c = 0;           
-            for(int i = 0; i < arr.Length; i++)
+            int c = 0;
+            if (a2 > a)
             {
-                Console.Write(arr[i]+" ");
-                while (c < arr2.Length)
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    Console.Write(arr2[c] + " ");
-                    c++;
-                    break;
+                    Console.Write(arr[i] + " ");
+                    while (c < arr2.Length)
+                    {
+                        Console.Write(arr2[c] + " ");
+                        c++;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < arr2.Length; i++)
+                {
+                    Console.Write(arr2[i] + " ");
+                    while (c < arr.Length)
+                    {
+                        Console.Write(arr[c] + " ");
+                        c++;
+                        break;
+                    }
                 }
             }
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Diferenta v1-v2");
-            for(int i  = 0; i < arr.Length; i++)
+            if (a2 > a)
             {
-                for(int j = 0; j < arr2.Length; j++)
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    if(arr[i] == arr2[j])
+                    for (int j = 0; j < arr2.Length; j++)
                     {
-                        arr = arr.Where((source, index) => index != i).ToArray();                       
+                        if (arr[i] == arr2[j])
+                        {
+                            arr = arr.Where((source, index) => index != i).ToArray();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < arr2.Length; i++)
+                {
+                    for (int j = 0; j < arr.Length; j++)
+                    {
+                        if (arr2[i] == arr[j])
+                        {
+                            arr = arr.Where((source, index) => index != i).ToArray();
+                        }
                     }
                 }
             }
@@ -109,21 +135,37 @@ namespace TestArea
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Diferenta v2-v1");
-            for (int i = 0; i < arr2.Length; i++)
+            if (a > a2)
             {
-                for (int j = 0; j < arr3.Length; j++)
+                for (int i = 0; i < arr2.Length; i++)
                 {
-                    if (arr2[i] == arr3[j])
+                    for (int j = 0; j < arr3.Length; j++)
                     {
-                        arr2 = arr2.Where((source, index) => index != i).ToArray();
+                        if (arr2[i] == arr3[j])
+                        {
+                            arr2 = arr2.Where((source, index) => index != i).ToArray();
 
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < arr3.Length; i++)
+                {
+                    for (int j = 0; j < arr2.Length; j++)
+                    {
+                        if (arr3[i] == arr2[j])
+                        {
+                            arr2 = arr2.Where((source, index) => index != i).ToArray();
+
+                        }
                     }
                 }
             }
             PrintArray(arr2);
             Console.WriteLine();
-
-
+            Console.WriteLine();
         }
         private static void Swap(int[] arr, int i, int j)
         {
@@ -148,17 +190,5 @@ namespace TestArea
             }
             return arr;
         }
-        /*for(int i  = 0; i < arr.Length; i++)
-            {
-                for(int j = 0; j < arr2.Length; j++)
-                {
-                    if(arr[i] == arr2[j])
-                    {
-                        arr = arr.Where((source, index) => index != i).ToArray();
-                        arr2 = arr2.Where((source, index) => index != j).ToArray();
-                    }
-                }
-            }
-        */
     }
 } 
