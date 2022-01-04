@@ -29,11 +29,7 @@ namespace TestArea
             {
                 arr2[i] = rnd.Next(0, 100);
             }
-            PrintArray(arr);
-            Console.WriteLine();
-            PrintArray(arr2);
-            Console.WriteLine();
-            StringBuilder sb = new StringBuilder();
+            List<int> com = new List<int>();
             int b;
             if (a2 > a)
             {
@@ -44,7 +40,7 @@ namespace TestArea
                         if (arr[i] == arr2[j])
                         {
                             b = arr[i];
-                            sb.Append(b + " ");
+                            com.Add(b);
                             break;
                         }
                     }
@@ -59,24 +55,51 @@ namespace TestArea
                         if (arr2[i] == arr[j])
                         {
                             b = arr2[i];
-                            sb.Append(b + " ");
+                            com.Add(b);
                             break;
                         }
                     }
                 }
             }
             Console.WriteLine();
-            Console.WriteLine("Interesctia:");
-            for(int i = 0; i < sb.Length; i++)
+            PrintArray2(arr,1);
+            Console.WriteLine();
+            Console.Write("---Binar--: ");
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.Write(sb[i]);
+
+                if (com.Contains(arr[i]))
+                {
+                    Console.Write("1  ");
+                }
+                else
+                {
+                    Console.Write("0  ");
+                }
+
             }
             Console.WriteLine();
-            sb.Clear();
+            PrintArray2(arr2,2);
+            Console.WriteLine();
+            Console.Write("---Binar--: ");
+            for (int i = 0; i < arr2.Length; i++)
+            {
+
+                if (com.Contains(arr2[i]))
+                {
+                    Console.Write("1  ");
+                }
+                else
+                {
+                    Console.Write("0  ");
+                }
+
+            }
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Reuniunea:");
             int c = 0;
-            if (a2 > a)
+            if (a > a2)
             {
                 for (int i = 0; i < arr.Length; i++)
                 {
@@ -131,7 +154,7 @@ namespace TestArea
                     }
                 }
             }
-            PrintArray(arr);
+            PrintArray2(arr,1);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Diferenta v2-v1");
@@ -163,7 +186,7 @@ namespace TestArea
                     }
                 }
             }
-            PrintArray(arr2);
+            PrintArray2(arr2,2);
             Console.WriteLine();
             Console.WriteLine();
         }
@@ -174,13 +197,14 @@ namespace TestArea
             arr[i] = arr[j];
             arr[j] = aux;
         }
-        public static void PrintArray(int[] arr)
+        public static void PrintArray2(int[] arr,int nr)
         {
-            Console.Write("Vectorul: ");
+            Console.Write($"Vectorul {nr}: ");
             for (int i = 0; i<arr.Length; i++)
             {
                 Console.Write(arr[i]+" ");
             }
+            
         }
         public static int[] GenerateArray(int[] arr)
         {
@@ -190,5 +214,22 @@ namespace TestArea
             }
             return arr;
         }
+        public static void BubbleSort(int[] arr)
+        {
+            int i;
+            bool sortat;
+            do
+            {
+                sortat = true;
+                for (i = 0; i < arr.Length - 1; i++)
+                {
+                    if (arr[i] > arr[i + 1])
+                    {
+                        Swap(arr, i, i + 1);
+                        sortat = false;
+                    }
+                }
+            } while (!sortat);
+        }
     }
-} 
+}
