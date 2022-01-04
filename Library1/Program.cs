@@ -423,28 +423,38 @@ namespace Library1
         }
         public static void codprobleme3()
         {
-            Console.WriteLine("Problema 1()");
-            Console.WriteLine("Problema 2()");
-            Console.WriteLine("Problema 3()");
-            Console.WriteLine("Problema 4()");
-            Console.WriteLine("Problema 5()");
-            Console.WriteLine("Problema 6()");
-            Console.WriteLine("Problema 7()");
-            Console.WriteLine("Problema 8()");
-            Console.WriteLine("Problema 9()");
-            Console.WriteLine("Problema 10()");
-            Console.WriteLine("Problema 11()");
-            Console.WriteLine("Problema 12()");
-            Console.WriteLine("Problema 13()");
-            Console.WriteLine("Problema 14()");
-            Console.WriteLine("Problema 15()");
-            Console.WriteLine("Problema 16()");
-            Console.WriteLine("Problema 17()");
-            Console.WriteLine("Problema 18()");
-            Console.WriteLine("Problema 19()");
-            Console.WriteLine("Problema 20()");
-            Console.WriteLine("Problema 21()");
-            repeat2:
+            Console.WriteLine("Problema 1(Calculati suma elementelor unui vector de n numere citite de la tastatura.)");
+            Console.WriteLine("Problema 2(Sa se determine prima pozitie din vector pe care apare k. )");
+            Console.WriteLine("Problema 3(Sa se determine pozitiile dintr-un vector pe care apar cel mai mic si cel mai mare element.)");
+            Console.WriteLine("Problema 4(Cea mai mica si cea mai mare valoare dintr-un vector si de cate ori apar acestea.)");
+            Console.WriteLine("Problema 5(Se cere sa se insereze valoarea e in vector pe pozitia k.)");
+            Console.WriteLine("Problema 6(Se cere sa se stearga din vector elementul de pe pozitia k.)");
+            Console.WriteLine("Problema 7(Se cere sa se inverseze ordinea elementelor din vector.)");
+            Console.WriteLine("Problema 8(Rotiti elementele vectorului cu o pozitie spre stanga.)");
+            Console.WriteLine("Problema 9(Rotiti elementele vectorului cu k pozitii spre stanga.)");
+            Console.WriteLine("Problema 10(Se cere sa se determine pozitia unui element dat k.)");
+            Console.WriteLine("Problema 11(Se cere sa se afiseze toate numerele prime mai mici sau egale cu n (ciurul lui Eratostene)");
+            Console.WriteLine("Problema 12(Implementati algoritmul de sortare <Selection Sort>.)");
+            Console.WriteLine("Problema 13(Implementati algoritmul de sortare <Insertion Sort>.)");
+            Console.WriteLine("Problema 14(Toate valorile egale cu zero sa ajunga la sfarsit.)");
+            Console.WriteLine("Problema 15(Modificati un vector prin eliminarea elementelor care se repeta, fara a folosi un alt vector.)");
+            Console.WriteLine("Problema 16(Determinati cel mai mare divizor comun al elementelor vectorului.)");
+            Console.WriteLine("Problema 17(Sa se converteasca si sa se afiseze numarul n in baza b.)");
+            Console.WriteLine("Problema 18(Se cere valoarea polinomului intr-un punct x.)");
+            Console.WriteLine("Problema 19(Determinati de cate ori apare p in s.)");
+            Console.WriteLine("Problema 20(Determinati numarul de suprapuneri.)");
+            Console.WriteLine("Problema 21(Se cere sa se determine ordinea lor lexicografica.)");
+            Console.WriteLine("Problema 22(Se cere sa determine intersectia, reuniunea, si diferentele v1-v2 si v2 -v1.)");
+            Console.WriteLine("Problema 23(Elementele din v1 respectiv v2  sunt in ordine strict crescatoare.)");
+            Console.WriteLine("Problema 24(Elementele sunt stocate ca vectori cu valori binare)");
+            Console.WriteLine("Problema 25(Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.)");
+            Console.WriteLine("Problema 26(Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.)");
+            Console.WriteLine("Problema 27(Sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.)");
+            Console.WriteLine("Problema 28(Sortati un vector folosind metoda QuickSort.)");
+            Console.WriteLine("Problema 29(Sortati un vector folosind metoda MergeSort.)");
+            Console.WriteLine("Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
+            Console.WriteLine("Problema 31(Sa se determine elementul majoritate al unui vector).");
+        repeat2:
             Console.Write("\nType the number of the problem you want to see: ");
             try
             {
@@ -609,6 +619,94 @@ namespace Library1
                         while ((s3buffer20 = s3load20.ReadLine()) != null)
                         {
                             Console.WriteLine(s3buffer20);
+                        }
+                        break;
+                    case 21:
+                        TextReader s3load21 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p21.txt");
+                        string s3buffer21;
+                        while ((s3buffer21 = s3load21.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer21);
+                        }
+                        break;
+                    case 22:
+                        TextReader s3load22 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p22.txt");
+                        string s3buffer22;
+                        while ((s3buffer22 = s3load22.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer22);
+                        }
+                        break;
+                    case 23:
+                        TextReader s3load23 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p23.txt");
+                        string s3buffer23;
+                        while ((s3buffer23 = s3load23.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer23);
+                        }
+                        break;
+                    case 24:
+                        TextReader s3load24 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p24.txt");
+                        string s3buffer24;
+                        while ((s3buffer24 = s3load24.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer24);
+                        }
+                        break;
+                    case 25:
+                        TextReader s3load25 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p25.txt");
+                        string s3buffer25;
+                        while ((s3buffer25 = s3load25.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer25);
+                        }
+                        break;
+                    case 26:
+                        TextReader s3load26 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p26.txt");
+                        string s3buffer26;
+                        while ((s3buffer26 = s3load26.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer26);
+                        }
+                        break;
+                    case 27:
+                        TextReader s3load27 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p27.txt");
+                        string s3buffer27;
+                        while ((s3buffer27 = s3load27.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer27);
+                        }
+                        break;
+                    case 28:
+                        TextReader s3load28 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p28.txt");
+                        string s3buffer28;
+                        while ((s3buffer28 = s3load28.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer28);
+                        }
+                        break;
+                    case 29:
+                        TextReader s3load29 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p29.txt");
+                        string s3buffer29;
+                        while ((s3buffer29 = s3load29.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer29);
+                        }
+                        break;
+                    case 30:
+                        TextReader s3load30 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p30.txt");
+                        string s3buffer30;
+                        while ((s3buffer30 = s3load30.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer30);
+                        }
+                        break;
+                    case 31:
+                        TextReader s3load31 = new StreamReader(@"..\..\CodeLineProbleme3\Set3p31.txt");
+                        string s3buffer31;
+                        while ((s3buffer31 = s3load31.ReadLine()) != null)
+                        {
+                            Console.WriteLine(s3buffer31);
                         }
                         break;
                     default:
