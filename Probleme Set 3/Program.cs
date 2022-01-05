@@ -1099,7 +1099,18 @@ namespace Probleme_Set_3
         }
         public static void set3p28()
         {
-
+            Console.Write("Cate numere doriti sa contina vectorul 1?(0,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 100);
+            }
+            PrintArray(arr);
+            QuickSort(arr, 0, arr.Length);
+            Console.WriteLine();
+            PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p29()
         {
@@ -1199,6 +1210,31 @@ namespace Probleme_Set_3
                     }
                 }
             } while (!sortat);
+        }
+        public static int[] QuickSort(int[] arr, int start, int end)
+        {
+            if (start < end)
+            {
+                int pivot = partition(arr, start, end);
+                QuickSort(arr, start, pivot);
+                QuickSort(arr, pivot + 1, end);
+            }
+            return arr;
+        }
+        public static int partition(int[] arr, int start, int end)
+        {
+            int pivot = arr[start];
+            int swapindex = start;
+            for (int i = start + 1; i < end; i++)
+            {
+                if (arr[i] < pivot)
+                {
+                    swapindex++;
+                    Swap(arr, i, swapindex);
+                }
+            }
+            Swap(arr, start, swapindex);
+            return swapindex;
         }
     }
     
