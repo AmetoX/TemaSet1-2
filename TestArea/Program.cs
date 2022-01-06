@@ -15,16 +15,17 @@ namespace TestArea
         {
             Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Cate numere doriti sa contina vectorul 2?(-100,100): ");
-            int b = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            int[] arr2 = new int[b];
-            GenerateArray(arr);
-            GenerateArray(arr2);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 2);
+            }
+            PrintArray(arr);
             Console.WriteLine();
-            PrintArray2(arr,1);
+            BubbleSort(arr);
+            Array.Reverse(arr);
+            PrintArray(arr);
             Console.WriteLine();
-
         }
         static void Merge(int[] array, int lowIndex, int middleIndex, int highIndex)
         {

@@ -483,7 +483,19 @@ namespace Probleme_Set_3
         }
         public static void set3p14()
         {
-
+            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 2);
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            BubbleSort(arr);
+            Array.Reverse(arr);
+            PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p15()
         {
@@ -1087,7 +1099,43 @@ namespace Probleme_Set_3
         }
         public static void set3p25()
         {
+            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Cate numere doriti sa contina vectorul 2?(-100,100): ");
+            int b = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            int[] arr2 = new int[b];
+            int[] arr3 = new int[a + b];
+            GenerateArray(arr);
+            GenerateArray(arr2);
+            Console.WriteLine();
+            PrintArray2(arr, 1);
+            Console.WriteLine();
+            PrintArray2(arr2, 2);
+            int i = 0;
+            while (i < arr3.Length)
+            {
 
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    arr3[i] = arr[j];
+                    i++;
+                }
+                for (int k = 0; k < arr2.Length; k++)
+                {
+                    arr3[i] = arr2[k];
+                    i++;
+                }
+            }
+            Console.WriteLine();
+            PrintArray2(arr3, 3);
+            Console.WriteLine();
+            BubbleSort(arr3);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            Console.WriteLine();
+            PrintArray(arr3);
+            Console.WriteLine();
         }
         public static void set3p26()
         {
