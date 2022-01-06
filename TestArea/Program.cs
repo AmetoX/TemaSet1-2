@@ -13,21 +13,18 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-            Console.Write("Cate numere doriti sa contina vectorul 1?(0,100): ");
+            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Cate numere doriti sa contina vectorul 2?(-100,100): ");
+            int b = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(0, 100);
-            }
-            PrintArray(arr);
+            int[] arr2 = new int[b];
+            GenerateArray(arr);
+            GenerateArray(arr2);
             Console.WriteLine();
-            Console.WriteLine("Sorting...");
-            MergeSort(arr,0,arr.Length-1);
+            PrintArray2(arr,1);
             Console.WriteLine();
-            Console.WriteLine("-Merge sort-");
-            PrintArray(arr);
-            Console.WriteLine();
+
         }
         static void Merge(int[] array, int lowIndex, int middleIndex, int highIndex)
         {
@@ -122,11 +119,19 @@ namespace TestArea
             }
             
         }
+        public static void PrintArray2(int[] arr, int nr)
+        {
+            Console.Write($"Vectorul {nr}: ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+        }
         public static int[] GenerateArray(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rnd.Next(0, 50);
+                arr[i] = rnd.Next(-100, 100);
             }
             return arr;
         }

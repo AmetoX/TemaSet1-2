@@ -1095,17 +1095,48 @@ namespace Probleme_Set_3
         }
         public static void set3p27()
         {
-
-        }
-        public static void set3p28()
-        {
-            Console.Write("Cate numere doriti sa contina vectorul 1?(0,100): ");
+            Console.Write("Cate numere doriti sa contina vectorul ?(0,100): ");
             int a = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = rnd.Next(0, 100);
             }
+            Console.WriteLine();
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.Write("Indexul : ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write($"{i} " + " ");
+            }
+            Console.WriteLine();
+            Console.Write("Alegeti o valoare din index: ");
+            int b = int.Parse(Console.ReadLine());
+            BubbleSort(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            Console.WriteLine();
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.Write("          ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i == b)
+                {
+                    Console.Write($"!!" + " ");
+                }
+                Console.Write($"  " + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Pe pozitia {b} din index se afla numarul: {arr[b]}.");
+        }
+        public static void set3p28()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul ?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             Console.WriteLine("Sorting...");
@@ -1117,13 +1148,10 @@ namespace Probleme_Set_3
         }
         public static void set3p29()
         {
-            Console.Write("Cate numere doriti sa contina vectorul 1?(0,100): ");
+            Console.Write("Cate numere doriti sa contina vectorul ?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(0, 100);
-            }
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             Console.WriteLine("Sorting...");
