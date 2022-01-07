@@ -15,6 +15,8 @@ namespace TestArea
         {
             
         }
+
+        //-----------------------------------------------------------------------------
         static void Merge(int[] array, int lowIndex, int middleIndex, int highIndex)
         {
             var left = lowIndex;
