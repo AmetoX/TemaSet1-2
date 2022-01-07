@@ -13,3 +13,30 @@ public static void set3p28()
             PrintArray(arr);
             Console.WriteLine();
         }
+
+ public static int[] QuickSort(int[] arr, int start, int end)
+        {
+            if (start < end)
+            {
+                int pivot = partition(arr, start, end);
+                QuickSort(arr, start, pivot);
+                QuickSort(arr, pivot + 1, end);
+            }
+            return arr;
+        }
+
+public static int partition(int[] arr, int start, int end)
+        {
+            int pivot = arr[start];
+            int swapindex = start;
+            for (int i = start + 1; i < end; i++)
+            {
+                if (arr[i] < pivot)
+                {
+                    swapindex++;
+                    Swap(arr, i, swapindex);
+                }
+            }
+            Swap(arr, start, swapindex);
+            return swapindex;
+        }

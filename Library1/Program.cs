@@ -13,8 +13,8 @@ namespace Library1
     {
         static void Main(string[] args)
         {
-            // this will be empty for now...
-        }             
+            //this will be empty for now..
+        }
         /// <summary>
         /// arata timpul cand se porneste programul
         /// </summary>
@@ -55,7 +55,7 @@ namespace Library1
             Console.WriteLine("(x) Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
             Console.WriteLine("(x) Problema 21(Ghiciti un numar intre 1 si 1024)");
         repeat:
-            Console.Write("\nType the number of the problem you want to see: ");
+            Console.Write("\nScrieti numarul optiunii pe care o alegeti: ");
             try
             {
                 int set1 = int.Parse(Console.ReadLine());
@@ -231,7 +231,7 @@ namespace Library1
                         }
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto repeat;
 
                 }
@@ -239,8 +239,8 @@ namespace Library1
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto repeat;
             }
         }
@@ -265,7 +265,7 @@ namespace Library1
             Console.WriteLine("( ) Problema 16(Se da o secventa de n numere. Se cere sa se determine daca este o secventa bitonica rotita.)");
             Console.WriteLine("(x) Problema 17(Determinati daca secventa reprezinta o secventa de paranteze corecta.)");
         repeat1:
-            Console.Write("\nType the number of the problem you want to see: ");
+            Console.Write("\nScrieti numarul optiunii pe care o alegeti: ");
             try
             {
                 int set2 = int.Parse(Console.ReadLine());
@@ -408,16 +408,15 @@ namespace Library1
                         }
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto repeat1;
                         
                 }
             }
             catch
-            {               
-                Console.WriteLine();
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+            {
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto repeat1;
             }
 
@@ -457,7 +456,7 @@ namespace Library1
             Console.WriteLine("( ) Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
             Console.WriteLine("(x) Problema 31(Sa se determine elementul majoritate al unui vector).");
         repeat2:
-            Console.Write("\nType the number of the problem you want to see: ");
+            Console.Write("\nScrieti numarul optiunii pe care o alegeti: ");
             try
             {
                 int set3 = int.Parse(Console.ReadLine());
@@ -712,14 +711,14 @@ namespace Library1
                         }
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto repeat2;
                 }
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto repeat2;
             }
 
@@ -733,7 +732,7 @@ namespace Library1
         {
             for (int P = 5; P > 0; P--)
             {
-                Console.Write("Please type the password: ");
+                Console.Write("Va rog introduceti parola: ");
                 string p = Console.ReadLine();
                 TextReader loadps = new StreamReader(@"..\..\Properties\Cache.txt");
                 string interval = loadps.ReadLine();
@@ -742,24 +741,60 @@ namespace Library1
                 int done = 0;
                 if (p == local_data[21] || p==passwords)
                 {
-                    Console.WriteLine("Password corect!\n\nWelcome!\n");
+                    Console.WriteLine("Parola corecta!\n\nBun venit!\n");
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine("wrong password");
-                    Console.WriteLine($"{P - 1} attemps left");
+                    Console.WriteLine("parola gresita");
+                    Console.WriteLine($"{P - 1} incercari ramase");
                 }
                 if (P == done)
                 {
-                    Console.WriteLine("No more attemps left...\n The program is closing...");
+                    Console.WriteLine("Nu mai aveti incercari ramase...\n Programul se inchide...");
                     return false;
-
                 }
             }
             return false;
 
         }
+        public static void Console_Color()
+        {
+            TextReader color = new StreamReader(@"..\..\Color.txt");
+            string interval = color.ReadLine();
+            string[] local_data = interval.Split(' ');
+            string alb = "0";
+            string albastru = "1";
+            string gri = "2";
+            string galben = "3";
+            string rosu = "4";
+            string verde = "5";
+            if (local_data[0] == alb)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            if (local_data[0] == albastru)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            if (local_data[0] == gri)
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            if (local_data[0] == galben)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            if (local_data[0] == rosu)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            if (local_data[0] == verde)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+        }
+
         //-----------------------------------------------
         /// <summary>
         /// Apartin de problmea 17 set 3.

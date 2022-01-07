@@ -1,0 +1,9 @@
+0   <----- schimbati cifra
+------------
+0 - alb
+1 - albastru
+2 - gri
+3 - galben
+4 - rosu
+5 - verde
+// selectati culoarea consolei prin schimbarea cifrei. 

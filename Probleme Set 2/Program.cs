@@ -33,7 +33,7 @@ namespace Probleme_Set_2
             Console.WriteLine("( ) Problema 16(Se da o secventa de n numere. Se cere sa se determine daca este o secventa bitonica rotita.)");
             Console.WriteLine("(x) Problema 17(Determinati daca secventa reprezinta o secventa de paranteze corecta.)");
             begin:
-            Console.Write("\nType the number of the problem you want to see: ");
+            Console.Write("\nScrieti numarul optiunii pe care o alegeti: ");
             int set2 = int.Parse(Console.ReadLine());
             try
             {
@@ -91,14 +91,14 @@ namespace Probleme_Set_2
                         set2p17();
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto begin;
                 }
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto begin;
             }
         }
@@ -869,6 +869,7 @@ namespace Probleme_Set_2
         }
         public static void set2p17()
         {
+            Console.WriteLine("Problema partial rezolvata!!!");
             Console.Write("Introduceti un nr. : ");
             int n = int.Parse(Console.ReadLine());
             StringBuilder sb = new StringBuilder();
@@ -898,7 +899,6 @@ namespace Probleme_Set_2
                 }
                 a = r;
 
-
                 ok = true;
                 if (r == 0)
                 {
@@ -914,7 +914,6 @@ namespace Probleme_Set_2
             }
             Console.WriteLine();
 
-
             for (int j = 0; j < sb.Length; j++)
             {
                 Console.Write(sb[j]);
@@ -923,15 +922,13 @@ namespace Probleme_Set_2
             Console.WriteLine("Paranteze perfecte: " + b);
             if (sb[0] == 1 || ok)
             {
-                Console.WriteLine("nu");
+                Console.WriteLine("incorecta");
             }
-
             if (zero == unu)
 
             {
-                Console.WriteLine("merge");
+                Console.WriteLine("corecta");
             }
-
         }
     }
 }

@@ -50,7 +50,7 @@ namespace Probleme_Set_3
             Console.WriteLine("( ) Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
             Console.WriteLine("(x) Problema 31(Sa se determine elementul majoritate al unui vector).");
         begin:
-            Console.Write("\nType the number of the problem you want to see: ");
+            Console.Write("\nScrieti numarul optiunii pe care o alegeti: ");
             int set3 = int.Parse(Console.ReadLine());
             try
             {
@@ -150,14 +150,14 @@ namespace Probleme_Set_3
                         set3p31();
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto begin;
                 }
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto begin;
             }
         }
@@ -183,6 +183,7 @@ namespace Probleme_Set_3
             PrintArray(arr);
             Console.WriteLine();
             Console.WriteLine($"Suma sirului introdus este: {suma}");
+         
         }
         public static void set3p2()
         {
@@ -219,7 +220,7 @@ namespace Probleme_Set_3
         }
         public static void set3p3()
         {
-            Console.Write("Cate numere doriti sa contina vecotrul? : ");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
@@ -313,6 +314,7 @@ namespace Probleme_Set_3
             Console.WriteLine();
             Console.WriteLine("Noul vector: ");
             PrintArray(newarr);
+            Console.WriteLine();
         }
         public static void set3p6()
         {
@@ -327,6 +329,7 @@ namespace Probleme_Set_3
             int e = int.Parse(Console.ReadLine());
             arr = arr.Where((source, index) => index != e).ToArray();
             PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p7()
         {
@@ -350,6 +353,7 @@ namespace Probleme_Set_3
             {
                 Console.Write(rev[i] + " ");
             }
+            Console.WriteLine();
         }
         public static void set3p8()
         {
@@ -370,7 +374,7 @@ namespace Probleme_Set_3
             arr[a - 1] = c;
             Console.WriteLine("Vector rotit spre stanga cu o pozitie.");
             PrintArray(arr);
-
+            Console.WriteLine();
         }
         public static void set3p9()
         {
@@ -378,7 +382,7 @@ namespace Probleme_Set_3
         }
         public static void set3p10()
         {
-                        Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");            
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");            
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
@@ -409,7 +413,7 @@ namespace Probleme_Set_3
         }
         public static void set3p11()
         {
-            Console.Write("Cate numere doriti sa contina vectorul?(0,100) : ");
+            Console.Write("Cate numere doriti sa contina vectorul?: ");
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
@@ -434,10 +438,11 @@ namespace Probleme_Set_3
             }
             Console.WriteLine("Toate numerele prime mai mici sau egale cu a (ciurul lui Eratostene): ");
             PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p12()
         {
-            Console.Write("Cate numere doriti sa contina vectorul?: ");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
             int a = int.Parse(Console.ReadLine()); ;
             int[] arr;
             arr = new int[a];
@@ -464,7 +469,7 @@ namespace Probleme_Set_3
         }
         public static void set3p13()
         {
-            Console.Write("Cate numere doriti sa contina vectorul?: ");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
             int a = int.Parse(Console.ReadLine()); ;
             int[] arr;
             arr = new int[a];
@@ -482,19 +487,21 @@ namespace Probleme_Set_3
             }
             Console.WriteLine("-Insertion sort-");
             PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p14()
         {
-            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
+            //numa asa am reusit sa fac
+            Console.Write("Cate numere doriti sa contina vectorul 1?(0,4): ");
             int a = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rnd.Next(0, 2);
+                arr[i] = rnd.Next(0, 4);
             }
             PrintArray(arr);
             Console.WriteLine();
-            BubbleSort(arr);
+            BubbleSort(arr);           
             Array.Reverse(arr);
             PrintArray(arr);
             Console.WriteLine();
@@ -522,6 +529,7 @@ namespace Probleme_Set_3
             }
             Console.WriteLine("Vectorul fara numere care se repeta:");
             PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p16()
         {

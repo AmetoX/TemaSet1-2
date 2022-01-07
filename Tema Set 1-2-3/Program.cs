@@ -16,19 +16,20 @@ namespace Tema_Set_1_2_3
         //Pentru ca programul sa functioneze corect aceasta solutie trebuie selecta ca si startup project
         static void Main(string[] args)
         {
+            Library1.Program.Console_Color();
             Library1.Program.time();
-            Console.WriteLine("Welcome dear User to my program !\n");
+            Console.WriteLine("Bun venit !\n");
             password();
             start:
-            Console.WriteLine("Choose an option from below:");
+            Console.WriteLine("Alegeti una dintre optiunile de mai jos:");
             Console.WriteLine();
             options();
-            Console.Write("Please enter the number of the option you want to choose: ");
+            Console.Write("Introduceti numarul optiunii pe care doriti sa o alegeti: ");
             optionSelect();
             // o functie "goto" pt a merge inapoi la inceput dupa ce sa parcurs odata prin program           
-            Console.Write("Do you want to return to the main menu? (y/n)");
+            Console.WriteLine("Doriti sa va intoarceti la meniul principal? (d/n)");
             string b = Console.ReadLine();
-            string y = "y";
+            string y = "d";
             string n = "n";
             if (b == y)
             {
@@ -37,7 +38,8 @@ namespace Tema_Set_1_2_3
             }
             else if (b == n)
             {
-                Console.WriteLine("\nThank you for using my program!");
+                Console.WriteLine("\nVa multumesc pentru utilizare!\nO zi buna!\n");
+
             }
         }      
         /// <summary>
@@ -63,14 +65,14 @@ namespace Tema_Set_1_2_3
                     case 1:
                         again:
                         Console.Clear();
-                        Console.WriteLine("Select the set:\n");
+                        Console.WriteLine("Selectati setul dorit:\n");
                         Console.WriteLine("1.Set 1 [21/21]");
                         Console.WriteLine("2.Set 2 [13/17]");
                         Console.WriteLine("3.Set 3 [24/31]");
                         afisareProbleme();
-                        Console.WriteLine("Again or continue? (a/c)");
+                        Console.WriteLine("Din nou sau continuati ? (d/c)");
                         string b = Console.ReadLine();
-                        string y = "a";
+                        string y = "d";
                         string n = "c";
                         if (b == y)
                         {
@@ -89,9 +91,9 @@ namespace Tema_Set_1_2_3
                         Console.WriteLine("2.Cod probleme 2");
                         Console.WriteLine("3.Cod probleme 3");
                         codprobleme();
-                        Console.WriteLine("Again or continue? (a/c)");
+                        Console.WriteLine("Din nou sau continuati ? (d/c)");
                         string d = Console.ReadLine();
-                        string a = "a";
+                        string a = "d";
                         string c = "c";
                         if (d == a)
                         {
@@ -104,18 +106,17 @@ namespace Tema_Set_1_2_3
                         }
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto try1;
                 }
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 Console.WriteLine();
                 options();
-                Console.Write("Please enter the number of the option you want to choose: ");
-                
+                Console.Write("Introduceti numarul optiunii pe care doriti sa o alegeti: ");               
                 goto try1;
             }
         }
@@ -126,7 +127,7 @@ namespace Tema_Set_1_2_3
         {
             if (Library1.Program.passv2())
             {
-                Console.WriteLine("Now you can use the program!");
+                Console.WriteLine("Acum puteti folosi programul!");
             }
             else
             {
@@ -144,23 +145,23 @@ namespace Tema_Set_1_2_3
             for (int P = 5; P > 0; P--)
             {
                 
-                Console.Write("Please type the password:");
+                Console.Write("Va rog introduceti parola: ");
                 string p = Console.ReadLine();               
                 string passwords = "123";
                 int done = 0;
                 if (p == passwords)
                 {
-                    Console.WriteLine("Password corect!\n\nWelcome!\n");
+                    Console.WriteLine("Parola corecta!\n\nBun venit!\n");
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine("wrong password");
-                    Console.WriteLine($"{P - 1} attemps left");
+                    Console.WriteLine("parola gresita");
+                    Console.WriteLine($"{P - 1} incercari ramase");
                 }
                 if (P == done)
                 {
-                    Console.WriteLine("No more attemps left...\n The program is closing...");
+                    Console.WriteLine("Nu mai aveti incercari ramase...\n Programul se inchide...");
                     return false;
 
                 }
@@ -202,8 +203,8 @@ namespace Tema_Set_1_2_3
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto try2;
 
             }
@@ -236,10 +237,10 @@ namespace Tema_Set_1_2_3
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto try3;
             }
-        }
+        }       
     }
 }

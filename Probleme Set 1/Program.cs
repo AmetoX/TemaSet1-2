@@ -37,7 +37,7 @@ namespace Probleme_Set_1
             Console.WriteLine("(x) Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
             Console.WriteLine("(x) Problema 21(Ghiciti un numar intre 1 si 1024)");
         begin:
-            Console.Write("\nType the number of the problem you want to see: ");
+            Console.Write("\nScrieti numarul optiunii pe care o alegeti: ");
             try
             {
                 int set1 = int.Parse(Console.ReadLine());
@@ -107,14 +107,14 @@ namespace Probleme_Set_1
                         set1p21();
                         break;
                     default:
-                        Console.WriteLine("Wrong problem number.Try again!");
+                        Console.WriteLine("Numarul problemei este gresit. Reincercati!");
                         goto begin;
                 }
             }
             catch
             {
-                Console.WriteLine("EROR: wrong input.");
-                Console.WriteLine("Please try again...");
+                Console.WriteLine("EROARE: input gresit.");
+                Console.WriteLine("-Reincercati-");
                 goto begin;                
             }
            
@@ -628,8 +628,8 @@ namespace Probleme_Set_1
         }
         public static void set1p21()
         {
-            Random random = new Random();
-            int randomnr = random.Next(1, 1024);
+            Console.WriteLine("Introduceti un nr(1, 1024): ");
+            int randomnr = int.Parse(Console.ReadLine());
             Console.WriteLine("numarul este mai mare sau egal decat 512?");
             if (randomnr >= 512)
             {
