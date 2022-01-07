@@ -374,7 +374,7 @@ namespace Probleme_Set_3
         }
         public static void set3p9()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p10()
         {
@@ -608,19 +608,19 @@ namespace Probleme_Set_3
         }
         public static void set3p18()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p19()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p20()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p21()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p22()
         {
@@ -1165,7 +1165,7 @@ namespace Probleme_Set_3
         }
         public static void set3p26()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p27()
         {
@@ -1237,7 +1237,7 @@ namespace Probleme_Set_3
         }
         public static void set3p30()
         {
-            //
+            Console.WriteLine("Nu am stiut sa o rezolv.");
         }
         public static void set3p31()
         {
