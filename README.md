@@ -5,6 +5,6 @@ In folderul (Tema Set 1-2-3) aveti un fisier Color.txt unde puteti schimba culoa
 
 Parola pt a rula programul se afla in folderul Properties unde veti gasi un fisier .txt , al 21-lea numar este parola programului.
 
-Dupa ce ati deschis programul in VS (din github), veti selecta proiectul Tema Set 1-2-3 ca starUp project si dupa rulati programul.
+Dupa ce ati deschis programul (din github) in VS , veti selecta proiectul Tema Set 1-2-3 ca starUp project si dupa rulati programul.
 
 -O zi buna!-
