@@ -1279,6 +1279,8 @@ namespace Probleme_Set_3
             Console.WriteLine();
         }
 
+
+        //------------------------------------------------------------------------------------
         private static void PrintArray(int[] arr)
         {
             Console.Write("Vectorul: ");

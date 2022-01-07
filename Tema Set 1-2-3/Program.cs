@@ -20,7 +20,7 @@ namespace Tema_Set_1_2_3
             Console.WriteLine("Welcome dear User to my program !\n");
             password();
             start:
-            Console.WriteLine("Chose an option from below:");
+            Console.WriteLine("Choose an option from below:");
             Console.WriteLine();
             options();
             Console.Write("Please enter the number of the option you want to choose: ");

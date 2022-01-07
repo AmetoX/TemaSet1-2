@@ -25,35 +25,35 @@ namespace Library1
             Console.WriteLine(dt.ToString(culture));
         }       
         /// <summary>
-        /// -aceste 3 functii cand vor fi apeta vor arata o serie de variante 
+        /// -aceste 3 functii cand vor fi apelate vor arata o serie de variante 
         /// -odata ce utilizatorul alege una dintr-e acele variante programul va arata in consola exact continutul din fiesrul text
         /// care ii corespende
         /// (are rolul de gasi codul unei probleme fara a cauta prin tot codul programului)
         /// </summary>
         public static void codprobleme1()
         {
-            Console.WriteLine("Problema 1(necunoscuta: ax+b = 0)");
-            Console.WriteLine("Problema 2(necunoscuta: ax^2 + bx + c = 0)");
-            Console.WriteLine("Problema 3(n se divide cu k)");
-            Console.WriteLine("Problema 4(un an y este an bisect)");
-            Console.WriteLine("Problema 5(afisati a k-a cifra de la sfarsitul unui numar)");
-            Console.WriteLine("Problema 6(trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi)");
-            Console.WriteLine("Problema 7(sa se inverseze valorile lor)");
-            Console.WriteLine("Problema 8(sa se inverseze valorile lor fara a folosi alte variabile suplimentare)");
-            Console.WriteLine("Problema 9(toti divizorii numarului n)");
-            Console.WriteLine("Problema 10(daca un numar n este prim)");
-            Console.WriteLine("Problema 11(Afisati in ordine inversa cifrele unui numar n)");
-            Console.WriteLine("Problema 12(cate numere integi divizibile cu n se afla in intervalul [a, b])");
-            Console.WriteLine("Problema 13(cati ani bisecti sunt intre anii y1 si y2)");
-            Console.WriteLine("Problema 14(daca un numar n este palindrom)");
-            Console.WriteLine("Problema 15(3 numere. Sa se afiseze in ordine crescatoare)");
-            Console.WriteLine("Problema 16(5 numere. Sa se afiseze in ordine crescatoare)");
-            Console.WriteLine("Problema 17(cel mai mare divizor comun si cel mai mic multiplu comun a doua numere)");
-            Console.WriteLine("Problema 18(descompunerea in factori primi ai unui numar n)");
-            Console.WriteLine("Problema 19(daca un numar e format doar cu 2 cifre care se pot repeta)");
-            Console.WriteLine("Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
-            Console.WriteLine("Problema 21(Ghiciti un numar intre 1 si 1024)");
-
+            Console.WriteLine("Facut(x) / Nefacut( )");
+            Console.WriteLine("(x) Problema 1(necunoscuta: ax+b = 0)");
+            Console.WriteLine("(x) Problema 2(necunoscuta: ax^2 + bx + c = 0)");
+            Console.WriteLine("(x) Problema 3(n se divide cu k)");
+            Console.WriteLine("(x) Problema 4(un an y este an bisect)");
+            Console.WriteLine("(x) Problema 5(afisati a k-a cifra de la sfarsitul unui numar)");
+            Console.WriteLine("(x) Problema 6(trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi)");
+            Console.WriteLine("(x) Problema 7(sa se inverseze valorile lor)");
+            Console.WriteLine("(x) Problema 8(sa se inverseze valorile lor fara a folosi alte variabile suplimentare)");
+            Console.WriteLine("(x) Problema 9(toti divizorii numarului n)");
+            Console.WriteLine("(x) Problema 10(daca un numar n este prim)");
+            Console.WriteLine("(x) Problema 11(Afisati in ordine inversa cifrele unui numar n)");
+            Console.WriteLine("(x) Problema 12(cate numere integi divizibile cu n se afla in intervalul [a, b])");
+            Console.WriteLine("(x) Problema 13(cati ani bisecti sunt intre anii y1 si y2)");
+            Console.WriteLine("(x) Problema 14(daca un numar n este palindrom)");
+            Console.WriteLine("(x) Problema 15(3 numere. Sa se afiseze in ordine crescatoare)");
+            Console.WriteLine("(x) Problema 16(5 numere. Sa se afiseze in ordine crescatoare)");
+            Console.WriteLine("(x) Problema 17(cel mai mare divizor comun si cel mai mic multiplu comun a doua numere)");
+            Console.WriteLine("(x) Problema 18(descompunerea in factori primi ai unui numar n)");
+            Console.WriteLine("(x) Problema 19(daca un numar e format doar cu 2 cifre care se pot repeta)");
+            Console.WriteLine("(x) Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
+            Console.WriteLine("(x) Problema 21(Ghiciti un numar intre 1 si 1024)");
         repeat:
             Console.Write("\nType the number of the problem you want to see: ");
             try
@@ -246,24 +246,25 @@ namespace Library1
         }
         public static void codprobleme2()
         {
-            Console.WriteLine("Problema 1(Cate din ele sunt pare.)");
-            Console.WriteLine("Problema 2(Cate sunt negative, cate sunt zero si cate sunt pozitive.)");
-            Console.WriteLine("Problema 3(Suma si produsul numerelor de la 1 la n.)");
-            Console.WriteLine("Problema 4(Pe ce pozitie se afla in secventa un numara a.)");
-            Console.WriteLine("Problema 5(Cate elemente dintr-o secventa de n numere sunt egale cu pozitia pe care apar in secventa.)");
-            Console.WriteLine("Problema 6(Sa se determine daca numerele din secventa sunt in ordine crescatoare.)");
-            Console.WriteLine("Problema 7(Sa se determine cea mai mare si cea mai mica valoare din secventa.)");
-            Console.WriteLine("Problema 8(Al n-lea numar din sirul lui Fibonacci.)");
-            Console.WriteLine("Problema 9(Daca o secventa de n numere este monotona.)");
-            Console.WriteLine("Problema 10(Care este numarul maxim de numere consecutive egale din secventa.)");
-            Console.WriteLine("Problema 11(Sa se caculeze suma inverselor acestor numere.)");
-            Console.WriteLine("Problema 12(Cate grupuri de numere consecutive diferite de zero sunt intr-o secventa de n numere.)");
-            Console.WriteLine("Problema 13(Determinati daca o secventa de n numere este o secventa crescatoare rotita.)");
-            Console.WriteLine("Problema 14(Determinati daca o secventa de n numere este o secventa monotona rotita.)");
-            Console.WriteLine("Problema 15(Sa se determine daca este bitonica.)");
-            Console.WriteLine("Problema 16(Se da o secventa de n numere. Se cere sa se determine daca este o secventa bitonica rotita.)");
-            Console.WriteLine("Problema 17(Determinati daca secventa reprezinta o secventa de paranteze corecta.)");
-            repeat1:
+            Console.WriteLine("Facut(x) / Nefacut( )");
+            Console.WriteLine("(x) Problema 1(Cate din ele sunt pare.)");
+            Console.WriteLine("(x) Problema 2(Cate sunt negative, cate sunt zero si cate sunt pozitive.)");
+            Console.WriteLine("(x) Problema 3(Suma si produsul numerelor de la 1 la n.)");
+            Console.WriteLine("(x) Problema 4(Pe ce pozitie se afla in secventa un numara a.)");
+            Console.WriteLine("(x) Problema 5(Cate elemente dintr-o secventa de n numere sunt egale cu pozitia pe care apar in secventa.)");
+            Console.WriteLine("(x) Problema 6(Sa se determine daca numerele din secventa sunt in ordine crescatoare.)");
+            Console.WriteLine("(x) Problema 7(Sa se determine cea mai mare si cea mai mica valoare din secventa.)");
+            Console.WriteLine("(x) Problema 8(Al n-lea numar din sirul lui Fibonacci.)");
+            Console.WriteLine("(x) Problema 9(Daca o secventa de n numere este monotona.)");
+            Console.WriteLine("(x) Problema 10(Care este numarul maxim de numere consecutive egale din secventa.)");
+            Console.WriteLine("(x) Problema 11(Sa se caculeze suma inverselor acestor numere.)");
+            Console.WriteLine("(x) Problema 12(Cate grupuri de numere consecutive diferite de zero sunt intr-o secventa de n numere.)");
+            Console.WriteLine("( ) Problema 13(Determinati daca o secventa de n numere este o secventa crescatoare rotita.)");
+            Console.WriteLine("( ) Problema 14(Determinati daca o secventa de n numere este o secventa monotona rotita.)");
+            Console.WriteLine("( ) Problema 15(Sa se determine daca este bitonica.)");
+            Console.WriteLine("( ) Problema 16(Se da o secventa de n numere. Se cere sa se determine daca este o secventa bitonica rotita.)");
+            Console.WriteLine("(x) Problema 17(Determinati daca secventa reprezinta o secventa de paranteze corecta.)");
+        repeat1:
             Console.Write("\nType the number of the problem you want to see: ");
             try
             {
@@ -423,37 +424,38 @@ namespace Library1
         }
         public static void codprobleme3()
         {
-            Console.WriteLine("Problema 1(Calculati suma elementelor unui vector de n numere citite de la tastatura.)");
-            Console.WriteLine("Problema 2(Sa se determine prima pozitie din vector pe care apare k. )");
-            Console.WriteLine("Problema 3(Sa se determine pozitiile dintr-un vector pe care apar cel mai mic si cel mai mare element.)");
-            Console.WriteLine("Problema 4(Cea mai mica si cea mai mare valoare dintr-un vector si de cate ori apar acestea.)");
-            Console.WriteLine("Problema 5(Se cere sa se insereze valoarea e in vector pe pozitia k.)");
-            Console.WriteLine("Problema 6(Se cere sa se stearga din vector elementul de pe pozitia k.)");
-            Console.WriteLine("Problema 7(Se cere sa se inverseze ordinea elementelor din vector.)");
-            Console.WriteLine("Problema 8(Rotiti elementele vectorului cu o pozitie spre stanga.)");
-            Console.WriteLine("Problema 9(Rotiti elementele vectorului cu k pozitii spre stanga.)");
-            Console.WriteLine("Problema 10(Se cere sa se determine pozitia unui element dat k.)");
-            Console.WriteLine("Problema 11(Se cere sa se afiseze toate numerele prime mai mici sau egale cu n (ciurul lui Eratostene)");
-            Console.WriteLine("Problema 12(Implementati algoritmul de sortare <Selection Sort>.)");
-            Console.WriteLine("Problema 13(Implementati algoritmul de sortare <Insertion Sort>.)");
-            Console.WriteLine("Problema 14(Toate valorile egale cu zero sa ajunga la sfarsit.)");
-            Console.WriteLine("Problema 15(Modificati un vector prin eliminarea elementelor care se repeta, fara a folosi un alt vector.)");
-            Console.WriteLine("Problema 16(Determinati cel mai mare divizor comun al elementelor vectorului.)");
-            Console.WriteLine("Problema 17(Sa se converteasca si sa se afiseze numarul n in baza b.)");
-            Console.WriteLine("Problema 18(Se cere valoarea polinomului intr-un punct x.)");
-            Console.WriteLine("Problema 19(Determinati de cate ori apare p in s.)");
-            Console.WriteLine("Problema 20(Determinati numarul de suprapuneri.)");
-            Console.WriteLine("Problema 21(Se cere sa se determine ordinea lor lexicografica.)");
-            Console.WriteLine("Problema 22(Se cere sa determine intersectia, reuniunea, si diferentele v1-v2 si v2 -v1.)");
-            Console.WriteLine("Problema 23(Elementele din v1 respectiv v2  sunt in ordine strict crescatoare.)");
-            Console.WriteLine("Problema 24(Elementele sunt stocate ca vectori cu valori binare)");
-            Console.WriteLine("Problema 25(Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.)");
-            Console.WriteLine("Problema 26(Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.)");
-            Console.WriteLine("Problema 27(Sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.)");
-            Console.WriteLine("Problema 28(Sortati un vector folosind metoda QuickSort.)");
-            Console.WriteLine("Problema 29(Sortati un vector folosind metoda MergeSort.)");
-            Console.WriteLine("Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
-            Console.WriteLine("Problema 31(Sa se determine elementul majoritate al unui vector).");
+            Console.WriteLine("Facut(x) / Nefacut( )");
+            Console.WriteLine("(x) Problema 1(Calculati suma elementelor unui vector de n numere citite de la tastatura.)");
+            Console.WriteLine("(x) Problema 2(Sa se determine prima pozitie din vector pe care apare k. )");
+            Console.WriteLine("(x) Problema 3(Sa se determine pozitiile dintr-un vector pe care apar cel mai mic si cel mai mare element.)");
+            Console.WriteLine("(x) Problema 4(Cea mai mica si cea mai mare valoare dintr-un vector si de cate ori apar acestea.)");
+            Console.WriteLine("(x) Problema 5(Se cere sa se insereze valoarea e in vector pe pozitia k.)");
+            Console.WriteLine("(x) Problema 6(Se cere sa se stearga din vector elementul de pe pozitia k.)");
+            Console.WriteLine("(x) Problema 7(Se cere sa se inverseze ordinea elementelor din vector.)");
+            Console.WriteLine("(x) Problema 8(Rotiti elementele vectorului cu o pozitie spre stanga.)");
+            Console.WriteLine("( ) Problema 9(Rotiti elementele vectorului cu k pozitii spre stanga.)");
+            Console.WriteLine("(x) Problema 10(Se cere sa se determine pozitia unui element dat k.)");
+            Console.WriteLine("(x) Problema 11(Se cere sa se afiseze toate numerele prime mai mici sau egale cu n (ciurul lui Eratostene)");
+            Console.WriteLine("(x) Problema 12(Implementati algoritmul de sortare <Selection Sort>.)");
+            Console.WriteLine("(x) Problema 13(Implementati algoritmul de sortare <Insertion Sort>.)");
+            Console.WriteLine("(x) Problema 14(Toate valorile egale cu zero sa ajunga la sfarsit.)");
+            Console.WriteLine("(x) Problema 15(Modificati un vector prin eliminarea elementelor care se repeta, fara a folosi un alt vector.)");
+            Console.WriteLine("(x) Problema 16(Determinati cel mai mare divizor comun al elementelor vectorului.)");
+            Console.WriteLine("(x) Problema 17(Sa se converteasca si sa se afiseze numarul n in baza b.)");
+            Console.WriteLine("( ) Problema 18(Se cere valoarea polinomului intr-un punct x.)");
+            Console.WriteLine("( ) Problema 19(Determinati de cate ori apare p in s.)");
+            Console.WriteLine("( ) Problema 20(Determinati numarul de suprapuneri.)");
+            Console.WriteLine("( ) Problema 21(Se cere sa se determine ordinea lor lexicografica.)");
+            Console.WriteLine("(x) Problema 22(Se cere sa determine intersectia, reuniunea, si diferentele v1-v2 si v2 -v1.)");
+            Console.WriteLine("(x) Problema 23(Elementele din v1 respectiv v2  sunt in ordine strict crescatoare.)");
+            Console.WriteLine("(x) Problema 24(Elementele sunt stocate ca vectori cu valori binare)");
+            Console.WriteLine("(x) Problema 25(Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.)");
+            Console.WriteLine("( ) Problema 26(Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.)");
+            Console.WriteLine("(x) Problema 27(Sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.)");
+            Console.WriteLine("(x) Problema 28(Sortati un vector folosind metoda QuickSort.)");
+            Console.WriteLine("(x) Problema 29(Sortati un vector folosind metoda MergeSort.)");
+            Console.WriteLine("( ) Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
+            Console.WriteLine("(x) Problema 31(Sa se determine elementul majoritate al unui vector).");
         repeat2:
             Console.Write("\nType the number of the problem you want to see: ");
             try
@@ -721,12 +723,17 @@ namespace Library1
                 goto repeat2;
             }
 
-        }       
+        }
+        /// <summary>
+        /// -acest bool va verifica parola introdusa si va acorda 5 incercari de a introduce parola dupa ce acele incercari se termina
+        /// programul se va inchide 
+        /// - daca parola se potriveste vei putea intra in cont
+        /// </summary>   
         public static bool passv2()
         {
             for (int P = 5; P > 0; P--)
             {
-                Console.Write("Please type the password:");
+                Console.Write("Please type the password: ");
                 string p = Console.ReadLine();
                 TextReader loadps = new StreamReader(@"..\..\Properties\Cache.txt");
                 string interval = loadps.ReadLine();
@@ -753,8 +760,10 @@ namespace Library1
             return false;
 
         }
-
         //-----------------------------------------------
+        /// <summary>
+        /// Apartin de problmea 17 set 3.
+        /// </summary>
         public static string MyBase2Converter(int a)
         {
             int cifra;
