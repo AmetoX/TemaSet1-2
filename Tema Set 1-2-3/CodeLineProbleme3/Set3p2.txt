@@ -1,20 +1,33 @@
-public static void set1p2()
+public static void set3p2()
         {
-            Console.WriteLine("Ecuatia:");
-            Console.WriteLine("ax^2 + bx + c = 0");
-            Console.WriteLine("Introduceti numerele a , b si c: ");
+            Console.Write("Cate numere doriti sa contina vectorul?: ");
             int a = int.Parse(Console.ReadLine());
+            Console.Write("Scrieti nr pe care il cautati(intr-e -100 si 100): ");
             int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-            int delta = b * b - 4 * a * c;
-            if (delta < 0)
+            int c = 0;
+            bool ok = false;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("nu are solutii");
+
+                if (arr[i] == b)
+                {
+                    c = i;
+                    ok = true;
+                }
+
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            if (ok)
+            {
+                Console.WriteLine($"Numarul cautat({b}) a fost gasit si este pe pozita: {c}");
             }
             else
             {
-                double x1 = (-b + Math.Sqrt(delta)) / 2 * a;
-                double x2 = (-b - Math.Sqrt(delta)) / 2 * a;
-                Console.WriteLine($"Rezultatutul: x1= {x1}, x2= {x2}.");
+                Console.WriteLine($"Numarul {b} nu se afla in acest sir.");
             }
+
         }

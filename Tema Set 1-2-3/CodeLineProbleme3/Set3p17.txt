@@ -1,23 +1,161 @@
-public static void set1p17()
+public static void set3p17()
         {
-            Console.WriteLine("Introduceti 2 numere (unul dupa altu cu spatiu intr-e ele):");
-            string interval = Console.ReadLine();
-            string[] local_data = interval.Split(' ');
-            int a = int.Parse(local_data[0]);
-            int b = int.Parse(local_data[1]);
-            int x = a;
-            int y = b;
-            while (x != y)
+            Console.Write("Introduceti un nr. in baza 10: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("In ce baza doriti sa convertiti numarul?: ");
+            int b = int.Parse(Console.ReadLine());
+            switch (b)
             {
-                if (x > y)
-                {
-                    x = x - y;
-                }
-                else
-                {
-                    y = y - x;
-                }
+                case 2:
+                    Console.WriteLine(Library1.Program.MyBase2Converter(a));
+                    break;
+                case 3:
+                    Console.WriteLine(Library1.Program.MyBase3Converter(a));
+                    break;
+                case 4:
+                    Console.WriteLine(Library1.Program.MyBase4Converter(a));
+                    break;
+                case 5:
+                    Console.WriteLine(Library1.Program.MyBase5Converter(a));
+                    break;
+                case 6:
+                    Console.WriteLine(Library1.Program.MyBase6Converter(a));
+                    break;
+                case 7:
+                    Console.WriteLine(Library1.Program.MyBase7Converter(a));
+                    break;
+                case 8:
+                    Console.WriteLine(Library1.Program.MyBase8Converter(a));
+                    break;
+                case 9:
+                    Console.WriteLine(Library1.Program.MyBase9Converter(a));
+                    break;
+                case 10:
+                    Console.WriteLine(Convert.ToString(a, 10));
+                    break;
+                case 11:
+                    Console.WriteLine(Library1.Program.MyBase11Converter(a));
+                    break;
+                case 12:
+                    Console.WriteLine(Library1.Program.MyBase12Converter(a));
+                    break;
+                case 13:
+                    Console.WriteLine(Library1.Program.MyBase13Converter(a));
+                    break;
+                case 14:
+                    Console.WriteLine(Library1.Program.MyBase14Converter(a));
+                    break;
+                case 15:
+                    Console.WriteLine(Library1.Program.MyBase15Converter(a));
+                    break;
+                case 16:
+                    Console.WriteLine(Library1.Program.MyBase16Converter(a));
+                    break;
             }
-            Console.WriteLine($"Cel mai mic multiplu comun:" + (a * b) / x);
-            Console.WriteLine($"Cel mai mare divizor comun:{x}");
         }
+public static string MyBase2Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 2;
+                digits.Push(cifra);
+                a /= 2;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "01";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase3Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 3;
+                digits.Push(cifra);
+                a /= 3;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "012";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase4Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 4;
+                digits.Push(cifra);
+                a /= 4;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "0123";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase5Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 5;
+                digits.Push(cifra);
+                a /= 5;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "01234";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+        public static string MyBase6Converter(int a)
+        {
+            int cifra;
+            Stack<int> digits = new Stack<int>();
+            while (a > 0)
+            {
+                cifra = a % 6;
+                digits.Push(cifra);
+                a /= 6;
+            }
+            StringBuilder sb = new StringBuilder();
+            string map = "012345";
+            while (digits.Count > 0)
+            {
+                cifra = digits.Pop();
+                sb.Append(map[cifra]);
+            }
+
+
+            return sb.ToString();
+        }
+etc...

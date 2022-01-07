@@ -1,10 +1,23 @@
-public static void set1p1()
+public static void set3p1()
         {
-            Console.WriteLine("Type 2 numbers: ");
-            double a = int.Parse(Console.ReadLine());
-            double b = int.Parse(Console.ReadLine());
-            double sol = 0;
-            double x = (sol - b) / a;
-            Console.WriteLine($"Necunoscuta x din ax+b=0 este {x}");
-            Console.ReadKey();
+            Console.Write("Cate numere doriti sa scrieti? : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            Console.Write("Introduceti numerele unu dupa altul cu un spatiu intr-e ele: ");
+            string b = Console.ReadLine();
+            string[] local_data = b.Split(' ');
+            for (int i = 0; i < a; i++)
+            {
+                int c = int.Parse(local_data[i]);
+                arr[i] = c;
+            }
+            int suma = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                suma = arr[i] + suma;
+            }
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine($"Suma sirului introdus este: {suma}");
         }

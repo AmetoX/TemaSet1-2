@@ -1,0 +1,15 @@
+public static void set3p28()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul ?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            QuickSort(arr, 0, arr.Length);
+            Console.WriteLine();
+            Console.WriteLine("-Quick Sort-");
+            PrintArray(arr);
+            Console.WriteLine();
+        }

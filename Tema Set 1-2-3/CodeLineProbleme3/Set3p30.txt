@@ -1,0 +1,4 @@
+public static void set3p30()
+        {
+            Console.WriteLine("Nu am stiut sa o rezolv.");
+        }

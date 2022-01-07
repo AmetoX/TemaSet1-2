@@ -13,19 +13,7 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
-            int a = int.Parse(Console.ReadLine());
-            int[] arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(0, 2);
-            }
-            PrintArray(arr);
-            Console.WriteLine();
-            BubbleSort(arr);
-            Array.Reverse(arr);
-            PrintArray(arr);
-            Console.WriteLine();
+            
         }
         static void Merge(int[] array, int lowIndex, int middleIndex, int highIndex)
         {

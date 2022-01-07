@@ -1,22 +1,27 @@
-public static void set1p4()
+public static void set3p4()
         {
-            Console.WriteLine("Introduceti un an:");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
             int a = int.Parse(Console.ReadLine());
-            if (a % 4 == 0)
+            int b = 0;
+            int c = 0;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            Array.Sort(arr);
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine($"Anul {a} este un an bisect.");
+                if (arr[i] == arr[0])
+                {
+                    b++;
+                }
+                if (arr[i] == arr[a - 1])
+                {
+                    c++;
+                }
             }
-            else if (a % 100 == 0)
-            {
-                Console.WriteLine($"Anul {a} nu este un an bisect.");
-            }
-            else if (a % 400 == 0)
-            {
-                Console.WriteLine($"Anul {a} este un an bisect.");
-            }
-            else
-            {
-                Console.WriteLine($"Anul {a} nu este un an bisect.");
-            }
-            Console.ReadKey();
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine($"Cel mai mare nr este: {arr[a - 1]} ,iar acesta apare de {c}-ori.");
+            Console.WriteLine($"Cel mai mic nr este: {arr[0]} ,iar acesta apare de {b}-ori.");
         }

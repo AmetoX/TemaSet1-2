@@ -1,12 +1,21 @@
-public static void set1p8()
+public static void set3p8()
         {
-            Console.Write("Iroduceti a =");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
-            Console.Write("Iroduceti b =");
-            int b = int.Parse(Console.ReadLine());
-            a = a + b;
-            b = a - b;
-            a = a - b;
-            Console.WriteLine($"a={a} iar b = {b}");
-            Console.ReadKey();
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            int c = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+
+                arr[i] = arr[i + 1];
+
+            }
+            arr[a - 1] = c;
+            Console.WriteLine("Vector rotit spre stanga cu o pozitie.");
+            PrintArray(arr);
+
         }

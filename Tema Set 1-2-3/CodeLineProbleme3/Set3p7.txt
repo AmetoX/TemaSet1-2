@@ -1,12 +1,23 @@
-public static void set1p7()
+public static void set3p7()
         {
-            Console.Write("Introduceti primul numar a = ");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
             int a = int.Parse(Console.ReadLine());
-            Console.Write("Introduceti al doilea numnar b = ");
-            int b = int.Parse(Console.ReadLine());
-            int aux = a;
-            a = b;
-            b = aux;
-            Console.WriteLine($"Dupa inversare numar a = {a} ,  iar b = {b} .");
-            Console.ReadKey();
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            int[] rev = new int[a];
+            int b = a - 1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+
+                rev[i] = arr[b];
+                b--;
+            }
+            Console.Write("Vectorul inversat: ");
+            for (int i = 0; i < rev.Length; i++)
+            {
+                Console.Write(rev[i] + " ");
+            }
         }

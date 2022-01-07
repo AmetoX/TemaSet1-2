@@ -14,27 +14,28 @@ namespace Probleme_Set_1
         }       
         public static void afisareProblemeSet1()
         {
-            Console.WriteLine("Problema 1(necunoscuta: ax+b = 0)");
-            Console.WriteLine("Problema 2(necunoscuta: ax^2 + bx + c = 0)");
-            Console.WriteLine("Problema 3(n se divide cu k)");
-            Console.WriteLine("Problema 4(un an y este an bisect)");
-            Console.WriteLine("Problema 5(afisati a k-a cifra de la sfarsitul unui numar)");
-            Console.WriteLine("Problema 6(trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi)");
-            Console.WriteLine("Problema 7(sa se inverseze valorile lor)");
-            Console.WriteLine("Problema 8(sa se inverseze valorile lor fara a folosi alte variabile suplimentare)");
-            Console.WriteLine("Problema 9(toti divizorii numarului n)");
-            Console.WriteLine("Problema 10(daca un numar n este prim)");
-            Console.WriteLine("Problema 11(Afisati in ordine inversa cifrele unui numar n)");
-            Console.WriteLine("Problema 12(cate numere integi divizibile cu n se afla in intervalul [a, b])");
-            Console.WriteLine("Problema 13(cati ani bisecti sunt intre anii y1 si y2)");
-            Console.WriteLine("Problema 14(daca un numar n este palindrom)");
-            Console.WriteLine("Problema 15(3 numere. Sa se afiseze in ordine crescatoare)");
-            Console.WriteLine("Problema 16(5 numere. Sa se afiseze in ordine crescatoare)");
-            Console.WriteLine("Problema 17(cel mai mare divizor comun si cel mai mic multiplu comun a doua numere)");
-            Console.WriteLine("Problema 18(descompunerea in factori primi ai unui numar n)");
-            Console.WriteLine("Problema 19(daca un numar e format doar cu 2 cifre care se pot repeta)");
-            Console.WriteLine("Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
-            Console.WriteLine("Problema 21(Ghiciti un numar intre 1 si 1024)");
+            Console.WriteLine("Facut(x) / Nefacut( )");
+            Console.WriteLine("(x) Problema 1(necunoscuta: ax+b = 0)");
+            Console.WriteLine("(x) Problema 2(necunoscuta: ax^2 + bx + c = 0)");
+            Console.WriteLine("(x) Problema 3(n se divide cu k)");
+            Console.WriteLine("(x) Problema 4(un an y este an bisect)");
+            Console.WriteLine("(x) Problema 5(afisati a k-a cifra de la sfarsitul unui numar)");
+            Console.WriteLine("(x) Problema 6(trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi)");
+            Console.WriteLine("(x) Problema 7(sa se inverseze valorile lor)");
+            Console.WriteLine("(x) Problema 8(sa se inverseze valorile lor fara a folosi alte variabile suplimentare)");
+            Console.WriteLine("(x) Problema 9(toti divizorii numarului n)");
+            Console.WriteLine("(x) Problema 10(daca un numar n este prim)");
+            Console.WriteLine("(x) Problema 11(Afisati in ordine inversa cifrele unui numar n)");
+            Console.WriteLine("(x) Problema 12(cate numere integi divizibile cu n se afla in intervalul [a, b])");
+            Console.WriteLine("(x) Problema 13(cati ani bisecti sunt intre anii y1 si y2)");
+            Console.WriteLine("(x) Problema 14(daca un numar n este palindrom)");
+            Console.WriteLine("(x) Problema 15(3 numere. Sa se afiseze in ordine crescatoare)");
+            Console.WriteLine("(x) Problema 16(5 numere. Sa se afiseze in ordine crescatoare)");
+            Console.WriteLine("(x) Problema 17(cel mai mare divizor comun si cel mai mic multiplu comun a doua numere)");
+            Console.WriteLine("(x) Problema 18(descompunerea in factori primi ai unui numar n)");
+            Console.WriteLine("(x) Problema 19(daca un numar e format doar cu 2 cifre care se pot repeta)");
+            Console.WriteLine("(x) Problema 20(Afisati fractia m/n in format zecimal, cu perioada intre paranteze)");
+            Console.WriteLine("(x) Problema 21(Ghiciti un numar intre 1 si 1024)");
         begin:
             Console.Write("\nType the number of the problem you want to see: ");
             try
@@ -126,7 +127,7 @@ namespace Probleme_Set_1
             double sol = 0;
             double x = (sol - b) / a;
             Console.WriteLine($"Necunoscuta x din ax+b=0 este {x}");
-            Console.ReadKey();
+          
         }
         public static void set1p2()
         {
@@ -161,7 +162,7 @@ namespace Probleme_Set_1
             {
                 Console.WriteLine($"numarul {n} nu este divizibil cu {k}.");
             }
-            Console.ReadKey();
+            
         }
         public static void set1p4()
         {
@@ -183,7 +184,7 @@ namespace Probleme_Set_1
             {
                 Console.WriteLine($"Anul {a} nu este un an bisect.");
             }
-            Console.ReadKey();
+      
         }
         public static void set1p5()
         {
@@ -197,7 +198,7 @@ namespace Probleme_Set_1
                 a = a / 10;
             }
             Console.WriteLine($"Cifra de la sfarsitul unui numar ({ogl}) (Cifrele se numara de la dreapta la stanga): {ogl % 10}");
-            Console.ReadKey();
+        
         }
         public static void set1p6()
         {
@@ -213,7 +214,6 @@ namespace Probleme_Set_1
             {
                 Console.WriteLine($"{a}, {b}, {c} nu pot fi lungimile laturilor unui triunghi");
             }
-            Console.ReadKey();
 
         }
         public static void set1p7()
@@ -226,7 +226,6 @@ namespace Probleme_Set_1
             a = b;
             b = aux;
             Console.WriteLine($"Dupa inversare numar a = {a} ,  iar b = {b} .");
-            Console.ReadKey();
         }
         public static void set1p8()
         {
@@ -238,7 +237,6 @@ namespace Probleme_Set_1
             b = a - b;
             a = a - b;
             Console.WriteLine($"a={a} iar b = {b}");
-            Console.ReadKey();
         }
         public static void set1p9()
         {
@@ -251,7 +249,7 @@ namespace Probleme_Set_1
                     Console.Write(i + " ");
                 i++;
             }
-            Console.ReadKey();
+
         }
         public static void set1p10()
         {
@@ -267,7 +265,6 @@ namespace Probleme_Set_1
             {
                 Console.WriteLine($"Numarul {n} nu este prim");
             }
-            Console.ReadKey();
         }
         public static bool prim(int n)
         {
@@ -303,7 +300,7 @@ namespace Probleme_Set_1
                 n = n / 10;
             }
             Console.WriteLine($"Numarul invers este: {ogl}");
-            Console.ReadKey();
+
         }
         public static void set1p12()
         {
@@ -325,7 +322,6 @@ namespace Probleme_Set_1
 
             }
             Console.WriteLine($"Numarul {n} are {div} divizori in intervalul [{a},{b}].");
-            Console.ReadKey();
         }
         public static void set1p13()
         {
@@ -375,7 +371,6 @@ namespace Probleme_Set_1
 
             }
             Console.WriteLine($"Intr-e anii {a} - {b} sunt {bis} anii bisecti.");
-            Console.ReadKey();
         }
         public static void set1p14()
         {
@@ -396,7 +391,7 @@ namespace Probleme_Set_1
             {
                 Console.WriteLine("Numarul introdus nu este palidrom.");
             }
-            Console.ReadKey();
+            
         }
         public static void set1p15()
         {
@@ -553,7 +548,7 @@ namespace Probleme_Set_1
             Console.WriteLine(dubp19()
                 ? "Numarul este format numai din 2 numere diferite."
                 : "Numarul este format din mai mult de 2 numere diferite.");
-            Console.ReadKey();
+            
         }
         static bool dubp19()
         {

@@ -1,50 +1,21 @@
-public static void set1p13()
+public static void set3p13()
         {
-            Console.WriteLine("Introduceti doi ani ca sa aflati cati ani bisecti se aflta intr-e ei (unul dupa altu cu spatiu intre ele):");
-            string interval = Console.ReadLine();
-            string[] local_data = interval.Split(' ');
-            int a = int.Parse(local_data[0]);
-            int b = int.Parse(local_data[1]);
-            int bis = 0;
-            if (a < b)
+            Console.Write("Cate numere doriti sa contina vectorul?: ");
+            int a = int.Parse(Console.ReadLine()); ;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            int i, k;
+            for (i = 1; i < arr.Length; i++)
             {
-                while (a < b)
+                for (k = i; k > 0 && arr[k] < arr[k - 1]; k--)
                 {
-                    if (a % 4 == 0)
-                    {
-                        bis++;
-                    }
-                    else if (a % 400 == 0)
-                    {
-                        bis++;
-                    }
-                    else
-                    {
-
-                    }
-                    a++;
+                    Swap(arr, k, k - 1);
                 }
             }
-            else if (b > a)
-            {
-                while (b > a)
-                {
-                    if (b % 4 == 0)
-                    {
-                        bis++;
-                    }
-                    else if (b % 400 == 0)
-                    {
-                        bis++;
-                    }
-                    else
-                    {
-
-                    }
-                    b++;
-                }
-
-            }
-            Console.WriteLine($"Intr-e anii {a} - {b} sunt {bis} anii bisecti.");
-            Console.ReadKey();
+            Console.WriteLine("-Insertion sort-");
+            PrintArray(arr);
         }

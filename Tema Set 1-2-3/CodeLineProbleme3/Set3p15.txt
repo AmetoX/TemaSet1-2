@@ -1,31 +1,24 @@
-public static void set1p15()
+public static void set3p15()
         {
-            Console.WriteLine("Introduceti 3 numere (unul dupa altu cu spatiu intr-e ele):");
-            string interval = Console.ReadLine();
-            string[] local_data = interval.Split(' ');
-            int a = int.Parse(local_data[0]);
-            int b = int.Parse(local_data[1]);
-            int c = int.Parse(local_data[2]);
-            if (a > b)
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
             {
-                int aux = a;
-                a = b;
-                b = aux;
+                arr[i] = rnd.Next(-10, 10);
             }
-
-            if (a > c)
+            PrintArray(arr);
+            Console.WriteLine();
+            int[] rmv = new int[a];
+            Array.Sort(arr);
+            for (int i = 1; i < arr.Length - 1; i++)
             {
-                int aux = a;
-                a = c;
-                c = aux;
+                if (arr[i] == arr[i - 1])
+                {
+                    arr = arr.Where((source, index) => index != i).ToArray();
+                }
             }
-
-            if (b > c)
-            {
-                int aux = b;
-                b = c;
-                c = aux;
-            }
-
-            Console.WriteLine($"Numerele introduse mai sus in ordine crescatoare: {a}, {b}, {c}.");
+            Console.WriteLine("Vectorul fara numere care se repeta:");
+            PrintArray(arr);
         }

@@ -1,15 +1,37 @@
-public static void set1p3()
+public static void set3p3()
         {
-            Console.WriteLine("Type 2 numbers: ");
-            double n = int.Parse(Console.ReadLine());
-            double k = int.Parse(Console.ReadLine());
-            if (n % k == 0)
+            Console.Write("Cate numere doriti sa contina vecotrul? : ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            int[] arr2 = new int[a];
+            GenerateArray(arr);
+            int c = 0;
+            int d = 0;
+            int e = 0;
+            int f = 0;
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine($"numarul {n} este divizibil cu {k}.");
+                arr2[i] = arr[i];
             }
-            else
+            Array.Sort(arr2);
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine($"numarul {n} nu este divizibil cu {k}.");
+                
+                if (arr[i] == arr2[a - 1])
+                {
+                    c = arr[i];
+                    d = i;
+                }
+                if (arr[i] == arr2[0])
+                {
+                    e = arr[i];
+                    f = i;
+                }
             }
-            Console.ReadKey();
+
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine($"Cel mai mare nr este: {c} pe pozitia {d}");
+            Console.WriteLine($"Cel mai mic nr este: {e} pe pozitia {f}");
         }

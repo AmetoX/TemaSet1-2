@@ -16,12 +16,10 @@ namespace Tema_Set_1_2_3
         //Pentru ca programul sa functioneze corect aceasta solutie trebuie selecta ca si startup project
         static void Main(string[] args)
         {
-
             Library1.Program.time();
             Console.WriteLine("Welcome dear User to my program !\n");
             password();
             start:
-
             Console.WriteLine("Chose an option from below:");
             Console.WriteLine();
             options();
@@ -48,7 +46,7 @@ namespace Tema_Set_1_2_3
         static void options()
         {
             Console.WriteLine("1.Probleme");
-            Console.WriteLine("2.Afisre codul problemelor");
+            Console.WriteLine("2.Afisare cod probleme");
         }
         /// <summary>
         /// -al doilea set de optiuni care apar in functie de ce alegi la primul set de optiuni
@@ -61,13 +59,14 @@ namespace Tema_Set_1_2_3
             {
                 int select = int.Parse(Console.ReadLine());
                 switch (select)
-                {
+                {                   
                     case 1:
+                        again:
                         Console.Clear();
                         Console.WriteLine("Select the set:\n");
-                        Console.WriteLine("1.Set 1");
-                        Console.WriteLine("2.Set 2");
-                        Console.WriteLine("3.Set 3");
+                        Console.WriteLine("1.Set 1 [21/21]");
+                        Console.WriteLine("2.Set 2 [13/17]");
+                        Console.WriteLine("3.Set 3 [24/31]");
                         afisareProbleme();
                         Console.WriteLine("Again or continue? (a/c)");
                         string b = Console.ReadLine();
@@ -80,11 +79,11 @@ namespace Tema_Set_1_2_3
                         }
                         else if (b == n)
                         {
-                            Console.WriteLine("\nThank you for using my program!");
+                            
                         }
                         break;
                     case 2:
-                    again:
+                    again2:
                         Console.Clear();
                         Console.WriteLine("1.Cod probleme 1");
                         Console.WriteLine("2.Cod probleme 2");
@@ -97,16 +96,16 @@ namespace Tema_Set_1_2_3
                         if (d == a)
                         {
                             Console.Clear();
-                            goto again;
+                            goto again2;
                         }
                         else if (d == c)
                         {
-                            Console.WriteLine("\nThank you for using my program!");
+                            
                         }
                         break;
                     default:
                         Console.WriteLine("Wrong problem number.Try again!");
-                        goto again;
+                        goto try1;
                 }
             }
             catch

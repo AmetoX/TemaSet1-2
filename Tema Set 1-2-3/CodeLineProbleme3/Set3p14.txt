@@ -1,21 +1,16 @@
-public static void set1p14()
+public static void set3p14()
         {
-            Console.Write("Introduceti un numar: ");
-            int n = int.Parse(Console.ReadLine());
-            int ogl = 0;
-            int a = n;
-            while (n != 0)
+            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            for (int i = 0; i < arr.Length; i++)
             {
-                ogl = ogl * 10 + n % 10; 
-                n = n / 10;
+                arr[i] = rnd.Next(0, 2);
             }
-            if (ogl == a)
-            {
-                Console.WriteLine("Numarul introdus este palidrom.");
-            }
-            else
-            {
-                Console.WriteLine("Numarul introdus nu este palidrom.");
-            }
-            Console.ReadKey();
+            PrintArray(arr);
+            Console.WriteLine();
+            BubbleSort(arr);
+            Array.Reverse(arr);
+            PrintArray(arr);
+            Console.WriteLine();
         }

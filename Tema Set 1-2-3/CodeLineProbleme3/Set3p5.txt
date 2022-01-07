@@ -1,14 +1,33 @@
-public static void set1p5()
+public static void set3p5()
         {
-            Console.Write("Introduceti un nr: ");
+            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");
             int a = int.Parse(Console.ReadLine());
-            int ogl = 0;
-            int b = a;
-            while (a != 0)
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.Write("Ce numar doriti sa introduceti?: ");
+            int e = int.Parse(Console.ReadLine());
+            Console.Write("Pe ce pozitie dorit sa fie acesta?: ");
+            int k = int.Parse(Console.ReadLine());
+            int[] newarr = new int[a + 1];
+            for (int i = 0; i < a + 1; i++)
             {
-                ogl = ogl * 10 + a % 10;
-                a = a / 10;
+                if (i < k - 1)
+                {
+                    newarr[i] = arr[i];
+                }
+                else if (i == k - 1)
+                {
+                    newarr[i] = e;
+                }
+                else
+                {
+                    newarr[i] = arr[i - 1];
+                }
             }
-            Console.WriteLine($"Cifra de la sfarsitul unui numar ({ogl}) (Cifrele se numara de la dreapta la stanga): {ogl % 10}");
-            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Noul vector: ");
+            PrintArray(newarr);
         }

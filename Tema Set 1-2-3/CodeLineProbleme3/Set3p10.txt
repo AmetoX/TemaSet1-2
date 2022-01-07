@@ -1,39 +1,31 @@
-        public static void set1p10()
+public static void set3p10()
         {
-            int n;
-            Console.WriteLine("Introduceti un numar: ");
-            n = int.Parse(Console.ReadLine());
-
-            if (prim(n))
+                        Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");            
+            int a = int.Parse(Console.ReadLine());
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            Array.Sort(arr);
+            Console.Write("Ce numar doriti sa cautati?: ");
+            int key = int.Parse(Console.ReadLine());
+            bool ok = false;
+            int nf = -1;
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine($"Numarul {n} este prim");
+                if (arr[i] == key)
+                {
+                    ok = true;
+                    nf = i;
+                }
+            }
+            if (ok)
+            {
+                Console.WriteLine($"Am gasit nr. cautat({key}), pe pozitia: {nf}");
             }
             else
             {
-                Console.WriteLine($"Numarul {n} nu este prim");
+                Console.WriteLine($"Numarul nu a fost gasit {nf}");
             }
-	Console.ReadKey();
-        }
-        public static bool prim(int n)
-        {
-            if (n < 2)
-                return false;
-            if (n == 2)
-            {
-                return true;
-            }
-            if (n % 2 == 0)
-            {
-                return false;
-            }
-            
-            for (int a = 3; a <= n / 2; a = a + 2)
-            {
-                if (n % a == 0)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            PrintArray(arr);
+            Console.WriteLine();
         }

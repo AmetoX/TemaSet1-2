@@ -17,37 +17,38 @@ namespace Probleme_Set_3
         }
         public static void afisareProblemeSet3()
         {
-            Console.WriteLine("Problema 1(Calculati suma elementelor unui vector de n numere citite de la tastatura.)");
-            Console.WriteLine("Problema 2(Sa se determine prima pozitie din vector pe care apare k. )");
-            Console.WriteLine("Problema 3(Sa se determine pozitiile dintr-un vector pe care apar cel mai mic si cel mai mare element.)");
-            Console.WriteLine("Problema 4(Cea mai mica si cea mai mare valoare dintr-un vector si de cate ori apar acestea.)");
-            Console.WriteLine("Problema 5(Se cere sa se insereze valoarea e in vector pe pozitia k.)");
-            Console.WriteLine("Problema 6(Se cere sa se stearga din vector elementul de pe pozitia k.)");
-            Console.WriteLine("Problema 7(Se cere sa se inverseze ordinea elementelor din vector.)");
-            Console.WriteLine("Problema 8(Rotiti elementele vectorului cu o pozitie spre stanga.)");
-            Console.WriteLine("Problema 9(Rotiti elementele vectorului cu k pozitii spre stanga.)");
-            Console.WriteLine("Problema 10(Se cere sa se determine pozitia unui element dat k.)");
-            Console.WriteLine("Problema 11(Se cere sa se afiseze toate numerele prime mai mici sau egale cu n (ciurul lui Eratostene)");
-            Console.WriteLine("Problema 12(Implementati algoritmul de sortare <Selection Sort>.)");
-            Console.WriteLine("Problema 13(Implementati algoritmul de sortare <Insertion Sort>.)");
-            Console.WriteLine("Problema 14(Toate valorile egale cu zero sa ajunga la sfarsit.)");
-            Console.WriteLine("Problema 15(Modificati un vector prin eliminarea elementelor care se repeta, fara a folosi un alt vector.)");
-            Console.WriteLine("Problema 16(Determinati cel mai mare divizor comun al elementelor vectorului.)");
-            Console.WriteLine("Problema 17(Sa se converteasca si sa se afiseze numarul n in baza b.)");
-            Console.WriteLine("Problema 18(Se cere valoarea polinomului intr-un punct x.)");
-            Console.WriteLine("Problema 19(Determinati de cate ori apare p in s.)");
-            Console.WriteLine("Problema 20(Determinati numarul de suprapuneri.)");
-            Console.WriteLine("Problema 21(Se cere sa se determine ordinea lor lexicografica.)");
-            Console.WriteLine("Problema 22(Se cere sa determine intersectia, reuniunea, si diferentele v1-v2 si v2 -v1.)");
-            Console.WriteLine("Problema 23(Elementele din v1 respectiv v2  sunt in ordine strict crescatoare.)");
-            Console.WriteLine("Problema 24(Elementele sunt stocate ca vectori cu valori binare)");
-            Console.WriteLine("Problema 25(Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.)");
-            Console.WriteLine("Problema 26(Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.)");
-            Console.WriteLine("Problema 27(Sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.)");
-            Console.WriteLine("Problema 28(Sortati un vector folosind metoda QuickSort.)");
-            Console.WriteLine("Problema 29(Sortati un vector folosind metoda MergeSort.)");
-            Console.WriteLine("Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
-            Console.WriteLine("Problema 31(Sa se determine elementul majoritate al unui vector).");
+            Console.WriteLine("Facut(x) / Nefacut( )");
+            Console.WriteLine("(x) Problema 1(Calculati suma elementelor unui vector de n numere citite de la tastatura.)");
+            Console.WriteLine("(x) Problema 2(Sa se determine prima pozitie din vector pe care apare k. )");
+            Console.WriteLine("(x) Problema 3(Sa se determine pozitiile dintr-un vector pe care apar cel mai mic si cel mai mare element.)");
+            Console.WriteLine("(x) Problema 4(Cea mai mica si cea mai mare valoare dintr-un vector si de cate ori apar acestea.)");
+            Console.WriteLine("(x) Problema 5(Se cere sa se insereze valoarea e in vector pe pozitia k.)");
+            Console.WriteLine("(x) Problema 6(Se cere sa se stearga din vector elementul de pe pozitia k.)");
+            Console.WriteLine("(x) Problema 7(Se cere sa se inverseze ordinea elementelor din vector.)");
+            Console.WriteLine("(x) Problema 8(Rotiti elementele vectorului cu o pozitie spre stanga.)");
+            Console.WriteLine("( ) Problema 9(Rotiti elementele vectorului cu k pozitii spre stanga.)");
+            Console.WriteLine("(x) Problema 10(Se cere sa se determine pozitia unui element dat k.)");
+            Console.WriteLine("(x) Problema 11(Se cere sa se afiseze toate numerele prime mai mici sau egale cu n (ciurul lui Eratostene)");
+            Console.WriteLine("(x) Problema 12(Implementati algoritmul de sortare <Selection Sort>.)");
+            Console.WriteLine("(x) Problema 13(Implementati algoritmul de sortare <Insertion Sort>.)");
+            Console.WriteLine("(x) Problema 14(Toate valorile egale cu zero sa ajunga la sfarsit.)");
+            Console.WriteLine("(x) Problema 15(Modificati un vector prin eliminarea elementelor care se repeta, fara a folosi un alt vector.)");
+            Console.WriteLine("(x) Problema 16(Determinati cel mai mare divizor comun al elementelor vectorului.)");
+            Console.WriteLine("(x) Problema 17(Sa se converteasca si sa se afiseze numarul n in baza b.)");
+            Console.WriteLine("( ) Problema 18(Se cere valoarea polinomului intr-un punct x.)");
+            Console.WriteLine("( ) Problema 19(Determinati de cate ori apare p in s.)");
+            Console.WriteLine("( ) Problema 20(Determinati numarul de suprapuneri.)");
+            Console.WriteLine("( ) Problema 21(Se cere sa se determine ordinea lor lexicografica.)");
+            Console.WriteLine("(x) Problema 22(Se cere sa determine intersectia, reuniunea, si diferentele v1-v2 si v2 -v1.)");
+            Console.WriteLine("(x) Problema 23(Elementele din v1 respectiv v2  sunt in ordine strict crescatoare.)");
+            Console.WriteLine("(x) Problema 24(Elementele sunt stocate ca vectori cu valori binare)");
+            Console.WriteLine("(x) Problema 25(Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.)");
+            Console.WriteLine("( ) Problema 26(Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.)");
+            Console.WriteLine("(x) Problema 27(Sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.)");
+            Console.WriteLine("(x) Problema 28(Sortati un vector folosind metoda QuickSort.)");
+            Console.WriteLine("(x) Problema 29(Sortati un vector folosind metoda MergeSort.)");
+            Console.WriteLine("( ) Problema 30(Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare.)");
+            Console.WriteLine("(x) Problema 31(Sa se determine elementul majoritate al unui vector).");
         begin:
             Console.Write("\nType the number of the problem you want to see: ");
             int set3 = int.Parse(Console.ReadLine());
@@ -459,6 +460,7 @@ namespace Probleme_Set_3
             }
             Console.WriteLine("-Selection sort-");
             PrintArray(arr);
+            Console.WriteLine();
         }
         public static void set3p13()
         {
@@ -523,7 +525,31 @@ namespace Probleme_Set_3
         }
         public static void set3p16()
         {
-
+            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            int b, c;
+            int cmd = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                b = arr[i];
+                c = arr[i + 1];
+                while (c != 0)
+                {
+                    int r = b % c;
+                    b = c;
+                    c = r;
+                }
+                if (b > cmd)
+                {
+                    cmd = b;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Cmmdc: {cmd}");
         }
         public static void set3p17()
         {
@@ -1218,10 +1244,7 @@ namespace Probleme_Set_3
             Console.Write("Cate numere doriti sa contina vectorul?(-100,100): ");
             int a = int.Parse(Console.ReadLine());
             int[] arr = new int[a];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(0, 3);
-            }
+            GenerateArray(arr);
             PrintArray(arr);
             Console.WriteLine();
             int m = 0;

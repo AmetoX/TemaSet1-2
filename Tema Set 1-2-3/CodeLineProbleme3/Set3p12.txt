@@ -1,22 +1,27 @@
-public static void set1p12()
+public static void set3p12()
         {
-            Console.WriteLine("Introduceti doua numere sa fie interval(unul dupa altu cu spatiu intre ele):");
-            string interval = Console.ReadLine();
-            string[] local_data = interval.Split(' ');
-            int a = int.Parse(local_data[0]);
-            int b = int.Parse(local_data[1]);
-            Console.Write("Introduceti un numar: ");
-            int n = int.Parse(Console.ReadLine());
-            int interval1 = b - a;
-            int div = 0;
-            for (int i = 1; i <= interval1; i++)
+            Console.Write("Cate numere doriti sa contina vectorul?: ");
+            int a = int.Parse(Console.ReadLine()); ;
+            int[] arr;
+            arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            int i, j, k;
+            for (i = 0; i < arr.Length; i++)
             {
-                if (i % n == 0)
+                k = i;
+                for (j = i + 1; j < arr.Length; j++)
                 {
-                    div++;
+                    if (arr[j] < arr[k])
+                    {
+                        k = j;
+                    }
                 }
-
+                Swap(arr, i, k);
             }
-            Console.WriteLine($"Numarul {n} are {div} divizori in intervalul [{a},{b}].");
-            Console.ReadKey();
+            Console.WriteLine("-Selection sort-");
+            PrintArray(arr);
+            Console.WriteLine();
         }

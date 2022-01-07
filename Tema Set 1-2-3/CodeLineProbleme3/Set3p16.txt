@@ -1,73 +1,28 @@
-public static void set1p16()
+public static void set3p16()
         {
-            Console.WriteLine("Introduceti 5 numere (unul dupa altu cu spatiu intr-e ele):");
-            string interval = Console.ReadLine();
-            string[] local_data = interval.Split(' ');
-            int a = int.Parse(local_data[0]);
-            int b = int.Parse(local_data[1]);
-            int c = int.Parse(local_data[2]);
-            int d = int.Parse(local_data[3]);
-            int e = int.Parse(local_data[4]);
-            
-            if (a > b)
+            Console.Write("Cate numere doriti sa contina vectorul 1?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            int b, c;
+            int cmd = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                int aux = a;
-                a = b;
-                b = aux;
+                b = arr[i];
+                c = arr[i + 1];
+                while (c != 0)
+                {
+                    int r = b % c;
+                    b = c;
+                    c = r;
+                }
+                if (b > cmd)
+                {
+                    cmd = b;
+                }
             }
-            if (a > c)
-            {
-                int aux = a;
-                a = c;
-                c = aux;
-            }
-            if (a > d)
-            {
-                int aux = a;
-                a = d;
-                d = aux;
-            }
-            if (a > e)
-            {
-                int aux = a;
-                a = e;
-                e = aux;
-            }
-            if (b > c)
-            {
-                int aux = b;
-                b = c;
-                c = aux;
-            }
-            if (b > d)
-            {
-                int aux = b;
-                b = d;
-                d = aux;
-            }
-            if (b > e)
-            {
-                int aux = b;
-                b = e;
-                e = aux;
-            }
-            if (c > d)
-            {
-                int aux = c;
-                c = d;
-                d = aux;
-            }
-            if (c > e)
-            {
-                int aux = c;
-                c = e;
-                e = aux;
-            }
-            if (d > e)
-            {
-                int aux = d;
-                d = e;
-                e = aux;
-            }          
-            Console.WriteLine($"Numerele introduse mai sus in ordine crescatoare: {a}, {b}, {c}, {d}, {e}.");            
+            Console.WriteLine();
+            Console.WriteLine($"Cmmdc: {cmd}");
         }

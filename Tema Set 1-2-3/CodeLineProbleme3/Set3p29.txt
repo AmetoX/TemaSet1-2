@@ -1,0 +1,15 @@
+public static void set3p29()
+        {
+            Console.Write("Cate numere doriti sa contina vectorul ?(-100,100): ");
+            int a = int.Parse(Console.ReadLine());
+            int[] arr = new int[a];
+            GenerateArray(arr);
+            PrintArray(arr);
+            Console.WriteLine();
+            Console.WriteLine("Sorting...");
+            MergeSort(arr, 0, arr.Length - 1);
+            Console.WriteLine();
+            Console.WriteLine("-Merge sort-");
+            PrintArray(arr);
+            Console.WriteLine();
+        }
