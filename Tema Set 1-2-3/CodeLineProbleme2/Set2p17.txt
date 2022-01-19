@@ -1,0 +1,63 @@
+public static void set2p17()
+        {
+            Console.WriteLine("Problema partial rezolvata!!!");
+            Console.Write("Introduceti un nr. : ");
+            int n = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+            sb.Capacity = n;
+            int b = 0;
+            int a = -1;
+            int zero = 0;
+            int unu = 0;
+            bool ok = true; ;
+            for (int i = 1; i <= n; i++)
+            {
+                //()(()())
+                //01001011
+                //(((())))()((()))
+                int r = rnd.Next(0, 2);
+                if (r == 0)
+                {
+                    Console.Write("(" + " ");
+                }
+                else if (r == 1)
+                {
+                    Console.Write(")" + " ");
+                }
+                if (r == 1 && a == 0)
+                {
+                    b++;
+                }
+                a = r;
+
+                ok = true;
+                if (r == 0)
+                {
+                    ok = false;
+                    zero++;
+                }
+                else
+                {
+                    unu++;
+                }
+
+                sb.Append(r + " ");
+            }
+            Console.WriteLine();
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                Console.Write(sb[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Paranteze perfecte: " + b);
+            if (sb[0] == 1 || ok)
+            {
+                Console.WriteLine("incorecta");
+            }
+            if (zero == unu)
+
+            {
+                Console.WriteLine("corecta");
+            }
+        }
