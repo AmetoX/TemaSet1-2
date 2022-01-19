@@ -382,12 +382,15 @@ namespace Probleme_Set_3
         }
         public static void set3p10()
         {
-            Console.Write("Cate numere doriti sa contina vectorul?(-100,100) : ");            
+            Console.Write("Cate numere doriti sa contina vectorul?(0,100) : ");            
             int a = int.Parse(Console.ReadLine());
             int[] arr;
             arr = new int[a];
-            GenerateArray(arr);
-            Array.Sort(arr);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, 100);
+            }
+            BubbleSort(arr);
             Console.Write("Ce numar doriti sa cautati?: ");
             int key = int.Parse(Console.ReadLine());
             bool ok = false;
@@ -398,6 +401,7 @@ namespace Probleme_Set_3
                 {
                     ok = true;
                     nf = i;
+                    break;
                 }
             }
             if (ok)

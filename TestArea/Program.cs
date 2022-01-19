@@ -13,6 +13,13 @@ namespace TestArea
         static Random rnd = new Random();
         static void Main(string[] args)
         {
+            int a, b, c, d;
+            a = 68%6;
+            b = 96 % 5;
+            c = 110 % 5;
+            d = 105 % 3;
+
+            Console.WriteLine(a + " "+ b+ " " +c+" "+ d+" ");
             
         }
 
