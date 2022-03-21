@@ -1,0 +1,5 @@
+﻿           string buffer;
+            while ((buffer = load.ReadLine()) != null)
+            {
+                listBox1.Items.Add(buffer);
+            }
